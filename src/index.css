@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Core Keyframe Animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.08); }
+}
+
+@keyframes floatVanLoop {
+  0% { transform: translateX(110vw); }
+  100% { transform: translateX(-110vw); }
+}
+
+/* Subtle Animated Herringbone Flooring Background */
+@keyframes herringboneWave {
+  0% {
+    stroke-dashoffset: 240;
+    opacity: 0.35;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 0.85;
+  }
+  100% {
+    stroke-dashoffset: -240;
+    opacity: 0.35;
+  }
+}
+
+.hb-plank-anim-1 {
+  animation: herringboneWave 14s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+.hb-plank-anim-2 {
+  animation: herringboneWave 14s cubic-bezier(0.4, 0, 0.2, 1) infinite 3.5s;
+}
+.hb-plank-anim-3 {
+  animation: herringboneWave 14s cubic-bezier(0.4, 0, 0.2, 1) infinite 7s;
+}
+.hb-plank-anim-4 {
+  animation: herringboneWave 14s cubic-bezier(0.4, 0, 0.2, 1) infinite 10.5s;
+}
+
+.animate-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-van-highway {
+  animation: floatVanLoop 22s linear infinite;
+}
+
+/* Custom Craftsman Flooring Mallet Cursor */
+html, body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='none'%3E%3Cpath d='M6.5 2.5 L12.5 8.5 L10 11 L4 5 Z' fill='%23111111' stroke='%23F7941D' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M3 4 L5 2 L6.5 3.5 L4.5 5.5 Z' fill='%23F7941D'/%3E%3Cpath d='M9.5 9.5 L22.5 22.5 L20.5 24.5 L7.5 11.5 Z' fill='%238C4F00' stroke='%23111111' stroke-width='1' stroke-linejoin='round'/%3E%3Cpath d='M19 19 L23 23 L21 25 L17 21 Z' fill='%23F7941D'/%3E%3Ccircle cx='4' cy='4' r='1.5' fill='%23FFFFFF'/%3E%3C/svg%3E") 4 4, auto !important;
+}
+
+a, button, input, select, textarea, [role="button"], .cursor-pointer {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='none'%3E%3Cpath d='M4.5 5.5 L10.5 11.5 L8 14 L2 8 Z' fill='%23F7941D' stroke='%23111111' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M1.5 6.5 L3.5 4.5 L5.5 6.5 L3.5 8.5 Z' fill='%23111111'/%3E%3Cpath d='M8 12.5 L21 25.5 L19 27.5 L6 14.5 Z' fill='%238C4F00' stroke='%23111111' stroke-width='1' stroke-linejoin='round'/%3E%3Cpath d='M18 22.5 L22 26.5 L20 28 L16.5 24 Z' fill='%23F7941D'/%3E%3Cpolygon points='1,2 6,4 4,7' fill='%23F7941D' opacity='0.9'/%3E%3Ccircle cx='3' cy='6' r='1.5' fill='%23FFFFFF'/%3E%3C/svg%3E") 3 6, pointer !important;
+}
+
+/* Custom Webkit Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F7941D;
+}
