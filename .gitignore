@@ -12,6 +12,16 @@ dist
 dist-ssr
 *.local
 
+# Env files — FTP/hosting secrets must never reach the repo. The deploy
+# workflow reads the same values from GitHub Actions secrets instead.
+.env
+.env.*
+!.env.example
+
+# Local tooling scratch files
+.tmp-*
+*.tmp
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
