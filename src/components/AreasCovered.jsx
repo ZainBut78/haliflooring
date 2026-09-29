@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const areas = [
   { name: '📍 Bolton', desc: 'Headquarters & Hub', highlight: true },
@@ -12,6 +13,48 @@ const areas = [
   { name: 'Blackburn', desc: 'Full Coverage', highlight: false },
   { name: 'Horwich', desc: '& West Pennine', highlight: false }
 ];
+
+/*  Coverage ticker — two counter-scrolling marquee rows.                      */
+/*  CSS animation rather than JS: it keeps running off the main thread, and    */
+/*  each list is duplicated so the seam is invisible when the row wraps. The   */
+/*  pauses on hover let someone actually read a town name instead of chasing   */
+/*  it, and the copy is marked aria-hidden because the grid below is the       */
+/*  accessible, crawlable list of the same places.                             */
+function CoverageRow({ items, reverse = false, duration }) {
+  const doubled = [...items, ...items]
+
+  return (
+    <div
+      className="group relative flex overflow-hidden"
+      // Fade the text out at both edges so names enter and leave instead of
+      // being chopped off at the container border.
+      style={{
+        maskImage: 'linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)',
+        WebkitMaskImage: 'linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)'
+      }}
+    >
+      <div
+        aria-hidden="true"
+        className={`flex shrink-0 items-center gap-3 pr-3 motion-reduce:animate-none ${
+          reverse ? 'areaMarqueeReverse' : 'areaMarquee'
+        }`}
+        style={{ animationDuration: `${duration}s` }}
+      >
+        {doubled.map((area, i) => (
+          <React.Fragment key={`${area.name}-${i}`}>
+            <span className="whitespace-nowrap text-sm font-extrabold uppercase tracking-wider text-gray-400 transition-colors duration-300 group-hover:text-brand-orange">
+              {area.name.replace(/📍\s*/, '')}
+            </span>
+            <span
+              aria-hidden="true"
+              className="w-1.5 h-1.5 rounded-full bg-brand-orange/50 shrink-0"
+            />
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default function AreasCovered() {
   return (
@@ -29,12 +72,19 @@ export default function AreasCovered() {
           </p>
         </div>
 
+        {/* Scrolling coverage ticker */}
+        <div className="mb-10 sm:mb-12 space-y-3">
+          <CoverageRow items={areas} duration={38} />
+          <CoverageRow items={areas} reverse duration={46} />
+        </div>
+
         {/* Clean Light Pill Matrix */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 text-center">
-          {areas.map((area, idx) => (
-            <div
-              key={idx}
-              className={`p-4 rounded-xl shadow-sm transition-all ${
+          {areas.map((area) => (
+            <Link
+              key={area.name}
+              to="/contact"
+              className={`block p-4 rounded-xl shadow-sm transition-all hover:-translate-y-0.5 ${
                 area.highlight
                   ? 'bg-white border-2 border-brand-orange'
                   : 'bg-white border border-gray-200 hover:border-brand-orange'
@@ -50,7 +100,7 @@ export default function AreasCovered() {
                 {area.name}
               </span>
               <span className="text-[11px] text-gray-500 font-semibold">{area.desc}</span>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

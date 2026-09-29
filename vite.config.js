@@ -8,6 +8,11 @@ export default defineConfig({
     port: 5173,
     watch: {
       usePolling: true,
-    }
-  }
+    },
+  },
+  build: {
+    // Image assets in src/assets/Images are referenced from content.js.
+    assetsInlineLimit: 2048,
+    cssCodeSplit: false,
+  },
 })

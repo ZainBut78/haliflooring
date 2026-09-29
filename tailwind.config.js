@@ -8,8 +8,15 @@ export default {
     extend: {
       colors: {
         brand: {
-          orange: '#F7941D',
-          orangeHover: '#e07e0c',
+          // The signature orange. Reads correctly on the dark sections of the
+          // site (6.44:1 on #111111) and is what buttons, links and accents
+          // use throughout.
+          //
+          // On white it is 2.93:1, just under the WCAG AA threshold, so keep
+          // it off small body text sitting on a light background.
+          orange: '#E07E0C',
+          // Hovered / pressed state — same hue, a shade deeper.
+          orangeHover: '#C56D08',
           orangeLight: '#FFF4E5',
           dark: '#111111',
           charcoal: '#1E1E22',
@@ -24,9 +31,9 @@ export default {
         display: ['Montserrat', 'sans-serif']
       },
       boxShadow: {
-        'glow-orange': '0 10px 25px -5px rgba(247, 148, 29, 0.4)',
+        'glow-orange': '0 10px 25px -5px rgba(224, 126, 12, 0.4)',
         'card-clean': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
-        'card-hover': '0 12px 30px -4px rgba(247, 148, 29, 0.15)'
+        'card-hover': '0 12px 30px -4px rgba(224, 126, 12, 0.15)'
       }
     }
   },

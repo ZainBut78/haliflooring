@@ -1,0 +1,127 @@
+{
+  "flooring (1).jpg": {
+    "slug": "flooring-1",
+    "source": "flooring (1).jpg",
+    "width": 2000,
+    "height": 1334,
+    "sourceWidth": 4000,
+    "sourceHeight": 2668,
+    "mtimeMs": 1790024198620.4224,
+    "size": 1380154,
+    "outputs": [
+      "src/assets/generated/images/flooring-1-480.webp",
+      "src/assets/generated/images/flooring-1-800.webp",
+      "src/assets/generated/images/flooring-1-1200.webp",
+      "src/assets/generated/images/flooring-1-1600.webp",
+      "src/assets/generated/images/flooring-1-2000.webp",
+      "src/assets/generated/images/flooring-1-800.jpg",
+      "src/assets/generated/images/flooring-1-1200.jpg",
+      "src/assets/generated/images/flooring-1-1600.jpg",
+      "src/assets/generated/images/flooring-1-2000.jpg"
+    ]
+  },
+  "flooring (2).jpg": {
+    "slug": "flooring-2",
+    "source": "flooring (2).jpg",
+    "width": 1600,
+    "height": 2000,
+    "sourceWidth": 1869,
+    "sourceHeight": 2336,
+    "mtimeMs": 1790024198682.918,
+    "size": 1213626,
+    "outputs": [
+      "src/assets/generated/images/flooring-2-480.webp",
+      "src/assets/generated/images/flooring-2-800.webp",
+      "src/assets/generated/images/flooring-2-1200.webp",
+      "src/assets/generated/images/flooring-2-1600.webp",
+      "src/assets/generated/images/flooring-2-800.jpg",
+      "src/assets/generated/images/flooring-2-1200.jpg",
+      "src/assets/generated/images/flooring-2-1600.jpg"
+    ]
+  },
+  "flooring (3).jpg": {
+    "slug": "flooring-3",
+    "source": "flooring (3).jpg",
+    "width": 2000,
+    "height": 2667,
+    "sourceWidth": 3024,
+    "sourceHeight": 4032,
+    "mtimeMs": 1790024198761.0442,
+    "size": 3623797,
+    "outputs": [
+      "src/assets/generated/images/flooring-3-480.webp",
+      "src/assets/generated/images/flooring-3-800.webp",
+      "src/assets/generated/images/flooring-3-1200.webp",
+      "src/assets/generated/images/flooring-3-1600.webp",
+      "src/assets/generated/images/flooring-3-2000.webp",
+      "src/assets/generated/images/flooring-3-800.jpg",
+      "src/assets/generated/images/flooring-3-1200.jpg",
+      "src/assets/generated/images/flooring-3-1600.jpg",
+      "src/assets/generated/images/flooring-3-2000.jpg"
+    ]
+  },
+  "flooring (4).jpg": {
+    "slug": "flooring-4",
+    "source": "flooring (4).jpg",
+    "width": 2000,
+    "height": 1333,
+    "sourceWidth": 4608,
+    "sourceHeight": 3072,
+    "mtimeMs": 1790024198854.107,
+    "size": 3255786,
+    "outputs": [
+      "src/assets/generated/images/flooring-4-480.webp",
+      "src/assets/generated/images/flooring-4-800.webp",
+      "src/assets/generated/images/flooring-4-1200.webp",
+      "src/assets/generated/images/flooring-4-1600.webp",
+      "src/assets/generated/images/flooring-4-2000.webp",
+      "src/assets/generated/images/flooring-4-800.jpg",
+      "src/assets/generated/images/flooring-4-1200.jpg",
+      "src/assets/generated/images/flooring-4-1600.jpg",
+      "src/assets/generated/images/flooring-4-2000.jpg"
+    ]
+  },
+  "flooring (5).jpg": {
+    "slug": "flooring-5",
+    "source": "flooring (5).jpg",
+    "width": 2000,
+    "height": 1333,
+    "sourceWidth": 6992,
+    "sourceHeight": 4661,
+    "mtimeMs": 1790024198926.7988,
+    "size": 2902054,
+    "outputs": [
+      "src/assets/generated/images/flooring-5-480.webp",
+      "src/assets/generated/images/flooring-5-800.webp",
+      "src/assets/generated/images/flooring-5-1200.webp",
+      "src/assets/generated/images/flooring-5-1600.webp",
+      "src/assets/generated/images/flooring-5-2000.webp",
+      "src/assets/generated/images/flooring-5-800.jpg",
+      "src/assets/generated/images/flooring-5-1200.jpg",
+      "src/assets/generated/images/flooring-5-1600.jpg",
+      "src/assets/generated/images/flooring-5-2000.jpg"
+    ]
+  },
+  "flooring (6).jpg": {
+    "slug": "flooring-6",
+    "source": "flooring (6).jpg",
+    "width": 2000,
+    "height": 1335,
+    "sourceWidth": 7360,
+    "sourceHeight": 4912,
+    "mtimeMs": 1790024199042.33,
+    "size": 5194617,
+    "outputs": [
+      "src/assets/generated/images/flooring-6-480.webp",
+      "src/assets/generated/images/flooring-6-800.webp",
+      "src/assets/generated/images/flooring-6-1200.webp",
+      "src/assets/generated/images/flooring-6-1600.webp",
+      "src/assets/generated/images/flooring-6-2000.webp",
+      "src/assets/generated/images/flooring-6-800.jpg",
+      "src/assets/generated/images/flooring-6-1200.jpg",
+      "src/assets/generated/images/flooring-6-1600.jpg",
+      "src/assets/generated/images/flooring-6-2000.jpg"
+    ]
+  },
+  "version": 3
+}

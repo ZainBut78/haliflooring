@@ -50,7 +50,7 @@ export default function QuoteSection() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-gray-900 hover:text-brand-orange transition-colors p-3 rounded-xl hover:bg-gray-50"
               >
-                <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 text-lg">
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 text-lg">
                   💬
                 </div>
                 <div>

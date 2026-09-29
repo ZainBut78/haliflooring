@@ -1,8 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
+// Each card opens a different page. Where a card had no service page of its
+// own, it points at the project that actually shows that work — stair runners
+// and LVT both had real installations to link to — so no two cards on the
+// page land the visitor in the same place.
 const showroomItems = [
   {
     title: 'LVT',
+    to: '/services/lvt',
     desc: 'Herringbone, bordered & chevron styles from leading design brands.',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -12,6 +18,7 @@ const showroomItems = [
   },
   {
     title: 'ENGINEERED WOOD',
+    to: '/services/wood',
     desc: 'Straight, herringbone & chevron planks crafted for lasting beauty.',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -21,6 +28,7 @@ const showroomItems = [
   },
   {
     title: 'LAMINATE',
+    to: '/services/laminate',
     desc: 'Herringbone & straight plank, built for busy homes.',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -30,6 +38,7 @@ const showroomItems = [
   },
   {
     title: 'CARPETS & UNDERLAYS',
+    to: '/services/carpet',
     desc: 'Deep saxony, wool twists & luxury cushion underlay for warmth underfoot.',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -39,6 +48,7 @@ const showroomItems = [
   },
   {
     title: 'BESPOKE STAIR RUNNERS',
+    to: '/work/worsley-manor-custom-runner',
     desc: 'Handcrafted edging, whipped borders & matte black stair rods.',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -48,6 +58,7 @@ const showroomItems = [
   },
   {
     title: 'VINYL FLOORING',
+    to: '/work/bolton-residence-herringbone-lvt',
     desc: 'Hardwearing, water-proof flooring for kitchens & bathrooms.',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -57,6 +68,7 @@ const showroomItems = [
   },
   {
     title: 'FLOOR LEVELLING',
+    to: '/services/subfloor',
     desc: 'Laser-flat subfloor prep, damp proofing & ply boarding done right.',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -66,6 +78,7 @@ const showroomItems = [
   },
   {
     title: 'ARTIFICIAL GRASS',
+    to: '/contact',
     desc: 'UV-stabilised, child & pet friendly lawns laid over a porous base.',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -101,10 +114,10 @@ export default function ShowroomServices() {
         {/* Two-Column Split Layout */}
         <div className="w-full space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
-            {showroomItems.map((item, idx) => (
-              <a
-                key={idx}
-                href="#quote"
+            {showroomItems.map((item) => (
+              <Link
+                key={item.title}
+                to={item.to}
                 className="flex items-center gap-4 p-5 rounded-2xl bg-white/90 backdrop-blur-sm border border-gray-200/90 hover:border-brand-orange transition-all duration-300 group shadow-sm hover:shadow-md hover:-translate-y-0.5"
               >
                 <div className="w-12 h-12 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center shrink-0 group-hover:bg-brand-orange group-hover:text-white transition-colors duration-200">
@@ -119,10 +132,10 @@ export default function ShowroomServices() {
                   </div>
                   <p className="text-xs sm:text-sm text-gray-600 mt-0.5">{item.desc}</p>
                 </div>
-                <span className="text-gray-400 group-hover:text-brand-orange group-hover:translate-x-1 transition-all text-base shrink-0">
+                <span className="text-gray-600 group-hover:text-brand-orange group-hover:translate-x-1 transition-all text-base shrink-0">
                   →
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
 

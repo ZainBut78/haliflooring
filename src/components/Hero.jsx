@@ -32,7 +32,7 @@ export default function Hero() {
               <path
                 className="hb-plank-anim-1"
                 d="M0,30 L30,0 L60,30 L30,60 Z"
-                stroke="#F7941D"
+                stroke="#E07E0C"
                 strokeDasharray="120"
                 strokeWidth="1.25"
               />
@@ -46,7 +46,7 @@ export default function Hero() {
               <path
                 className="hb-plank-anim-3"
                 d="M60,90 L90,60 L120,90 L90,120 Z"
-                stroke="#F7941D"
+                stroke="#E07E0C"
                 strokeDasharray="120"
                 strokeWidth="1.25"
               />
@@ -85,7 +85,7 @@ export default function Hero() {
         {/* Hero Headline */}
         <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight text-[#111111] leading-[1.06] font-display uppercase drop-shadow-sm">
-            WOOD FLOORING, CARPET &amp; <span className="text-[#F7941D]">LVT</span>
+            WOOD FLOORING, CARPET &amp; <span className="text-brand-orange">LVT</span>
           </h1>
 
           {/* Primary Hero Actions */}

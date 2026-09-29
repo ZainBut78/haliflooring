@@ -30,9 +30,9 @@ export default function ProcessStrip() {
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
               <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
-            <h3 className="text-lg font-extrabold text-gray-900 font-display uppercase tracking-wide">
+            <h2 className="text-lg font-extrabold text-gray-900 font-display uppercase tracking-wide">
               SEE IT
-            </h3>
+            </h2>
           </div>
           <p className="text-gray-600 text-xs leading-relaxed">
             Explore our mobile and showroom samples &amp; feel the tangible build quality under real home lighting.
@@ -64,12 +64,12 @@ export default function ProcessStrip() {
               <path d="M10.5 7.5l2 2" />
               <path d="M13.5 4.5l2 2" />
             </svg>
-            <h3 className="text-lg font-extrabold text-gray-900 font-display uppercase tracking-wide">
+            <h2 className="text-lg font-extrabold text-gray-900 font-display uppercase tracking-wide">
               MEASURE IT
-            </h3>
+            </h2>
           </div>
           <p className="text-gray-600 text-xs leading-relaxed">
-            We measure &amp; plan for <span className="text-[#F7941D] font-bold">FREE!</span> Accurate laser surveying with transparent, no-obligation pricing.
+            We measure &amp; plan for <span className="text-brand-orange font-bold">FREE!</span> Accurate laser surveying with transparent, no-obligation pricing.
           </p>
         </div>
 
@@ -95,12 +95,12 @@ export default function ProcessStrip() {
             >
               <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
             </svg>
-            <h3 className="text-lg font-extrabold text-gray-900 font-display uppercase tracking-wide">
+            <h2 className="text-lg font-extrabold text-gray-900 font-display uppercase tracking-wide">
               FIT IT
-            </h3>
+            </h2>
           </div>
           <p className="text-gray-600 text-xs leading-relaxed">
-            Our experts install it <span className="text-[#F7941D] font-bold">perfectly</span>. Clean, fast, and tidy workmanship with comprehensive guarantees.
+            Our experts install it <span className="text-brand-orange font-bold">perfectly</span>. Clean, fast, and tidy workmanship with comprehensive guarantees.
           </p>
         </div>
       </div>

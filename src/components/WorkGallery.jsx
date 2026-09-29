@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import ResponsiveImage from './ResponsiveImage';
 
+// Each card opens the matching project page. The slugs come from `projects` in
+// src/data/content.js — the same data the /work/… routes render.
 const projects = [
   {
+    to: '/work/bolton-residence-herringbone-lvt',
     category: 'lvt',
     location: 'BOLTON RESIDENCE',
     type: 'Herringbone LVT',
@@ -12,6 +17,7 @@ const projects = [
       'https://lh3.googleusercontent.com/aida-public/AB6AXuCvmR27rjqwq15T9FZwNP8QILSRvp1lpvT7JhPLZU0GlaRR23FvRXIPLWigOvr-APnUJe-IdOWMD8Y9SXGl8wpvXxmMyqctCLWD-dn1zfBzPSqY45P1w7tMR6bRQo-oqnrFnch0LCXob5bI4n24UWbh9POJnK9JGJfiybWY5U10XxiCTniVTqeT-koUU5vXhJqyZuwZp7ribz9oS49ppzlYa5u9ZMTLkXORA8tQYOIfm4Yz5EtWOIRp'
   },
   {
+    to: '/work/worsley-manor-custom-runner',
     category: 'carpet',
     location: 'WORSLEY MANOR',
     type: 'Custom Runner',
@@ -22,6 +28,7 @@ const projects = [
       'https://lh3.googleusercontent.com/aida-public/AB6AXuCr3-NA2oFWyFzen5Nlj5tbQzqlUi6IeAdjZNitqErGlx7kO7UKdnyiBDmia_V_OdgnXANv0X1HhYDUCUmOVESVSp0xxilEMLnfWSUf6it4uqh4XhMOr_1YGW3kwSGqRnNi9WSmvrFjF-MaSok504-4nHAM2CnhYa24whGdRzggpDvAX-gtdQ3hezRl34hwN2kUPlIfdBkz424rLvEAYbHyVysn8xcm4THbeV8zbnj-bmzfyH6h_FAJ'
   },
   {
+    to: '/work/chorley-barn-engineered-oak',
     category: 'wood',
     location: 'CHORLEY BARN',
     type: 'Engineered Oak',
@@ -112,16 +119,18 @@ export default function WorkGallery() {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((proj, idx) => (
-            <div
-              key={idx}
+          {filteredProjects.map((proj) => (
+            <Link
+              key={proj.to}
+              to={proj.to}
               className="gallery-card-reveal group bg-[#1a1a1a] rounded-2xl overflow-hidden border border-neutral-800 hover:border-brand-orange transition-all duration-500 shadow-xl hover:shadow-glow-orange/20"
             >
               <div className="relative h-72 overflow-hidden bg-neutral-900">
-                <img
-                  src={proj.image}
+                <ResponsiveImage
+                  image={proj.image}
                   alt={proj.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  sizes="(min-width: 1024px) 34vw, (min-width: 640px) 50vw, 100vw"
+                  className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
                 <span className="absolute top-4 left-4 bg-black/75 backdrop-blur-md text-brand-orange font-mono text-[11px] font-extrabold px-3 py-1 rounded-full border border-brand-orange/30 shadow-md">
@@ -138,7 +147,7 @@ export default function WorkGallery() {
                 </h3>
                 <p className="text-xs text-neutral-400 mt-2 leading-relaxed">{proj.desc}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
