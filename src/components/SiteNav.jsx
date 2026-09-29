@@ -75,7 +75,7 @@ export default function SiteNav() {
             src="/logo-hali.webp"
             alt="Hali Flooring"
             width={800}
-            height={223}
+            height={275}
             className="h-9 sm:h-11 w-auto"
           />
         </Link>

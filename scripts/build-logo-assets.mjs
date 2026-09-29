@@ -1,14 +1,12 @@
 // Turns the raw brand logo (public/logo.jpeg) into the web-ready assets the
-// site actually ships: a transparent-background wordmark for the header and
-// footer, and square icon crops for the browser tab and touch icon.
+// site ships: the header/footer wordmark and the tab + home-screen icons.
 //
-// Why this is not just a rename: the source is a JPEG, so it has no alpha
-// channel, and it is a white-on-black lockup. Dropped onto the white header or
-// the #F8F9FA footer as-is, the black panel would read as a hole and the white
-// lettering would be invisible. So the black is knocked out to transparency and
-// the lettering is remapped to the site's near-black (#111111) — which is the
-// standard "light surface" variant of a brand mark. The orange in the mark is
-// left exactly as the brand supplied it.
+// The brand mark is a black lockup — orange logomark, white lettering, on a
+// flat black panel. That panel is part of the design, not a matte to be
+// removed, so nothing is knocked out here: the artwork is re-encoded, not
+// restyled. The only changes are a lossless-in-practice trim of dead space
+// and a downscale to what the page actually renders, which together cut the
+// payload without altering how the logo looks.
 //
 // Run after dropping a new logo in:  npm run logo
 
@@ -19,10 +17,9 @@ import path from 'node:path'
 const SRC = 'public/logo.jpeg'
 const OUT_DIR = 'public'
 
-const INK_FLOOR = 24 // below this a pixel is matte, not ink
-const NEUTRAL_MAX = 55 // max-min below this counts as colourless (lettering)
-const TEXT_FLOOR = 120 // brightness above which colourless ink is lettering
-const DARK_TEXT = [0x11, 0x11, 0x11]
+// The logo renders at 158px wide in the header and 201px in the footer, on a
+// 2x screen that needs ~400px of real pixels. 800 is comfortable headroom.
+const WORDMARK_WIDTH = 800
 
 const c = {
   dim: '\x1b[2m',
@@ -33,57 +30,23 @@ const c = {
 const kb = (n) => `${(n / 1024).toFixed(1)} kB`
 
 /**
- * Matte removal. The logo is ink sitting on a flat black panel, so the
- * brightest channel is a good proxy for how much ink covers a pixel: black
- * panel -> 0, solid orange or white -> 255. Using that as the alpha channel
- * keeps the edges of both the lettering and the mark smoothly antialiased
- * instead of leaving a dark fringe from the JPEG.
+ * Find the ink bounding box and the widest internal column gutter.
  *
- * @param mode 'dark' remaps colourless lettering to DARK_TEXT for light
- *             surfaces; 'light' leaves lettering white for dark surfaces.
+ * "Ink" means anything that is not the flat black panel, so the black is
+ * treated as background for measurement purposes only. The widest empty
+ * column band in the middle of the artwork is the gap between the logomark
+ * and the wordmark, which is where the square icon crop has to be centred.
  */
-function toTransparent(raw, width, height, channels, mode) {
-  const out = Buffer.alloc(width * height * 4)
-  for (let i = 0, p = 0; p < width * height; p++, i += channels) {
-    const r = raw[i]
-    const g = raw[i + 1]
-    const b = raw[i + 2]
-    const m = Math.max(r, g, b)
-    const o = p * 4
-
-    if (m <= INK_FLOOR) {
-      out[o + 3] = 0
-      continue
-    }
-    // Slightly over-shoot the coverage so thin strokes do not go patchy.
-    out[o + 3] = Math.min(255, Math.round(m * 1.08))
-
-    const neutral = m - Math.min(r, g, b) <= NEUTRAL_MAX && m > TEXT_FLOOR
-    if (neutral && mode === 'dark') {
-      out[o] = DARK_TEXT[0]
-      out[o + 1] = DARK_TEXT[1]
-      out[o + 2] = DARK_TEXT[2]
-    } else {
-      out[o] = r
-      out[o + 1] = g
-      out[o + 2] = b
-    }
-  }
-  return out
-}
-
-/** Find the ink bounding box and the widest internal column gutter. */
 function analyse(raw, width, height, channels) {
+  const BLACK = 28
   const colInk = new Array(width).fill(0)
-  const rowInk = new Array(height).fill(0)
   let minX = width, maxX = -1, minY = height, maxY = -1
 
   for (let y = 0; y < height; y++) {
     for (let x = 0; x < width; x++) {
       const i = (y * width + x) * channels
-      if (Math.max(raw[i], raw[i + 1], raw[i + 2]) <= INK_FLOOR) continue
+      if (Math.max(raw[i], raw[i + 1], raw[i + 2]) <= BLACK) continue
       colInk[x]++
-      rowInk[y]++
       if (x < minX) minX = x
       if (x > maxX) maxX = x
       if (y < minY) minY = y
@@ -91,8 +54,6 @@ function analyse(raw, width, height, channels) {
     }
   }
 
-  // The logomark and the wordmark are separated by a run of empty columns.
-  // Find the widest one that is not at the outer edge, and use it to split.
   const minGutter = Math.max(8, Math.round(width * 0.012))
   let best = null
   let runStart = null
@@ -106,7 +67,7 @@ function analyse(raw, width, height, channels) {
     }
   }
 
-  return { bbox: { minX, maxX, minY, maxY }, gutter: best, colInk }
+  return { bbox: { minX, maxX, minY, maxY }, gutter: best }
 }
 
 async function main() {
@@ -116,117 +77,78 @@ async function main() {
   const { width: W, height: H, channels: C } = info
   const { bbox, gutter } = analyse(data, W, H, C)
 
-  const inkW = bbox.maxX - bbox.minX + 1
-  const inkH = bbox.maxY - bbox.minY + 1
   console.log(`${c.dim}source${c.reset} ${SRC}  ${W}×${H}`)
   console.log(
-    `${c.dim}ink   ${c.reset} ${bbox.minX},${bbox.minY} → ${bbox.maxX},${bbox.maxY}  (${inkW}×${inkH})`
+    `${c.dim}ink   ${c.reset} ${bbox.minX},${bbox.minY} → ${bbox.maxX},${bbox.maxY}  ` +
+      `(${bbox.maxX - bbox.minX + 1}×${bbox.maxY - bbox.minY + 1})`
   )
   console.log(
     gutter
-      ? `${c.dim}split ${c.reset} column ${gutter.start}–${gutter.end} (${gutter.w}px) separates mark from wordmark`
-      : `${c.dim}split ${c.reset} no internal gutter found — using the whole lockup for the icon`
+      ? `${c.dim}split ${c.reset} column ${gutter.start}–${gutter.end} (${gutter.w}px) — logomark sits left of it`
+      : `${c.dim}split ${c.reset} no internal gutter found — centring the icon on the whole lockup`
   )
 
-  /* ---------------------------------------------------------------- */
-  /*  Wordmark — header and footer                                     */
-  /* ---------------------------------------------------------------- */
-  // Trim the matte first, then knock it out, so the transparent edge is the
-  // real edge of the artwork rather than a black border.
-  const wordmark = await sharp(data, { raw: { width: W, height: H, channels: C } })
-    .extract({ left: bbox.minX, top: bbox.minY, width: inkW, height: inkH })
-    .resize({ width: 800, withoutEnlargement: true, kernel: 'lanczos3' })
-    .raw()
-    .toBuffer({ resolveWithObject: true })
-
-  const wm = wordmark.info
-  const wmAlpha = toTransparent(wordmark.data, wm.width, wm.height, wm.channels, 'dark')
+  /* ------------------------------------------------------------------ */
+  /*  Wordmark — header and footer                                        */
+  /* ------------------------------------------------------------------ */
+  // Kept square, black panel and all. The source is already a JPEG of a
+  // flat-colour lockup, so WebP holds it at a fraction of the bytes.
   const wordmarkPath = path.join(OUT_DIR, 'logo-hali.webp')
-  await sharp(wmAlpha, { raw: { width: wm.width, height: wm.height, channels: 4 } })
-    .webp({ quality: 92, effort: 6 })
+  await sharp(data, { raw: { width: W, height: H, channels: C } })
+    .resize({ width: WORDMARK_WIDTH, withoutEnlargement: true, kernel: 'lanczos3' })
+    .webp({ quality: 90, effort: 6 })
     .toFile(wordmarkPath)
-  const wmSize = (await stat(wordmarkPath)).size
+  const wmMeta = await sharp(wordmarkPath).metadata()
   console.log(
-    `${c.green}  ✓${c.reset} logo-hali.webp     ${wm.width}×${wm.height}  ${c.dim}${kb(wmSize)}${c.reset}`
+    `${c.green}  ✓${c.reset} logo-hali.webp  ${wmMeta.width}×${wmMeta.height}  ` +
+      `${c.dim}${kb((await stat(wordmarkPath)).size)} · black panel kept${c.reset}`
   )
 
-  /* ---------------------------------------------------------------- */
-  /*  Icon crops — browser tab and iOS home screen                     */
-  /* ---------------------------------------------------------------- */
-  // Square box around the logomark only; the wordmark would be unreadable
-  // below about 64px, so the tab icon uses just the mark.
-  let ix0 = bbox.minX
-  let ix1 = gutter ? gutter.start - 1 : bbox.maxX
-  const markW = ix1 - ix0 + 1
-
-  // Tighten vertically to this column band so the crop is not letterboxed.
-  let minY = bbox.maxY
-  let maxY = bbox.minY
-  for (let y = bbox.minY; y <= bbox.maxY; y++) {
-    for (let x = ix0; x <= ix1; x++) {
-      const i = (y * W + x) * C
-      if (Math.max(data[i], data[i + 1], data[i + 2]) > INK_FLOOR) {
-        if (y < minY) minY = y
-        if (y > maxY) maxY = y
-        break
-      }
-    }
-  }
-  const markH = maxY - minY + 1
-  const side = Math.max(markW, markH)
-  const pad = Math.round(side * 0.06)
-  const box = side + pad * 2
-  const left = Math.round(ix0 - (box - markW) / 2)
-  const top = Math.round(minY - (box - markH) / 2)
-
-  const iconSrc = await sharp(data, { raw: { width: W, height: H, channels: C } })
-    .extract({
-      left: Math.max(0, left),
-      top: Math.max(0, top),
-      width: Math.min(box, W - Math.max(0, left)),
-      height: Math.min(box, H - Math.max(0, top)),
-    })
-    .raw()
-    .toBuffer({ resolveWithObject: true })
-  const ii = iconSrc.info
-  const iconAlpha = toTransparent(iconSrc.data, ii.width, ii.height, ii.channels, 'dark')
-  const iconRaw = { raw: { width: ii.width, height: ii.height, channels: 4 } }
+  /* ------------------------------------------------------------------ */
+  /*  Icon crops — browser tab and iOS home screen                       */
+  /* ------------------------------------------------------------------ */
+  // Square window centred on the logomark only. Everything outside the mark
+  // inside that window is the black panel, so the tile keeps the same look
+  // as the full lockup. The wordmark is dropped because it is unreadable
+  // below about 64px.
+  const markRight = gutter ? gutter.start - 1 : bbox.maxX
+  const markCx = Math.round((bbox.minX + markRight) / 2)
+  const markCy = Math.round((bbox.minY + bbox.maxY) / 2)
+  const markSide = Math.max(markRight - bbox.minX + 1, bbox.maxY - bbox.minY + 1)
+  // 1.3x leaves a black margin around the mark, matching the source lockup's
+  // proportions rather than cropping tight against it.
+  const box = Math.min(Math.round(markSide * 1.3), Math.min(W, H))
+  const left = Math.max(0, Math.min(W - box, markCx - Math.round(box / 2)))
+  const top = Math.max(0, Math.min(H - box, markCy - Math.round(box / 2)))
 
   const icons = [
-    // Quantised to a palette: the mark is one orange plus its own antialiasing,
-    // so a small palette is visually lossless and keeps each tile a few kB
-    // instead of the ~370 kB a straight 512px RGBA encode costs. 192 is the
-    // largest that is actually worth shipping — a 512 tile costs 4x the bytes
-    // and no browser shows it larger.
-    { file: 'favicon-192.png', size: 192, alpha: true, palette: true },
-    { file: 'favicon-32.png', size: 32, alpha: true, palette: true },
-    // iOS composites a touch icon on a solid backdrop and ignores the alpha
-    // channel, so this one is flattened onto white rather than left
-    // transparent — otherwise the mark lands on a black tile on some devices.
-    { file: 'apple-touch-icon.png', size: 180, alpha: false, palette: false },
+    { file: 'favicon-192.png', size: 192 },
+    { file: 'favicon-32.png', size: 32 },
+    { file: 'apple-touch-icon.png', size: 180 },
   ]
+
   for (const icon of icons) {
-    let pipe = sharp(iconAlpha, iconRaw).resize(icon.size, icon.size, { kernel: 'lanczos3' })
-    if (!icon.alpha) {
-      pipe = pipe.flatten({ background: '#ffffff' })
-    }
-    await pipe
-      .png({ compressionLevel: 9, palette: icon.palette, effort: 10 })
+    await sharp(data, { raw: { width: W, height: H, channels: C } })
+      .extract({ left, top, width: box, height: box })
+      .resize(icon.size, icon.size, { kernel: 'lanczos3' })
+      // Palette-quantised: the tile is black plus one orange and their
+      // antialiased blend, so 256 colours is visually lossless and a few kB.
+      .png({ compressionLevel: 9, palette: true, effort: 10 })
       .toFile(path.join(OUT_DIR, icon.file))
   }
 
   const sizeOf = async (f) => kb((await stat(path.join(OUT_DIR, f))).size)
   console.log(
-    `${c.green}  ✓${c.reset} favicon-192.png     192×192   ${c.dim}${await sizeOf('favicon-192.png')}${c.reset}`
+    `${c.green}  ✓${c.reset} favicon-192.png  192×192  ${c.dim}${await sizeOf('favicon-192.png')}${c.reset}`
   )
   console.log(
-    `${c.green}  ✓${c.reset} favicon-32.png      32×32    ${c.dim}${await sizeOf('favicon-32.png')}${c.reset}`
+    `${c.green}  ✓${c.reset} favicon-32.png   32×32   ${c.dim}${await sizeOf('favicon-32.png')}${c.reset}`
   )
   console.log(
-    `${c.green}  ✓${c.reset} apple-touch-icon.png 180×180  ${c.dim}${await sizeOf('apple-touch-icon.png')} · flattened on white${c.reset}`
+    `${c.green}  ✓${c.reset} apple-touch-icon.png 180×180 ${c.dim}${await sizeOf('apple-touch-icon.png')}${c.reset}`
   )
   console.log(
-    `\n${c.green}done${c.reset} — wordmark ${inkW}×${inkH} trimmed to ${wm.width}×${wm.height}, background transparent`
+    `\n${c.green}done${c.reset} — original ${W}×${H} black lockup preserved, icons cropped to the ${box}px mark window`
   )
 }
 

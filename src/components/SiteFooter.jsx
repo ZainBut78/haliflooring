@@ -20,7 +20,7 @@ export default function SiteFooter() {
                 src="/logo-hali.webp"
                 alt="Hali Flooring"
                 width={800}
-                height={223}
+                height={275}
                 className="h-11 sm:h-14 w-auto"
               />
             </Link>
