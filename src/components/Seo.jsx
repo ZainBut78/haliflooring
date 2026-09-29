@@ -96,7 +96,9 @@ export function buildJsonLd({ path = '/', type = 'WebPage', name, description, b
       name: SITE.name,
       description: `${SITE.name} is a flooring supply and installation specialist based in ${SITE.address.line1}, serving ${SITE.address.line2} and Lancashire.`,
       url: SITE.url,
-      telephone: `+44${SITE.phone}`,
+      // SITE.phone is already in E.164 form (+44…), which is what schema.org
+      // wants — do not prefix the country code again.
+      telephone: SITE.phone,
       email: SITE.email,
       image: `${SITE.url}/og-image.jpg`,
       priceRange: '££',

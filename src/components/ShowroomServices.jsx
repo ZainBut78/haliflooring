@@ -146,10 +146,10 @@ export default function ShowroomServices() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
-                href="tel:01204358904"
+                href="tel:+447467030479"
                 className="bg-brand-orange hover:bg-brand-orangeHover text-white font-extrabold px-6 py-3 rounded-xl shadow-md transition-all text-sm flex items-center gap-2"
               >
-                <span>📞 Call Us: 01204 358904</span>
+                <span>📞 Call Us: +44 7467 030479</span>
               </a>
               <a
                 href="#quote"

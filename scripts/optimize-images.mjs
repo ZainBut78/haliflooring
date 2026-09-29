@@ -191,7 +191,7 @@ async function buildOgImage(entries) {
       <text x="72" y="286" font-family="Montserrat, Arial, sans-serif" font-size="76" font-weight="800" fill="#FFFFFF">Hali Flooring</text>
       <text x="72" y="348" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="500" fill="#E5E7EB">Wood, Carpet &amp; LVT specialists</text>
       <text x="72" y="404" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="500" fill="#E5E7EB">Bolton &amp; the North West</text>
-      <text x="72" y="516" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#F7941D">01204 358904</text>
+      <text x="72" y="516" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#F7941D">+44 7467 030479</text>
     </svg>
   `)
 

@@ -3,9 +3,9 @@
 export const SITE = {
   name: 'Hali Flooring',
   url: 'https://haliflooring.co.uk',
-  phone: '01204358904',
-  phoneDisplay: '01204 358904',
-  whatsapp: 'https://wa.me/441204358904',
+  phone: '+447467030479',
+  phoneDisplay: '+44 7467 030479',
+  whatsapp: 'https://wa.me/447467030479',
   email: 'quotes@haliflooring.co.uk',
   address: {
     line1: 'Bolton',
@@ -213,7 +213,7 @@ export const services = {
     navLabel: 'LVT',
     metaTitle: 'Luxury Vinyl Tile (LVT) Flooring Specialists | Herringbone & Chevron | Hali Flooring',
     metaDescription:
-      'Luxury Vinyl Tile flooring specialists across the North West. Herringbone, chevron and bordered LVT installed with flush transitions. Free home survey, free laser measure and no-obligation quote. Call 01204 358904.',
+      'Luxury Vinyl Tile flooring specialists across the North West. Herringbone, chevron and bordered LVT installed with flush transitions. Free home survey, free laser measure and no-obligation quote. Call +44 7467 030479.',
     heroHeading: 'LUXURY VINYL TILE',
     intro:
       'Hardwearing, water-proof and available in the herringbone and chevron patterns that engineered timber costs three times as much to achieve. LVT is the single most requested floor in the North West right now.',

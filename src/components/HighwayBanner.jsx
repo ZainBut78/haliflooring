@@ -11,7 +11,7 @@ export default function HighwayBanner() {
         <span className="text-brand-orange font-bold">•</span>
         <span>BOLTON • MANCHESTER • BURY • PRESTON • WIGAN</span>
         <span className="text-brand-orange font-bold">•</span>
-        <span>FREE MEASURING SERVICE: 01204 358904</span>
+        <span>FREE MEASURING SERVICE: +44 7467 030479</span>
         <span className="text-brand-orange font-bold">•</span>
         <span>SUPPLY &amp; FIT SPECIALISTS</span>
       </div>

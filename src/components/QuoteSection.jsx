@@ -32,7 +32,7 @@ export default function QuoteSection() {
             </p>
             <div className="space-y-4 pt-4 border-t border-gray-200">
               <a
-                href="tel:01204358904"
+                href="tel:+447467030479"
                 className="flex items-center gap-4 text-gray-900 hover:text-brand-orange transition-colors p-3 rounded-xl hover:bg-gray-50"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-lg">
@@ -40,12 +40,12 @@ export default function QuoteSection() {
                 </div>
                 <div>
                   <span className="text-xs uppercase text-gray-500 font-bold block">Direct Call Line</span>
-                  <strong className="text-lg font-extrabold text-gray-900">01204 358904</strong>
+                  <strong className="text-lg font-extrabold text-gray-900">+44 7467 030479</strong>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/441204358904"
+                href="https://wa.me/447467030479"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-gray-900 hover:text-brand-orange transition-colors p-3 rounded-xl hover:bg-gray-50"

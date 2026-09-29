@@ -91,7 +91,7 @@ export const routes = [
     meta: {
       title: `Contact & Free Quote | Flooring Bolton & Manchester | ${SITE.name}`,
       description:
-        'Request a free home survey and written quote. Call 01204 358904 or message us on WhatsApp. We cover Bolton, Manchester, Bury, Wigan, Chorley, Preston, Rochdale, Salford, Blackburn and Horwich.',
+        'Request a free home survey and written quote. Call +44 7467 030479 or message us on WhatsApp. We cover Bolton, Manchester, Bury, Wigan, Chorley, Preston, Rochdale, Salford, Blackburn and Horwich.',
       keywords: [
         'flooring quote Bolton',
         'free flooring survey Manchester',
