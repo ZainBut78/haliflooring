@@ -67,14 +67,17 @@ export default function SiteNav() {
       }`}
     >
       <div className="w-[90%] max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* No aria-label: the accessible name is derived from the visible text
-            (the logo tile renders "HALI") so the two can never disagree. */}
-        <Link to="/" className="flex items-center gap-3 group shrink-0" title="Hali Flooring — home">
-          <HaliLogo className="h-9 sm:h-11 w-auto" />
-          <span className="hidden sm:block font-display font-extrabold text-[#111111] uppercase tracking-tight leading-none text-sm">
-            Hali
-            <span className="text-brand-orange"> Flooring</span>
-          </span>
+        {/* The real brand logo, not a drawn stand-in. The wordmark already
+            contains the business name, so there is no text label beside it —
+            the alt text is what gives the link its accessible name. */}
+        <Link to="/" className="flex items-center group shrink-0" title="Hali Flooring — home">
+          <img
+            src="/logo-hali.webp"
+            alt="Hali Flooring"
+            width={800}
+            height={223}
+            className="h-9 sm:h-11 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -225,30 +228,6 @@ export function PhoneIcon({ className = 'w-4 h-4' }) {
   )
 }
 
-/** Inline SVG wordmark so the site has no external image dependency. */
-export function HaliLogo({ className = 'h-10' }) {
-  return (
-    // aria-hidden: the wordmark sits next to a real text label, and the SVG's
-    // own <text> would otherwise fight with the link's accessible name.
-    <svg className={className} viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <rect width="64" height="64" rx="14" fill="#111111" />
-      {/* herringbone motif */}
-      <path d="M12 20 L20 12 L28 20 L20 28 Z" fill="#E07E0C" />
-      <path d="M20 28 L28 20 L36 28 L28 36 Z" fill="#E07E0C" opacity="0.72" />
-      <path d="M36 20 L44 28 L36 36 L28 28 Z" fill="#E07E0C" opacity="0.48" />
-      <path d="M44 28 L52 36 L44 44 L36 36 Z" fill="#E07E0C" opacity="0.3" />
-      <text
-        x="32"
-        y="57"
-        textAnchor="middle"
-        fill="#ffffff"
-        fontFamily="Montserrat, sans-serif"
-        fontSize="11"
-        fontWeight="800"
-        letterSpacing="0.5"
-      >
-        HALI
-      </text>
-    </svg>
-  )
-}
+/* The drawn herringbone-tile logo that used to live here has been replaced by
+   the real brand artwork in public/logo-hali.webp. Regenerate that file (and
+   the tab icons) from the master logo with: npm run logo */

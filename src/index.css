@@ -93,6 +93,49 @@
   }
 }
 
+/* City names in the coverage ticker. The separator is a pseudo-element
+   rather than its own span: with 93 cities listed twice across two rows,
+   a real node per bullet would add ~400 elements to the document for
+   something that is purely decorative. */
+.coverage-city {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+  transition: color 0.3s ease;
+}
+
+.coverage-city::after {
+  content: '•';
+  margin-left: 0.9rem;
+  color: #E07E0C;
+  opacity: 0.5;
+}
+
+/* Hovering anywhere in the row warms every name, not just the one under
+   the pointer — a 300ms colour chase across 180 names looks like a glitch. */
+.group:hover .coverage-city {
+  color: #E07E0C;
+}
+
+/* Region headings sit inside the stream so the eye has something to catch
+   on to between long alphabetical runs. */
+.coverage-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #E07E0C;
+  background: rgba(224, 126, 12, 0.1);
+  border: 1px solid rgba(224, 126, 12, 0.25);
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  margin: 0 1.25rem 0 0.5rem;
+}
+
 /* ------------------------------------------------------------------ */
 /*  WhatsApp button — attention rings pulsing out from the icon.       */
 /*  The rings are children of the same 60px box that holds the glyph,  */

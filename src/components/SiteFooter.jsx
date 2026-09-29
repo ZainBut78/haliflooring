@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SITE, services, serviceSlugs } from '../data/content'
-import { HaliLogo } from './SiteNav'
 
 export default function SiteFooter() {
   const year = 2026
@@ -12,12 +11,19 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <HaliLogo className="h-11 w-auto" />
-              <span className="font-display font-extrabold text-[#111111] uppercase text-lg leading-none">
-                Hali <span className="text-brand-orange">Flooring</span>
-              </span>
-            </div>
+            <Link
+              to="/"
+              className="inline-block"
+              title="Hali Flooring — home"
+            >
+              <img
+                src="/logo-hali.webp"
+                alt="Hali Flooring"
+                width={800}
+                height={223}
+                className="h-11 sm:h-14 w-auto"
+              />
+            </Link>
             <p className="text-gray-600 text-xs sm:text-sm max-w-sm leading-relaxed">
               Professional flooring supply and installation specialists based in Bolton, serving the entire
               Greater Manchester and Lancashire region. LVT, engineered oak, carpets, stair runners and subfloor

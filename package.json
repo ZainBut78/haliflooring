@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "images": "node scripts/optimize-images.mjs",
+    "logo": "node scripts/build-logo-assets.mjs",
     "predev": "node scripts/optimize-images.mjs",
     "dev": "vite",
     "prebuild": "node scripts/optimize-images.mjs",
