@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { SITE, services } from '../data/content'
-
-const serviceLinks = Object.values(services).map((s) => ({
-  to: `/services/${s.slug}`,
-  label: s.navLabel,
-}))
+import { SITE } from '../data/content'
 
 // "Home" leads the bar so every page has a visible way back to the landing
-// page. The logo already links there, but on mobile it is only a small SVG
-// tile — the text is hidden below the sm breakpoint.
+// page. Individual services live on the /services page rather than in a
+// dropdown, which keeps the small-screen menu short.
 const navItems = [
   { to: '/', label: 'Home' },
-  { to: '/services', label: 'Services', hasDropdown: true },
+  { to: '/services', label: 'Services' },
   { to: '/work', label: 'Our Work' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
@@ -21,7 +16,6 @@ const navItems = [
 export default function SiteNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
@@ -33,18 +27,7 @@ export default function SiteNav() {
   // Close everything on route change
   useEffect(() => {
     setMobileMenuOpen(false)
-    setDropdownOpen(false)
   }, [location.pathname])
-
-  // Close the desktop dropdown when clicking outside
-  useEffect(() => {
-    if (!dropdownOpen) return
-    const handleClick = (e) => {
-      if (!e.target.closest('[data-services-dropdown]')) setDropdownOpen(false)
-    }
-    document.addEventListener('click', handleClick)
-    return () => document.removeEventListener('click', handleClick)
-  }, [dropdownOpen])
 
   // Lock body scroll when the mobile drawer is open
   useEffect(() => {
@@ -82,54 +65,15 @@ export default function SiteNav() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-gray-700">
-          {navItems.map((item) =>
-            item.hasDropdown ? (
-              <div key={item.to} className="relative" data-services-dropdown>
-                <Link
-                  to={item.to}
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onFocus={() => setDropdownOpen(true)}
-                  className={`flex items-center gap-1.5 hover:text-brand-orange transition-colors ${
-                    isActive(item.to) ? 'text-brand-orange' : ''
-                  }`}
-                >
-                  {item.label}
-                  <svg
-                    className={`w-3.5 h-3.5 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </Link>
-                {dropdownOpen && (
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-64">
-                    <div className="bg-white rounded-2xl border border-gray-200 shadow-xl p-2">
-                      {serviceLinks.map((link) => (
-                        <Link
-                          key={link.to}
-                          to={link.to}
-                          className="block px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-colors"
-                        >
-                          {link.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={item.to}
-                to={item.to}
-                className={`hover:text-brand-orange transition-colors ${isActive(item.to) ? 'text-brand-orange' : ''}`}
-              >
-                {item.label}
-              </Link>
-            )
-          )}
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className={`hover:text-brand-orange transition-colors ${isActive(item.to) ? 'text-brand-orange' : ''}`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
@@ -169,28 +113,17 @@ export default function SiteNav() {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-b border-gray-200 max-h-[calc(100vh-5rem)] overflow-y-auto shadow-xl">
           <div className="px-5 py-5 space-y-1">
-            {serviceLinks.map((link) => (
+            {navItems.map((item) => (
               <Link
-                key={link.to}
-                to={link.to}
-                className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition-colors"
+                key={item.to}
+                to={item.to}
+                className={`block px-3 py-2.5 rounded-xl text-base font-semibold hover:bg-orange-50 hover:text-brand-orange transition-colors ${
+                  isActive(item.to) ? 'text-brand-orange' : 'text-gray-800'
+                }`}
               >
-                {link.label}
+                {item.label}
               </Link>
             ))}
-            <div className="pt-2 mt-2 border-t border-gray-200 space-y-1">
-              {navItems
-                .filter((i) => !i.hasDropdown)
-                .map((item) => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
-                    className="block px-3 py-2.5 rounded-xl text-base font-semibold text-gray-800 hover:bg-orange-50 hover:text-brand-orange transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-            </div>
             <div className="pt-4 mt-3 border-t border-gray-200 flex flex-col gap-3">
               <a
                 href={`tel:${SITE.phone}`}

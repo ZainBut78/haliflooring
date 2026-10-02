@@ -35,7 +35,7 @@ export default function ProcessStrip() {
             </h2>
           </div>
           <p className="text-gray-600 text-xs leading-relaxed">
-            Explore our mobile and showroom samples &amp; feel the tangible build quality under real home lighting.
+            Browse samples at our showroom, or book a free home survey and we will bring samples to you.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export default function ProcessStrip() {
             </h2>
           </div>
           <p className="text-gray-600 text-xs leading-relaxed">
-            We measure &amp; plan for <span className="text-brand-orange font-bold">FREE!</span> Accurate laser surveying with transparent, no-obligation pricing.
+            We survey &amp; quote for <span className="text-brand-orange font-bold">FREE!</span> Clear, no-obligation pricing in writing.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function ProcessStrip() {
             </h2>
           </div>
           <p className="text-gray-600 text-xs leading-relaxed">
-            Our experts install it <span className="text-brand-orange font-bold">perfectly</span>. Clean, fast, and tidy workmanship with comprehensive guarantees.
+            Our fitters install it <span className="text-brand-orange font-bold">neatly</span>. Clean, careful and tidy workmanship from start to finish.
           </p>
         </div>
       </div>

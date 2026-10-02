@@ -94,7 +94,7 @@ export function buildJsonLd({ path = '/', type = 'WebPage', name, description, b
       '@type': ['LocalBusiness', 'FlooringContractor', 'HomeAndConstructionBusiness'],
       '@id': `${SITE.url}/#business`,
       name: SITE.name,
-      description: `${SITE.name} is a flooring supply and installation specialist based in ${SITE.address.line1}, serving ${SITE.address.line2} and Lancashire.`,
+      description: `${SITE.name} is a flooring supply and installation specialist based in ${SITE.address.line1}, serving the North West and fitting nationwide.`,
       url: SITE.url,
       // SITE.phone is already in E.164 form (+44…), which is what schema.org
       // wants — do not prefix the country code again.
@@ -121,19 +121,14 @@ export function buildJsonLd({ path = '/', type = 'WebPage', name, description, b
         'Salford',
         'Blackburn',
         'Horwich',
+        'Warrington',
       ].map((name) => ({ '@type': 'Place', name })),
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '08:00',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          opens: '10:00',
           closes: '18:00',
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: 'Saturday',
-          opens: '09:00',
-          closes: '16:00',
         },
       ],
       sameAs: ['https://instagram.com/haliflooring', 'https://tiktok.com/@haliflooring'],

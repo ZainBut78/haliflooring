@@ -1,92 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SITE, services, serviceSlugs } from '../data/content';
 
-// Each card opens a different page. Where a card had no service page of its
-// own, it points at the project that actually shows that work — stair runners
-// and LVT both had real installations to link to — so no two cards on the
-// page land the visitor in the same place.
-const showroomItems = [
-  {
-    title: 'LVT',
-    to: '/services/lvt',
-    desc: 'Herringbone, bordered & chevron styles from leading design brands.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-      </svg>
-    )
-  },
-  {
-    title: 'ENGINEERED WOOD',
-    to: '/services/wood',
-    desc: 'Straight, herringbone & chevron planks crafted for lasting beauty.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-      </svg>
-    )
-  },
-  {
-    title: 'LAMINATE',
-    to: '/services/laminate',
-    desc: 'Herringbone & straight plank, built for busy homes.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    )
-  },
-  {
-    title: 'CARPETS & UNDERLAYS',
-    to: '/services/carpet',
-    desc: 'Deep saxony, wool twists & luxury cushion underlay for warmth underfoot.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-      </svg>
-    )
-  },
-  {
-    title: 'BESPOKE STAIR RUNNERS',
-    to: '/work/worsley-manor-custom-runner',
-    desc: 'Handcrafted edging, whipped borders & matte black stair rods.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    )
-  },
-  {
-    title: 'VINYL FLOORING',
-    to: '/work/bolton-residence-herringbone-lvt',
-    desc: 'Hardwearing, water-proof flooring for kitchens & bathrooms.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    )
-  },
-  {
-    title: 'FLOOR LEVELLING',
-    to: '/services/subfloor',
-    desc: 'Laser-flat subfloor prep, damp proofing & ply boarding done right.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path d="M5 13l4 4L19 7" />
-      </svg>
-    )
-  },
-  {
-    title: 'ARTIFICIAL GRASS',
-    to: '/contact',
-    desc: 'UV-stabilised, child & pet friendly lawns laid over a porous base.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z" />
-      </svg>
-    )
-  }
-];
+// One card per service, straight from the shared service data, so this list
+// can never drift from the navbar, footer or /services page and every card
+// opens its own service page.
+const showroomItems = serviceSlugs.map((slug) => ({
+  title: services[slug].navLabel,
+  to: `/services/${slug}`,
+  desc: services[slug].tagline,
+  icon: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d={services[slug].icon} />
+    </svg>
+  ),
+}));
 
 export default function ShowroomServices() {
   return (
@@ -107,13 +35,13 @@ export default function ShowroomServices() {
             SHOWROOM
           </h2>
           <p className="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed">
-            Explore our physical collections or experience our fully equipped mobile showroom brought directly to your doorstep.
+            Visit our showroom to see the ranges, or book a free home survey and our estimator will bring flooring samples to your door.
           </p>
         </div>
 
         {/* Two-Column Split Layout */}
         <div className="w-full space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             {showroomItems.map((item) => (
               <Link
                 key={item.title}
@@ -146,10 +74,10 @@ export default function ShowroomServices() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
-                href="tel:+447467030479"
+                href={`tel:${SITE.phone}`}
                 className="bg-brand-orange hover:bg-brand-orangeHover text-white font-extrabold px-6 py-3 rounded-xl shadow-md transition-all text-sm flex items-center gap-2"
               >
-                <span>📞 Call Us: +44 7467 030479</span>
+                <span>📞 Call Us: {SITE.phoneDisplay}</span>
               </a>
               <a
                 href="#quote"

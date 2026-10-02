@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SITE, services, serviceSlugs } from '../data/content';
 
 export default function QuoteSection() {
   const [formData, setFormData] = useState({
@@ -25,14 +26,14 @@ export default function QuoteSection() {
               Fast Response Guarantee
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-[#111111] font-display uppercase tracking-tight leading-tight">
-              Request Your Free Home Measuring
+              Book Your Free Home Survey
             </h2>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Fill in your details, and our friendly team will contact you promptly to arrange your free site measurement and supply you with exact estimates.
+              Fill in your details, and our friendly team will contact you to arrange your free home survey and send you a clear written quote.
             </p>
             <div className="space-y-4 pt-4 border-t border-gray-200">
               <a
-                href="tel:+447467030479"
+                href={`tel:${SITE.phone}`}
                 className="flex items-center gap-4 text-gray-900 hover:text-brand-orange transition-colors p-3 rounded-xl hover:bg-gray-50"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-lg">
@@ -40,12 +41,12 @@ export default function QuoteSection() {
                 </div>
                 <div>
                   <span className="text-xs uppercase text-gray-500 font-bold block">Direct Call Line</span>
-                  <strong className="text-lg font-extrabold text-gray-900">+44 7467 030479</strong>
+                  <strong className="text-lg font-extrabold text-gray-900">{SITE.phoneDisplay}</strong>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/447467030479"
+                href={SITE.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-gray-900 hover:text-brand-orange transition-colors p-3 rounded-xl hover:bg-gray-50"
@@ -65,7 +66,7 @@ export default function QuoteSection() {
                 </div>
                 <div>
                   <span className="text-xs uppercase text-gray-500 font-bold block">Email Inquiries</span>
-                  <strong className="text-sm font-bold text-gray-900">quotes@haliflooring.co.uk</strong>
+                  <a href={`mailto:${SITE.email}`} className="text-sm font-bold text-gray-900 hover:text-brand-orange break-all">{SITE.email}</a>
                 </div>
               </div>
             </div>
@@ -82,7 +83,7 @@ export default function QuoteSection() {
                   Thank You for Reaching Out!
                 </h3>
                 <p className="text-gray-600 text-sm max-w-md mx-auto">
-                  Your quote request has been received. Our team will contact you shortly to schedule your free site measurement.
+                  Your quote request has been received. Our team will contact you shortly to arrange your free home survey.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
@@ -155,12 +156,12 @@ export default function QuoteSection() {
                       className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
                     >
                       <option value="" disabled>Select Flooring Category</option>
-                      <option value="lvt">LVT Flooring (Herringbone / Chevron)</option>
-                      <option value="wood">Engineered Real Wood</option>
-                      <option value="laminate">Laminate Flooring</option>
-                      <option value="carpet">Carpets &amp; Stair Runners</option>
-                      <option value="safety">Safety Flooring &amp; Wet Rooms</option>
-                      <option value="screed">Floor Levelling / Prep Only</option>
+                      {serviceSlugs.map((slug) => (
+                        <option key={slug} value={slug}>
+                          {services[slug].name}
+                        </option>
+                      ))}
+                      <option value="not-sure">Not sure yet, please advise</option>
                     </select>
                   </div>
                 </div>

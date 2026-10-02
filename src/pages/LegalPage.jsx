@@ -68,7 +68,7 @@ const termsSections = [
   {
     h: 'Surveys and quotes',
     p: [
-      'Home surveys, laser measuring and written quotations are provided free of charge and carry no obligation. A quotation is valid for 60 days from the date it was issued, provided the scope of work has not changed.',
+      'Home surveys, measuring and written quotations are provided free of charge and carry no obligation. A quotation is valid for 60 days from the date it was issued, provided the scope of work has not changed.',
       'Where a survey reveals subfloor conditions that were not visible at the time, such as a need for screeding, we will tell you in writing before work begins and agree any additional cost with you first.',
     ],
   },

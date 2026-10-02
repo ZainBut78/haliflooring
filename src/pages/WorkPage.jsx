@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import ResponsiveImage from '../components/ResponsiveImage'
 import { useHead } from '../components/Seo'
 import { PageHero, CtaBand, PrimaryActions, Stars, Breadcrumbs } from '../components/ui'
-import { projects, projectCategories, testimonials, areas, SITE } from '../data/content'
+import { projects, projectCategories, testimonials, SITE } from '../data/content'
 
 export default function WorkPage() {
   // All projects are rendered into the static HTML. The category buttons only
@@ -160,25 +160,11 @@ export default function WorkPage() {
       <section className="py-12 lg:py-16 bg-white">
         <div className="w-[90%] max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-xl sm:text-2xl font-extrabold text-[#111111] font-display uppercase tracking-tight">
-            Projects Across the North West
+            We Cover Nationwide
           </h2>
           <p className="mt-3 text-sm text-gray-600 max-w-2xl mx-auto">
-            Our branded mobile vans cover ten areas around Bolton. Wherever you are, the survey is free.
+            Based in the North West, fitting wherever you are. The home survey is always free.
           </p>
-          <div className="mt-6 flex flex-wrap gap-2 justify-center">
-            {areas.map((a) => (
-              <span
-                key={a.name}
-                className={`px-3.5 py-2 rounded-xl text-xs font-bold border ${
-                  a.highlight
-                    ? 'bg-brand-orange text-white border-brand-orange'
-                    : 'bg-brand-grayBg border-gray-200 text-gray-700'
-                }`}
-              >
-                {a.name.replace(/📍\s*/, '')}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 

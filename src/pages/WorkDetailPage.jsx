@@ -181,7 +181,7 @@ export default function WorkDetailPage() {
                 <div>
                   <h3 className="text-base font-extrabold text-gray-900 font-display uppercase">Considering a similar project?</h3>
                   <p className="text-xs text-gray-600 mt-1">
-                    Free laser survey of every room, written quote, no obligation.
+                    Free home survey, written quote, no obligation.
                   </p>
                 </div>
                 <Link

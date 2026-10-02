@@ -25,9 +25,8 @@ export default function SiteFooter() {
               />
             </Link>
             <p className="text-gray-600 text-xs sm:text-sm max-w-sm leading-relaxed">
-              Professional flooring supply and installation specialists based in Bolton, serving the entire
-              Greater Manchester and Lancashire region. LVT, engineered oak, carpets, stair runners and subfloor
-              levelling.
+              Flooring supply and installation specialists based in Bolton, covering the North West and fitting
+              nationwide. Carpets, LVT, wood, laminate, vinyl and commercial safety flooring.
             </p>
             <div className="pt-1 flex items-center gap-3">
               <a
@@ -98,7 +97,7 @@ export default function SiteFooter() {
                 </li>
                 <li>
                   <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">
-                    WhatsApp 7 days a week
+                    Message us on WhatsApp
                   </a>
                 </li>
                 <li className="text-gray-700">

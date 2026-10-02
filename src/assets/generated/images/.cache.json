@@ -123,5 +123,290 @@
       "src/assets/generated/images/flooring-6-2000.jpg"
     ]
   },
-  "version": 3
+  "version": 3,
+  "svc-carpet-1.jpg": {
+    "slug": "svc-carpet-1",
+    "source": "svc-carpet-1.jpg",
+    "width": 1600,
+    "height": 1066,
+    "sourceWidth": 2000,
+    "sourceHeight": 1333,
+    "mtimeMs": 1790956448375.3994,
+    "size": 975133,
+    "outputs": [
+      "src/assets/generated/images/svc-carpet-1-480.webp",
+      "src/assets/generated/images/svc-carpet-1-800.webp",
+      "src/assets/generated/images/svc-carpet-1-1200.webp",
+      "src/assets/generated/images/svc-carpet-1-1600.webp",
+      "src/assets/generated/images/svc-carpet-1-800.jpg",
+      "src/assets/generated/images/svc-carpet-1-1200.jpg",
+      "src/assets/generated/images/svc-carpet-1-1600.jpg"
+    ]
+  },
+  "svc-carpet-2.jpg": {
+    "slug": "svc-carpet-2",
+    "source": "svc-carpet-2.jpg",
+    "width": 1600,
+    "height": 720,
+    "sourceWidth": 2000,
+    "sourceHeight": 900,
+    "mtimeMs": 1790956448418.91,
+    "size": 590225,
+    "outputs": [
+      "src/assets/generated/images/svc-carpet-2-480.webp",
+      "src/assets/generated/images/svc-carpet-2-800.webp",
+      "src/assets/generated/images/svc-carpet-2-1200.webp",
+      "src/assets/generated/images/svc-carpet-2-1600.webp",
+      "src/assets/generated/images/svc-carpet-2-800.jpg",
+      "src/assets/generated/images/svc-carpet-2-1200.jpg",
+      "src/assets/generated/images/svc-carpet-2-1600.jpg"
+    ]
+  },
+  "svc-grass-1.jpg": {
+    "slug": "svc-grass-1",
+    "source": "svc-grass-1.jpg",
+    "width": 1600,
+    "height": 900,
+    "sourceWidth": 2000,
+    "sourceHeight": 1125,
+    "mtimeMs": 1790956448792.5754,
+    "size": 1134458,
+    "outputs": [
+      "src/assets/generated/images/svc-grass-1-480.webp",
+      "src/assets/generated/images/svc-grass-1-800.webp",
+      "src/assets/generated/images/svc-grass-1-1200.webp",
+      "src/assets/generated/images/svc-grass-1-1600.webp",
+      "src/assets/generated/images/svc-grass-1-800.jpg",
+      "src/assets/generated/images/svc-grass-1-1200.jpg",
+      "src/assets/generated/images/svc-grass-1-1600.jpg"
+    ]
+  },
+  "svc-grass-2.jpg": {
+    "slug": "svc-grass-2",
+    "source": "svc-grass-2.jpg",
+    "width": 1600,
+    "height": 2400,
+    "sourceWidth": 2000,
+    "sourceHeight": 3000,
+    "mtimeMs": 1790956448846.677,
+    "size": 2764630,
+    "outputs": [
+      "src/assets/generated/images/svc-grass-2-480.webp",
+      "src/assets/generated/images/svc-grass-2-800.webp",
+      "src/assets/generated/images/svc-grass-2-1200.webp",
+      "src/assets/generated/images/svc-grass-2-1600.webp",
+      "src/assets/generated/images/svc-grass-2-800.jpg",
+      "src/assets/generated/images/svc-grass-2-1200.jpg",
+      "src/assets/generated/images/svc-grass-2-1600.jpg"
+    ]
+  },
+  "svc-laminate-1.jpg": {
+    "slug": "svc-laminate-1",
+    "source": "svc-laminate-1.jpg",
+    "width": 1600,
+    "height": 1066,
+    "sourceWidth": 2000,
+    "sourceHeight": 1333,
+    "mtimeMs": 1790956448332.3208,
+    "size": 1026750,
+    "outputs": [
+      "src/assets/generated/images/svc-laminate-1-480.webp",
+      "src/assets/generated/images/svc-laminate-1-800.webp",
+      "src/assets/generated/images/svc-laminate-1-1200.webp",
+      "src/assets/generated/images/svc-laminate-1-1600.webp",
+      "src/assets/generated/images/svc-laminate-1-800.jpg",
+      "src/assets/generated/images/svc-laminate-1-1200.jpg",
+      "src/assets/generated/images/svc-laminate-1-1600.jpg"
+    ]
+  },
+  "svc-lvt-1.jpg": {
+    "slug": "svc-lvt-1",
+    "source": "svc-lvt-1.jpg",
+    "width": 1600,
+    "height": 2400,
+    "sourceWidth": 2000,
+    "sourceHeight": 3000,
+    "mtimeMs": 1790956448171.4731,
+    "size": 766241,
+    "outputs": [
+      "src/assets/generated/images/svc-lvt-1-480.webp",
+      "src/assets/generated/images/svc-lvt-1-800.webp",
+      "src/assets/generated/images/svc-lvt-1-1200.webp",
+      "src/assets/generated/images/svc-lvt-1-1600.webp",
+      "src/assets/generated/images/svc-lvt-1-800.jpg",
+      "src/assets/generated/images/svc-lvt-1-1200.jpg",
+      "src/assets/generated/images/svc-lvt-1-1600.jpg"
+    ]
+  },
+  "svc-lvt-2.jpg": {
+    "slug": "svc-lvt-2",
+    "source": "svc-lvt-2.jpg",
+    "width": 1600,
+    "height": 2400,
+    "sourceWidth": 2000,
+    "sourceHeight": 3000,
+    "mtimeMs": 1790956448212.0125,
+    "size": 530240,
+    "outputs": [
+      "src/assets/generated/images/svc-lvt-2-480.webp",
+      "src/assets/generated/images/svc-lvt-2-800.webp",
+      "src/assets/generated/images/svc-lvt-2-1200.webp",
+      "src/assets/generated/images/svc-lvt-2-1600.webp",
+      "src/assets/generated/images/svc-lvt-2-800.jpg",
+      "src/assets/generated/images/svc-lvt-2-1200.jpg",
+      "src/assets/generated/images/svc-lvt-2-1600.jpg"
+    ]
+  },
+  "svc-runners-1.jpg": {
+    "slug": "svc-runners-1",
+    "source": "svc-runners-1.jpg",
+    "width": 1600,
+    "height": 1866,
+    "sourceWidth": 2000,
+    "sourceHeight": 2333,
+    "mtimeMs": 1790956448455.8784,
+    "size": 643472,
+    "outputs": [
+      "src/assets/generated/images/svc-runners-1-480.webp",
+      "src/assets/generated/images/svc-runners-1-800.webp",
+      "src/assets/generated/images/svc-runners-1-1200.webp",
+      "src/assets/generated/images/svc-runners-1-1600.webp",
+      "src/assets/generated/images/svc-runners-1-800.jpg",
+      "src/assets/generated/images/svc-runners-1-1200.jpg",
+      "src/assets/generated/images/svc-runners-1-1600.jpg"
+    ]
+  },
+  "svc-runners-2.jpg": {
+    "slug": "svc-runners-2",
+    "source": "svc-runners-2.jpg",
+    "width": 1600,
+    "height": 1866,
+    "sourceWidth": 2000,
+    "sourceHeight": 2333,
+    "mtimeMs": 1790956448490.5784,
+    "size": 410835,
+    "outputs": [
+      "src/assets/generated/images/svc-runners-2-480.webp",
+      "src/assets/generated/images/svc-runners-2-800.webp",
+      "src/assets/generated/images/svc-runners-2-1200.webp",
+      "src/assets/generated/images/svc-runners-2-1600.webp",
+      "src/assets/generated/images/svc-runners-2-800.jpg",
+      "src/assets/generated/images/svc-runners-2-1200.jpg",
+      "src/assets/generated/images/svc-runners-2-1600.jpg"
+    ]
+  },
+  "svc-safety-1.jpg": {
+    "slug": "svc-safety-1",
+    "source": "svc-safety-1.jpg",
+    "width": 1600,
+    "height": 1200,
+    "sourceWidth": 2000,
+    "sourceHeight": 1500,
+    "mtimeMs": 1790956448676.129,
+    "size": 297791,
+    "outputs": [
+      "src/assets/generated/images/svc-safety-1-480.webp",
+      "src/assets/generated/images/svc-safety-1-800.webp",
+      "src/assets/generated/images/svc-safety-1-1200.webp",
+      "src/assets/generated/images/svc-safety-1-1600.webp",
+      "src/assets/generated/images/svc-safety-1-800.jpg",
+      "src/assets/generated/images/svc-safety-1-1200.jpg",
+      "src/assets/generated/images/svc-safety-1-1600.jpg"
+    ]
+  },
+  "svc-subfloor-1.jpg": {
+    "slug": "svc-subfloor-1",
+    "source": "svc-subfloor-1.jpg",
+    "width": 1600,
+    "height": 2134,
+    "sourceWidth": 2000,
+    "sourceHeight": 2667,
+    "mtimeMs": 1790956448742.0117,
+    "size": 2566523,
+    "outputs": [
+      "src/assets/generated/images/svc-subfloor-1-480.webp",
+      "src/assets/generated/images/svc-subfloor-1-800.webp",
+      "src/assets/generated/images/svc-subfloor-1-1200.webp",
+      "src/assets/generated/images/svc-subfloor-1-1600.webp",
+      "src/assets/generated/images/svc-subfloor-1-800.jpg",
+      "src/assets/generated/images/svc-subfloor-1-1200.jpg",
+      "src/assets/generated/images/svc-subfloor-1-1600.jpg"
+    ]
+  },
+  "svc-vinyl-1.jpg": {
+    "slug": "svc-vinyl-1",
+    "source": "svc-vinyl-1.jpg",
+    "width": 1600,
+    "height": 1063,
+    "sourceWidth": 2000,
+    "sourceHeight": 1329,
+    "mtimeMs": 1790956448548.7866,
+    "size": 416855,
+    "outputs": [
+      "src/assets/generated/images/svc-vinyl-1-480.webp",
+      "src/assets/generated/images/svc-vinyl-1-800.webp",
+      "src/assets/generated/images/svc-vinyl-1-1200.webp",
+      "src/assets/generated/images/svc-vinyl-1-1600.webp",
+      "src/assets/generated/images/svc-vinyl-1-800.jpg",
+      "src/assets/generated/images/svc-vinyl-1-1200.jpg",
+      "src/assets/generated/images/svc-vinyl-1-1600.jpg"
+    ]
+  },
+  "svc-vinyl-2.jpg": {
+    "slug": "svc-vinyl-2",
+    "source": "svc-vinyl-2.jpg",
+    "width": 1600,
+    "height": 1016,
+    "sourceWidth": 2000,
+    "sourceHeight": 1270,
+    "mtimeMs": 1790956448610.309,
+    "size": 825455,
+    "outputs": [
+      "src/assets/generated/images/svc-vinyl-2-480.webp",
+      "src/assets/generated/images/svc-vinyl-2-800.webp",
+      "src/assets/generated/images/svc-vinyl-2-1200.webp",
+      "src/assets/generated/images/svc-vinyl-2-1600.webp",
+      "src/assets/generated/images/svc-vinyl-2-800.jpg",
+      "src/assets/generated/images/svc-vinyl-2-1200.jpg",
+      "src/assets/generated/images/svc-vinyl-2-1600.jpg"
+    ]
+  },
+  "svc-wood-1.jpg": {
+    "slug": "svc-wood-1",
+    "source": "svc-wood-1.jpg",
+    "width": 1600,
+    "height": 1179,
+    "sourceWidth": 2000,
+    "sourceHeight": 1474,
+    "mtimeMs": 1790956448238.568,
+    "size": 529355,
+    "outputs": [
+      "src/assets/generated/images/svc-wood-1-480.webp",
+      "src/assets/generated/images/svc-wood-1-800.webp",
+      "src/assets/generated/images/svc-wood-1-1200.webp",
+      "src/assets/generated/images/svc-wood-1-1600.webp",
+      "src/assets/generated/images/svc-wood-1-800.jpg",
+      "src/assets/generated/images/svc-wood-1-1200.jpg",
+      "src/assets/generated/images/svc-wood-1-1600.jpg"
+    ]
+  },
+  "svc-wood-2.jpg": {
+    "slug": "svc-wood-2",
+    "source": "svc-wood-2.jpg",
+    "width": 1600,
+    "height": 2134,
+    "sourceWidth": 2000,
+    "sourceHeight": 2667,
+    "mtimeMs": 1790956448285.4475,
+    "size": 676024,
+    "outputs": [
+      "src/assets/generated/images/svc-wood-2-480.webp",
+      "src/assets/generated/images/svc-wood-2-800.webp",
+      "src/assets/generated/images/svc-wood-2-1200.webp",
+      "src/assets/generated/images/svc-wood-2-1600.webp",
+      "src/assets/generated/images/svc-wood-2-800.jpg",
+      "src/assets/generated/images/svc-wood-2-1200.jpg",
+      "src/assets/generated/images/svc-wood-2-1600.jpg"
+    ]
+  }
 }

@@ -9,15 +9,15 @@ import { areas, services, serviceSlugs, SITE } from '../data/content'
 const contactFaqs = [
   {
     q: 'Is the home survey really free?',
-    a: 'Yes, with no obligation attached. We laser-measure every room you want floored and send a written, itemised quote. If you decide not to go ahead, there is nothing to pay and nobody will chase you.',
+    a: 'Yes, with no obligation attached. We measure up the rooms you want floored and send a written, itemised quote. If you decide not to go ahead, there is nothing to pay and nobody will chase you.',
   },
   {
     q: 'How quickly can you come out?',
-    a: 'Most home surveys are arranged within two to three working days across Bolton, Manchester and the surrounding towns. WhatsApp usually gets the quickest response.',
+    a: 'We will arrange a time that suits you. Call us, or message us on WhatsApp for the quickest reply.',
   },
   {
     q: 'Do you supply the flooring as well as fit it?',
-    a: 'Both. We hold a large showroom selection and can also source specific brands and finishes you have seen elsewhere, then fit them with the same guarantee as our own stock.',
+    a: 'Both. You can see our ranges in the showroom, or book a free home survey and we will bring samples to you. We can also source a specific floor you have seen elsewhere.',
   },
   {
     q: 'Do you remove the old flooring?',
@@ -25,11 +25,11 @@ const contactFaqs = [
   },
   {
     q: 'What areas do you actually cover?',
-    a: 'Bolton, Manchester, Bury, Wigan, Chorley, Preston, Rochdale, Salford, Blackburn and Horwich. If you are just outside that ring, call us and we will usually find a way.',
+    a: 'We are based in Bolton and cover the North West, including Manchester, Bury, Wigan, Chorley, Preston, Rochdale, Salford, Blackburn, Horwich and Warrington. We fit in every town nationwide, so just ask.',
   },
   {
     q: 'Are you insured?',
-    a: 'Fully. We hold current public liability and professional indemnity cover, and our own fully insured installers carry out all work. Certificates are available on request before any job starts.',
+    a: 'Please get in touch and we will be happy to answer any questions about insurance and guarantees before any work starts.',
   },
 ]
 
@@ -119,7 +119,7 @@ export default function ContactPage() {
               </a>
 
               <div className="p-5 rounded-2xl border border-gray-200">
-                <h2 className="text-xs uppercase text-gray-500 font-bold tracking-wider">Workshop &amp; Showroom</h2>
+                <h2 className="text-xs uppercase text-gray-500 font-bold tracking-wider">Showroom</h2>
                 <p className="mt-2 text-sm text-gray-800 font-semibold">
                   {SITE.address.line1}, {SITE.address.line2}
                 </p>
@@ -300,7 +300,7 @@ export default function ContactPage() {
             Areas We Cover
           </h2>
           <p className="mt-3 text-sm text-gray-600 max-w-2xl mx-auto">
-            Our branded mobile vans cover these ten areas. Free surveys, free laser measuring, no obligation.
+            Based in the North West and fitting nationwide. Free home surveys and no-obligation quotes.
           </p>
           <div className="mt-6 flex flex-wrap gap-2 justify-center">
             {areas.map((a) => (

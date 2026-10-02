@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import ResponsiveImage from '../components/ResponsiveImage'
 import { useHead } from '../components/Seo'
 import { Breadcrumbs, PageHero, SectionHeading, FaqAccordion, CtaBand, PrimaryActions } from '../components/ui'
-import { services, serviceSlugs, imagePool, SITE } from '../data/content'
+import { services, serviceSlugs, projects, SITE } from '../data/content'
 
 export default function ServicePage() {
   const { service: slug } = useRouteParams()
@@ -33,6 +33,7 @@ export default function ServicePage() {
   }
 
   const others = serviceSlugs.filter((s) => s !== slug)
+  const hasProjects = projects.some((p) => p.category === slug)
 
   return (
     <Layout>
@@ -44,7 +45,7 @@ export default function ServicePage() {
         ]}
       />
 
-      <PageHero eyebrow="Free survey & laser measure" heading={service.heroHeading} subheading={service.intro}>
+      <PageHero eyebrow="Free home survey & quote" heading={service.heroHeading} subheading={service.intro}>
         <PrimaryActions />
       </PageHero>
 
@@ -56,13 +57,13 @@ export default function ServicePage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
                 What you get with {service.navLabel.toLowerCase()}
               </h2>
-              <p className="mt-4 text-sm text-gray-600 leading-relaxed">{service.intro}</p>
+              <p className="mt-4 text-sm text-gray-600 leading-relaxed">{service.detail}</p>
               <ul className="mt-6 space-y-3">
                 {[
-                  'Free home survey and laser measure of every room',
+                  'Free home survey and measure',
                   'Written, itemised quote with no obligation',
-                  'Old floor removal and disposal included',
-                  'Fully insured installers with comprehensive guarantees',
+                  'Old floor removal and disposal if you need it',
+                  'Experienced fitters and a tidy, careful finish',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
                     <span className="shrink-0 w-5 h-5 rounded-full bg-brand-orange text-white flex items-center justify-center mt-0.5">
@@ -75,25 +76,28 @@ export default function ServicePage() {
                 ))}
               </ul>
             </div>
-            <div className="lg:col-span-7 order-1 lg:order-2 grid grid-cols-2 gap-4">
-              <figure className="rounded-2xl overflow-hidden bg-gray-100 aspect-square">
-                <ResponsiveImage
-                  image={imagePool[0]}
-                  alt={`${service.name} installation by ${SITE.name}`}
-                  sizes="(min-width: 1024px) 420px, 50vw"
-                  className="h-full w-full object-cover"
-                  loading="eager"
-                  fetchPriority="high"
-                />
-              </figure>
-              <figure className="rounded-2xl overflow-hidden bg-gray-100 aspect-square mt-6">
-                <ResponsiveImage
-                  image={imagePool[3]}
-                  alt={`${service.name} project detail`}
-                  sizes="(min-width: 1024px) 420px, 50vw"
-                  className="h-full w-full object-cover"
-                />
-              </figure>
+            <div
+              className={`lg:col-span-7 order-1 lg:order-2 grid gap-4 ${
+                service.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1'
+              }`}
+            >
+              {service.images.map((image, i) => (
+                <figure
+                  key={i}
+                  className={`rounded-2xl overflow-hidden bg-gray-100 ${
+                    service.images.length > 1 ? 'aspect-square' : 'aspect-[4/3]'
+                  } ${i === 1 ? 'mt-6' : ''}`}
+                >
+                  <ResponsiveImage
+                    image={image}
+                    alt={i === 0 ? `${service.name} by ${SITE.name}` : `${service.name} detail`}
+                    sizes="(min-width: 1024px) 420px, 50vw"
+                    className="h-full w-full object-cover"
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                    fetchPriority={i === 0 ? 'high' : undefined}
+                  />
+                </figure>
+              ))}
             </div>
           </div>
         </div>
@@ -126,23 +130,27 @@ export default function ServicePage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-14 lg:py-20 bg-white">
-        <div className="w-[90%] max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Answers"
-            heading={`${service.navLabel} FAQs`}
-            subheading={service.faqNote}
-          />
-          <FaqAccordion items={service.faqs} idPrefix={`faq-${slug}`} />
+      {/* FAQ: only the fuller pages have one */}
+      {service.faqs && (
+        <section className="py-14 lg:py-20 bg-white">
+          <div className="w-[90%] max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              eyebrow="Answers"
+              heading={`${service.navLabel} FAQs`}
+              subheading={service.faqNote}
+            />
+            <FaqAccordion items={service.faqs} idPrefix={`faq-${slug}`} />
 
-          <div className="mt-8 text-center">
-            <Link to="/work" className="text-sm font-bold text-brand-orange hover:underline">
-              See completed {service.navLabel.toLowerCase()} projects →
-            </Link>
+            {hasProjects && (
+              <div className="mt-8 text-center">
+                <Link to="/work" className="text-sm font-bold text-brand-orange hover:underline">
+                  See completed {service.navLabel.toLowerCase()} projects →
+                </Link>
+              </div>
+            )}
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Other services */}
       <section className="py-12 lg:py-16 bg-white border-t border-brand-borderLight">
@@ -166,7 +174,7 @@ export default function ServicePage() {
 
       <CtaBand
         heading={`Book your free ${service.navLabel.toLowerCase()} survey`}
-        subheading="Free home survey, free laser measure and a written quote with no obligation. We cover ten areas around Bolton."
+        subheading="Free home survey and a written quote with no obligation. Based in Bolton, covering the North West and fitting nationwide."
         primaryLabel="Get My Free Quote"
       />
     </Layout>

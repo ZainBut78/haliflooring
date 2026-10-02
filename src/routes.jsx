@@ -13,15 +13,15 @@ import { projects, services, serviceSlugs, SITE } from './data/content'
  */
 
 const homeMeta = {
-  title: `Wood Flooring, Carpet & LVT | Supply & Fit Specialists Bolton & Lancashire | ${SITE.name}`,
+  title: `Wood Flooring, Carpet & LVT | Supply & Fit Specialists Bolton & North West | ${SITE.name}`,
   description:
-    'Professional flooring supply and installation specialists based in Bolton, serving the entire Greater Manchester and Lancashire region. LVT, Engineered Oak, Carpets, Stair Runners & Subfloor Screeding. Free home survey.',
+    'Flooring supply and installation specialists based in Bolton, covering the North West and fitting nationwide. Carpets, LVT, engineered wood, laminate, vinyl, safety flooring and artificial grass. Free home survey.',
   keywords: [
     'flooring Bolton',
     'LVT Bolton',
     'engineered oak flooring Manchester',
     'stair runners Bolton',
-    'flooring installer Lancashire',
+    'flooring installer North West',
     'herringbone flooring North West',
   ],
 }
@@ -37,9 +37,9 @@ export const routes = [
     path: '/services',
     Component: () => import('./pages/ServiceIndexPage'),
     meta: {
-      title: `Our Flooring Services | LVT, Wood, Carpet, Laminate & Commercial | ${SITE.name}`,
+      title: `Our Flooring Services | LVT, Wood, Carpet, Laminate, Vinyl & Safety Flooring | ${SITE.name}`,
       description:
-        'Every flooring service we offer across the North West: luxury vinyl tile, engineered wood, carpets and bespoke stair runners, laminate, commercial safety flooring and subfloor levelling. Free survey and quote on all.',
+        'Every flooring service we offer across the North West: LVT, engineered wood, laminate, carpets and underlays, stair runners, vinyl, safety flooring, floor levelling and artificial grass. Free survey and quote on all.',
       keywords: ['flooring services Bolton', 'flooring types North West', 'flooring prices Manchester'],
     },
     paths: () => ['/services'],
@@ -78,9 +78,9 @@ export const routes = [
     path: '/about',
     Component: () => import('./pages/AboutPage'),
     meta: {
-      title: `About Us | Family-Run Flooring Specialists in Bolton | ${SITE.name}`,
+      title: `About Us | Flooring Specialists in Bolton & the North West | ${SITE.name}`,
       description:
-        'Family-run flooring supply and installation specialists based in Bolton for over 20 years. Fully insured, own installers, covering Greater Manchester and Lancashire. Meet the team behind our work.',
+        'Hali Flooring supplies and fits quality flooring for homes and businesses across the North West. Visit our Bolton showroom or book a free home survey.',
       keywords: ['flooring company Bolton', 'flooring contractor Manchester', 'trusted flooring installer Lancashire'],
     },
     paths: () => ['/about'],
@@ -91,7 +91,7 @@ export const routes = [
     meta: {
       title: `Contact & Free Quote | Flooring Bolton & Manchester | ${SITE.name}`,
       description:
-        'Request a free home survey and written quote. Call +44 7467 030479 or message us on WhatsApp. We cover Bolton, Manchester, Bury, Wigan, Chorley, Preston, Rochdale, Salford, Blackburn and Horwich.',
+        'Request a free home survey and written quote. Call 01204 358904 or message us on WhatsApp. Based in Bolton, covering the North West including Manchester, Warrington, Wigan and Preston.',
       keywords: [
         'flooring quote Bolton',
         'free flooring survey Manchester',

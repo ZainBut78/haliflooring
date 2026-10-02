@@ -53,6 +53,111 @@ import flooring_6_800_jpg from './flooring-6-800.jpg'
 import flooring_6_1200_jpg from './flooring-6-1200.jpg'
 import flooring_6_1600_jpg from './flooring-6-1600.jpg'
 import flooring_6_2000_jpg from './flooring-6-2000.jpg'
+import svc_carpet_1_480_webp from './svc-carpet-1-480.webp'
+import svc_carpet_1_800_webp from './svc-carpet-1-800.webp'
+import svc_carpet_1_1200_webp from './svc-carpet-1-1200.webp'
+import svc_carpet_1_1600_webp from './svc-carpet-1-1600.webp'
+import svc_carpet_1_800_jpg from './svc-carpet-1-800.jpg'
+import svc_carpet_1_1200_jpg from './svc-carpet-1-1200.jpg'
+import svc_carpet_1_1600_jpg from './svc-carpet-1-1600.jpg'
+import svc_carpet_2_480_webp from './svc-carpet-2-480.webp'
+import svc_carpet_2_800_webp from './svc-carpet-2-800.webp'
+import svc_carpet_2_1200_webp from './svc-carpet-2-1200.webp'
+import svc_carpet_2_1600_webp from './svc-carpet-2-1600.webp'
+import svc_carpet_2_800_jpg from './svc-carpet-2-800.jpg'
+import svc_carpet_2_1200_jpg from './svc-carpet-2-1200.jpg'
+import svc_carpet_2_1600_jpg from './svc-carpet-2-1600.jpg'
+import svc_grass_1_480_webp from './svc-grass-1-480.webp'
+import svc_grass_1_800_webp from './svc-grass-1-800.webp'
+import svc_grass_1_1200_webp from './svc-grass-1-1200.webp'
+import svc_grass_1_1600_webp from './svc-grass-1-1600.webp'
+import svc_grass_1_800_jpg from './svc-grass-1-800.jpg'
+import svc_grass_1_1200_jpg from './svc-grass-1-1200.jpg'
+import svc_grass_1_1600_jpg from './svc-grass-1-1600.jpg'
+import svc_grass_2_480_webp from './svc-grass-2-480.webp'
+import svc_grass_2_800_webp from './svc-grass-2-800.webp'
+import svc_grass_2_1200_webp from './svc-grass-2-1200.webp'
+import svc_grass_2_1600_webp from './svc-grass-2-1600.webp'
+import svc_grass_2_800_jpg from './svc-grass-2-800.jpg'
+import svc_grass_2_1200_jpg from './svc-grass-2-1200.jpg'
+import svc_grass_2_1600_jpg from './svc-grass-2-1600.jpg'
+import svc_laminate_1_480_webp from './svc-laminate-1-480.webp'
+import svc_laminate_1_800_webp from './svc-laminate-1-800.webp'
+import svc_laminate_1_1200_webp from './svc-laminate-1-1200.webp'
+import svc_laminate_1_1600_webp from './svc-laminate-1-1600.webp'
+import svc_laminate_1_800_jpg from './svc-laminate-1-800.jpg'
+import svc_laminate_1_1200_jpg from './svc-laminate-1-1200.jpg'
+import svc_laminate_1_1600_jpg from './svc-laminate-1-1600.jpg'
+import svc_lvt_1_480_webp from './svc-lvt-1-480.webp'
+import svc_lvt_1_800_webp from './svc-lvt-1-800.webp'
+import svc_lvt_1_1200_webp from './svc-lvt-1-1200.webp'
+import svc_lvt_1_1600_webp from './svc-lvt-1-1600.webp'
+import svc_lvt_1_800_jpg from './svc-lvt-1-800.jpg'
+import svc_lvt_1_1200_jpg from './svc-lvt-1-1200.jpg'
+import svc_lvt_1_1600_jpg from './svc-lvt-1-1600.jpg'
+import svc_lvt_2_480_webp from './svc-lvt-2-480.webp'
+import svc_lvt_2_800_webp from './svc-lvt-2-800.webp'
+import svc_lvt_2_1200_webp from './svc-lvt-2-1200.webp'
+import svc_lvt_2_1600_webp from './svc-lvt-2-1600.webp'
+import svc_lvt_2_800_jpg from './svc-lvt-2-800.jpg'
+import svc_lvt_2_1200_jpg from './svc-lvt-2-1200.jpg'
+import svc_lvt_2_1600_jpg from './svc-lvt-2-1600.jpg'
+import svc_runners_1_480_webp from './svc-runners-1-480.webp'
+import svc_runners_1_800_webp from './svc-runners-1-800.webp'
+import svc_runners_1_1200_webp from './svc-runners-1-1200.webp'
+import svc_runners_1_1600_webp from './svc-runners-1-1600.webp'
+import svc_runners_1_800_jpg from './svc-runners-1-800.jpg'
+import svc_runners_1_1200_jpg from './svc-runners-1-1200.jpg'
+import svc_runners_1_1600_jpg from './svc-runners-1-1600.jpg'
+import svc_runners_2_480_webp from './svc-runners-2-480.webp'
+import svc_runners_2_800_webp from './svc-runners-2-800.webp'
+import svc_runners_2_1200_webp from './svc-runners-2-1200.webp'
+import svc_runners_2_1600_webp from './svc-runners-2-1600.webp'
+import svc_runners_2_800_jpg from './svc-runners-2-800.jpg'
+import svc_runners_2_1200_jpg from './svc-runners-2-1200.jpg'
+import svc_runners_2_1600_jpg from './svc-runners-2-1600.jpg'
+import svc_safety_1_480_webp from './svc-safety-1-480.webp'
+import svc_safety_1_800_webp from './svc-safety-1-800.webp'
+import svc_safety_1_1200_webp from './svc-safety-1-1200.webp'
+import svc_safety_1_1600_webp from './svc-safety-1-1600.webp'
+import svc_safety_1_800_jpg from './svc-safety-1-800.jpg'
+import svc_safety_1_1200_jpg from './svc-safety-1-1200.jpg'
+import svc_safety_1_1600_jpg from './svc-safety-1-1600.jpg'
+import svc_subfloor_1_480_webp from './svc-subfloor-1-480.webp'
+import svc_subfloor_1_800_webp from './svc-subfloor-1-800.webp'
+import svc_subfloor_1_1200_webp from './svc-subfloor-1-1200.webp'
+import svc_subfloor_1_1600_webp from './svc-subfloor-1-1600.webp'
+import svc_subfloor_1_800_jpg from './svc-subfloor-1-800.jpg'
+import svc_subfloor_1_1200_jpg from './svc-subfloor-1-1200.jpg'
+import svc_subfloor_1_1600_jpg from './svc-subfloor-1-1600.jpg'
+import svc_vinyl_1_480_webp from './svc-vinyl-1-480.webp'
+import svc_vinyl_1_800_webp from './svc-vinyl-1-800.webp'
+import svc_vinyl_1_1200_webp from './svc-vinyl-1-1200.webp'
+import svc_vinyl_1_1600_webp from './svc-vinyl-1-1600.webp'
+import svc_vinyl_1_800_jpg from './svc-vinyl-1-800.jpg'
+import svc_vinyl_1_1200_jpg from './svc-vinyl-1-1200.jpg'
+import svc_vinyl_1_1600_jpg from './svc-vinyl-1-1600.jpg'
+import svc_vinyl_2_480_webp from './svc-vinyl-2-480.webp'
+import svc_vinyl_2_800_webp from './svc-vinyl-2-800.webp'
+import svc_vinyl_2_1200_webp from './svc-vinyl-2-1200.webp'
+import svc_vinyl_2_1600_webp from './svc-vinyl-2-1600.webp'
+import svc_vinyl_2_800_jpg from './svc-vinyl-2-800.jpg'
+import svc_vinyl_2_1200_jpg from './svc-vinyl-2-1200.jpg'
+import svc_vinyl_2_1600_jpg from './svc-vinyl-2-1600.jpg'
+import svc_wood_1_480_webp from './svc-wood-1-480.webp'
+import svc_wood_1_800_webp from './svc-wood-1-800.webp'
+import svc_wood_1_1200_webp from './svc-wood-1-1200.webp'
+import svc_wood_1_1600_webp from './svc-wood-1-1600.webp'
+import svc_wood_1_800_jpg from './svc-wood-1-800.jpg'
+import svc_wood_1_1200_jpg from './svc-wood-1-1200.jpg'
+import svc_wood_1_1600_jpg from './svc-wood-1-1600.jpg'
+import svc_wood_2_480_webp from './svc-wood-2-480.webp'
+import svc_wood_2_800_webp from './svc-wood-2-800.webp'
+import svc_wood_2_1200_webp from './svc-wood-2-1200.webp'
+import svc_wood_2_1600_webp from './svc-wood-2-1600.webp'
+import svc_wood_2_800_jpg from './svc-wood-2-800.jpg'
+import svc_wood_2_1200_jpg from './svc-wood-2-1200.jpg'
+import svc_wood_2_1600_jpg from './svc-wood-2-1600.jpg'
 
 /**
  * Each entry carries the intrinsic size plus WebP and JPEG sources, so
@@ -129,6 +234,186 @@ export const optimizedImages = {
     jpg: {
       src: flooring_6_800_jpg,
       srcSet: `${flooring_6_800_jpg} 800w, ${flooring_6_1200_jpg} 1200w, ${flooring_6_1600_jpg} 1600w, ${flooring_6_2000_jpg} 2000w`,
+    },
+  },
+  'svc-carpet-1': {
+    width: 1600,
+    height: 1066,
+    webp: {
+      src: svc_carpet_1_480_webp,
+      srcSet: `${svc_carpet_1_480_webp} 480w, ${svc_carpet_1_800_webp} 800w, ${svc_carpet_1_1200_webp} 1200w, ${svc_carpet_1_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_carpet_1_800_jpg,
+      srcSet: `${svc_carpet_1_800_jpg} 800w, ${svc_carpet_1_1200_jpg} 1200w, ${svc_carpet_1_1600_jpg} 1600w`,
+    },
+  },
+  'svc-carpet-2': {
+    width: 1600,
+    height: 720,
+    webp: {
+      src: svc_carpet_2_480_webp,
+      srcSet: `${svc_carpet_2_480_webp} 480w, ${svc_carpet_2_800_webp} 800w, ${svc_carpet_2_1200_webp} 1200w, ${svc_carpet_2_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_carpet_2_800_jpg,
+      srcSet: `${svc_carpet_2_800_jpg} 800w, ${svc_carpet_2_1200_jpg} 1200w, ${svc_carpet_2_1600_jpg} 1600w`,
+    },
+  },
+  'svc-grass-1': {
+    width: 1600,
+    height: 900,
+    webp: {
+      src: svc_grass_1_480_webp,
+      srcSet: `${svc_grass_1_480_webp} 480w, ${svc_grass_1_800_webp} 800w, ${svc_grass_1_1200_webp} 1200w, ${svc_grass_1_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_grass_1_800_jpg,
+      srcSet: `${svc_grass_1_800_jpg} 800w, ${svc_grass_1_1200_jpg} 1200w, ${svc_grass_1_1600_jpg} 1600w`,
+    },
+  },
+  'svc-grass-2': {
+    width: 1600,
+    height: 2400,
+    webp: {
+      src: svc_grass_2_480_webp,
+      srcSet: `${svc_grass_2_480_webp} 480w, ${svc_grass_2_800_webp} 800w, ${svc_grass_2_1200_webp} 1200w, ${svc_grass_2_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_grass_2_800_jpg,
+      srcSet: `${svc_grass_2_800_jpg} 800w, ${svc_grass_2_1200_jpg} 1200w, ${svc_grass_2_1600_jpg} 1600w`,
+    },
+  },
+  'svc-laminate-1': {
+    width: 1600,
+    height: 1066,
+    webp: {
+      src: svc_laminate_1_480_webp,
+      srcSet: `${svc_laminate_1_480_webp} 480w, ${svc_laminate_1_800_webp} 800w, ${svc_laminate_1_1200_webp} 1200w, ${svc_laminate_1_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_laminate_1_800_jpg,
+      srcSet: `${svc_laminate_1_800_jpg} 800w, ${svc_laminate_1_1200_jpg} 1200w, ${svc_laminate_1_1600_jpg} 1600w`,
+    },
+  },
+  'svc-lvt-1': {
+    width: 1600,
+    height: 2400,
+    webp: {
+      src: svc_lvt_1_480_webp,
+      srcSet: `${svc_lvt_1_480_webp} 480w, ${svc_lvt_1_800_webp} 800w, ${svc_lvt_1_1200_webp} 1200w, ${svc_lvt_1_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_lvt_1_800_jpg,
+      srcSet: `${svc_lvt_1_800_jpg} 800w, ${svc_lvt_1_1200_jpg} 1200w, ${svc_lvt_1_1600_jpg} 1600w`,
+    },
+  },
+  'svc-lvt-2': {
+    width: 1600,
+    height: 2400,
+    webp: {
+      src: svc_lvt_2_480_webp,
+      srcSet: `${svc_lvt_2_480_webp} 480w, ${svc_lvt_2_800_webp} 800w, ${svc_lvt_2_1200_webp} 1200w, ${svc_lvt_2_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_lvt_2_800_jpg,
+      srcSet: `${svc_lvt_2_800_jpg} 800w, ${svc_lvt_2_1200_jpg} 1200w, ${svc_lvt_2_1600_jpg} 1600w`,
+    },
+  },
+  'svc-runners-1': {
+    width: 1600,
+    height: 1866,
+    webp: {
+      src: svc_runners_1_480_webp,
+      srcSet: `${svc_runners_1_480_webp} 480w, ${svc_runners_1_800_webp} 800w, ${svc_runners_1_1200_webp} 1200w, ${svc_runners_1_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_runners_1_800_jpg,
+      srcSet: `${svc_runners_1_800_jpg} 800w, ${svc_runners_1_1200_jpg} 1200w, ${svc_runners_1_1600_jpg} 1600w`,
+    },
+  },
+  'svc-runners-2': {
+    width: 1600,
+    height: 1866,
+    webp: {
+      src: svc_runners_2_480_webp,
+      srcSet: `${svc_runners_2_480_webp} 480w, ${svc_runners_2_800_webp} 800w, ${svc_runners_2_1200_webp} 1200w, ${svc_runners_2_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_runners_2_800_jpg,
+      srcSet: `${svc_runners_2_800_jpg} 800w, ${svc_runners_2_1200_jpg} 1200w, ${svc_runners_2_1600_jpg} 1600w`,
+    },
+  },
+  'svc-safety-1': {
+    width: 1600,
+    height: 1200,
+    webp: {
+      src: svc_safety_1_480_webp,
+      srcSet: `${svc_safety_1_480_webp} 480w, ${svc_safety_1_800_webp} 800w, ${svc_safety_1_1200_webp} 1200w, ${svc_safety_1_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_safety_1_800_jpg,
+      srcSet: `${svc_safety_1_800_jpg} 800w, ${svc_safety_1_1200_jpg} 1200w, ${svc_safety_1_1600_jpg} 1600w`,
+    },
+  },
+  'svc-subfloor-1': {
+    width: 1600,
+    height: 2134,
+    webp: {
+      src: svc_subfloor_1_480_webp,
+      srcSet: `${svc_subfloor_1_480_webp} 480w, ${svc_subfloor_1_800_webp} 800w, ${svc_subfloor_1_1200_webp} 1200w, ${svc_subfloor_1_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_subfloor_1_800_jpg,
+      srcSet: `${svc_subfloor_1_800_jpg} 800w, ${svc_subfloor_1_1200_jpg} 1200w, ${svc_subfloor_1_1600_jpg} 1600w`,
+    },
+  },
+  'svc-vinyl-1': {
+    width: 1600,
+    height: 1063,
+    webp: {
+      src: svc_vinyl_1_480_webp,
+      srcSet: `${svc_vinyl_1_480_webp} 480w, ${svc_vinyl_1_800_webp} 800w, ${svc_vinyl_1_1200_webp} 1200w, ${svc_vinyl_1_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_vinyl_1_800_jpg,
+      srcSet: `${svc_vinyl_1_800_jpg} 800w, ${svc_vinyl_1_1200_jpg} 1200w, ${svc_vinyl_1_1600_jpg} 1600w`,
+    },
+  },
+  'svc-vinyl-2': {
+    width: 1600,
+    height: 1016,
+    webp: {
+      src: svc_vinyl_2_480_webp,
+      srcSet: `${svc_vinyl_2_480_webp} 480w, ${svc_vinyl_2_800_webp} 800w, ${svc_vinyl_2_1200_webp} 1200w, ${svc_vinyl_2_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_vinyl_2_800_jpg,
+      srcSet: `${svc_vinyl_2_800_jpg} 800w, ${svc_vinyl_2_1200_jpg} 1200w, ${svc_vinyl_2_1600_jpg} 1600w`,
+    },
+  },
+  'svc-wood-1': {
+    width: 1600,
+    height: 1179,
+    webp: {
+      src: svc_wood_1_480_webp,
+      srcSet: `${svc_wood_1_480_webp} 480w, ${svc_wood_1_800_webp} 800w, ${svc_wood_1_1200_webp} 1200w, ${svc_wood_1_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_wood_1_800_jpg,
+      srcSet: `${svc_wood_1_800_jpg} 800w, ${svc_wood_1_1200_jpg} 1200w, ${svc_wood_1_1600_jpg} 1600w`,
+    },
+  },
+  'svc-wood-2': {
+    width: 1600,
+    height: 2134,
+    webp: {
+      src: svc_wood_2_480_webp,
+      srcSet: `${svc_wood_2_480_webp} 480w, ${svc_wood_2_800_webp} 800w, ${svc_wood_2_1200_webp} 1200w, ${svc_wood_2_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: svc_wood_2_800_jpg,
+      srcSet: `${svc_wood_2_800_jpg} 800w, ${svc_wood_2_1200_jpg} 1200w, ${svc_wood_2_1600_jpg} 1600w`,
     },
   },
 }

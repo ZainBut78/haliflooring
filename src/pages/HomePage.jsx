@@ -4,6 +4,7 @@ import { useHead } from '../components/Seo'
 import Hero from '../components/Hero'
 import ProcessStrip from '../components/ProcessStrip'
 import LuxurySlideshow from '../components/LuxurySlideshow'
+import ExcellenceBand from '../components/ExcellenceBand'
 import ShowroomServices from '../components/ShowroomServices'
 import WorkGallery from '../components/WorkGallery'
 import AreasCovered from '../components/AreasCovered'
@@ -32,6 +33,7 @@ export default function HomePage() {
       <Hero />
       <ProcessStrip />
       <LuxurySlideshow />
+      <ExcellenceBand />
       <ShowroomServices />
       <WorkGallery />
       <AreasCovered />

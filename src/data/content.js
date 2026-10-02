@@ -3,10 +3,12 @@
 export const SITE = {
   name: 'Hali Flooring',
   url: 'https://haliflooring.co.uk',
-  phone: '+447467030479',
-  phoneDisplay: '+44 7467 030479',
+  // Landline for calls; the WhatsApp number is a separate mobile that lands in the inbox.
+  phone: '+441204358904',
+  phoneDisplay: '01204 358904',
   whatsapp: 'https://wa.me/447467030479',
-  email: 'quotes@haliflooring.co.uk',
+  whatsappDisplay: '+44 7467 030479',
+  email: 'Halifloorings@gmail.com',
   address: {
     line1: 'Bolton',
     line2: 'Greater Manchester',
@@ -14,9 +16,8 @@ export const SITE = {
     country: 'United Kingdom',
   },
   hours: [
-    { day: 'Mon - Fri', time: '8:00 AM - 6:00 PM' },
-    { day: 'Saturday', time: '9:00 AM - 4:00 PM' },
-    { day: 'Sunday', time: 'Emergency / By Appt' },
+    { day: 'Mon - Sat', time: '10:00 AM - 6:00 PM' },
+    { day: 'Sunday', time: 'Closed' },
   ],
 }
 
@@ -31,6 +32,8 @@ const flooring3 = optimizedImages['flooring-3']
 const flooring4 = optimizedImages['flooring-4']
 const flooring5 = optimizedImages['flooring-5']
 const flooring6 = optimizedImages['flooring-6']
+
+const img = (name) => optimizedImages[name]
 
 export const imagePool = [flooring1, flooring2, flooring3, flooring4, flooring5, flooring6]
 
@@ -62,7 +65,7 @@ export const projects = [
     challenge:
       'The existing subfloor had significant level variation across a 45m² open-plan space, and the clients wanted a herringbone layout that ran uninterrupted from the kitchen island through to the dining area.',
     solution:
-      'We laser-surveyed the full floor, laid a fresh latex screed to bring the slab within tolerance, then installed the herringbone LVT from the centre line outwards so the pattern stayed symmetrical on both sides of the room.',
+      'We surveyed the full floor, laid a fresh latex screed to bring the slab within tolerance, then installed the herringbone LVT from the centre line outwards so the pattern stayed symmetrical on both sides of the room.',
     duration: '3 days on site',
   },
   {
@@ -144,29 +147,29 @@ export const projects = [
     duration: '4 days on site',
   },
   {
-    slug: 'bury-retail-laminate-herringbone',
+    slug: 'bury-home-laminate-herringbone',
     category: 'laminate',
     categoryLabel: 'Laminate',
-    title: 'AC5 Herringbone Laminate for High-Traffic Retail',
+    title: 'AC5 Herringbone Laminate for a Busy Family Home',
     location: 'Bury, BL9',
-    metaTitle: 'AC5 Herringbone Laminate in Bury | Hali Flooring Project',
+    metaTitle: 'Herringbone Laminate in Bury | Hali Flooring Project',
     metaDescription:
-      '60m² of AC5 rated herringbone laminate installed over a fibreboard subfloor in Bury, Greater Manchester. Built for high-traffic retail durability.',
+      '60m² of AC5 rated herringbone laminate installed over a fibreboard subfloor in a Bury family home. Hardwearing, good value and ideal for a hallway and living room.',
     excerpt:
-      'Heavy-duty AC5 herringbone laminate laid over fibreboard and DPM, specified for daily footfall in a retail unit.',
+      'Hardwearing AC5 herringbone laminate laid over fibreboard and DPM through a hallway and living room, built for everyday family life.',
     images: [flooring4, flooring2],
     specs: {
       Area: '60m²',
       Duration: '2 Days',
       Product: 'AC5 Herringbone Laminate',
       Subfloor: 'Fibreboard + DPM',
-      'Area Covered': 'Retail shop floor + stockroom',
+      'Area Covered': 'Hallway + living room',
       Finish: 'Herringbone, click-fit',
     },
     challenge:
-      'A retail floor with constant footfall and occasional damp mopping. The budget allowed laminate but the spec still had to handle commercial wear.',
+      'A busy family hallway and living room needed a floor that could cope with school shoes, pets and daily mopping, with a herringbone look on a sensible budget.',
     solution:
-      'We specified AC5 wear-rated herringbone laminate over a fibreboard and DPM build-up, giving a 30-year wear warranty on a floor that sees daily footfall and wet cleaning.',
+      'We specified an AC5 wear-rated herringbone laminate over a fibreboard and DPM build-up, giving a tough, good-value floor with the look of real timber.',
     duration: '2 days on site',
   },
   {
@@ -206,194 +209,280 @@ export const projectCategories = [
   { id: 'commercial', label: 'Commercial' },
 ]
 
+// Every service shares one shape. `intro` opens the page, `detail` is the
+// second paragraph further down (never the same words), `tagline` is the short
+// line on the home page cards and `listBlurb` the longer one on /services.
+// Copy is deliberately generic: no claims about specific jobs, brands or
+// equipment, so nothing here needs backing up with a photo or a certificate.
+// `faqs` is optional; the small pages simply leave it out.
 export const services = {
   lvt: {
     slug: 'lvt',
     name: 'Luxury Vinyl Tile',
     navLabel: 'LVT',
-    metaTitle: 'Luxury Vinyl Tile (LVT) Flooring Specialists | Herringbone & Chevron | Hali Flooring',
+    metaTitle: 'Luxury Vinyl Tile (LVT) Flooring | Supply & Fit North West | Hali Flooring',
     metaDescription:
-      'Luxury Vinyl Tile flooring specialists across the North West. Herringbone, chevron and bordered LVT installed with flush transitions. Free home survey, free laser measure and no-obligation quote. Call +44 7467 030479.',
+      'Luxury Vinyl Tile supplied and fitted across the North West. Wood, stone and tile effects in plank, herringbone, chevron and parquet patterns. Free home survey and no-obligation quote.',
     heroHeading: 'LUXURY VINYL TILE',
     intro:
-      'Hardwearing, water-proof and available in the herringbone and chevron patterns that engineered timber costs three times as much to achieve. LVT is the single most requested floor in the North West right now.',
-    // Unique per service, so the six service pages never share a paragraph.
-    sellingPoint:
-      'Every LVT job starts with a laser survey of the slab, because a herringbone layout magnifies any dip in the subfloor. We then set the centre line first and work outwards, which is the only way the chevron reads symmetrical across a kitchen diner.',
-    faqNote:
-      'The questions Bolton homeowners actually ask before ordering LVT — mostly about water, underfloor heating and how long a herringbone floor really takes.',
-    // Short line for the /services index card, so the index does not reprint
-    // each service page's opening paragraph.
+      'Luxury Vinyl Tile is one of the most popular floors in UK homes, and it is easy to see why: it is warm underfoot, water-resistant, quiet and tough enough for family life. With wood, stone and tile effects in plank, herringbone, chevron and parquet patterns, there is an LVT to suit almost any room.',
+    detail:
+      'LVT works beautifully in kitchens, bathrooms, hallways and open-plan living areas. It wipes clean in seconds, feels comfortable to walk on and suits underfloor heating. We supply and fit it, and we can take care of lifting the old floor and getting the subfloor ready so the new one goes down flat.',
+    tagline: 'Wood, stone & tile effects in countless patterns.',
     listBlurb:
-      'Water-proof herringbone and chevron laid from a laser-set centre line, with a flushed brass or oak threshold at every doorway.',
+      'Water-resistant, easy-care vinyl tiles and planks in herringbone, chevron, parquet and more, for kitchens, hallways and living areas.',
+    icon: 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z',
+    images: [img('svc-lvt-1'), img('svc-lvt-2')],
+    sellingPoint:
+      'Plank, tile, herringbone, chevron, parquet, bordered: the choice of patterns and shapes in LVT is huge. Tell us the look you want and we will show you what is available.',
+    faqNote: 'The questions we hear most before people choose LVT.',
     features: [
-      { title: 'Herringbone & Chevron', desc: 'Classic 45° herringbone and chevron layouts laid to a true centre line so the pattern reads symmetrical across the room.' },
-      { title: '100% Water-Proof', desc: 'Fully waterproof core, so kitchens, bathrooms and utility rooms are covered without the warping risk of real timber.' },
-      { title: 'Commercial Wear Ratings', desc: 'Available in heavy-duty wear layers rated for busy family homes and light commercial footfall.' },
-      { title: 'Underfloor Heating Ready', desc: 'Thermal resistance tested for compatibility with underfloor heating manifolds.' },
-      { title: 'Flush Transitions', desc: 'Brass, oak or matched trim transitions laid perfectly flush so there is no trip lip between rooms.' },
-      { title: 'Free Laser Measure', desc: 'Accurate laser surveying of every room before a single board is ordered. No wastage, no surprises.' },
+      { title: 'Endless Patterns', desc: 'Straight plank, herringbone, chevron, parquet and tile layouts, in wood, stone and concrete looks.' },
+      { title: 'Water-Resistant', desc: 'A waterproof construction makes it a sensible choice for kitchens, bathrooms and utility rooms.' },
+      { title: 'Warm & Quiet Underfoot', desc: 'Softer and warmer than ceramic tile, and kinder on the legs and on noise.' },
+      { title: 'Underfloor Heating Friendly', desc: 'Many ranges are suitable for underfloor heating. We check the product before you order.' },
+      { title: 'Easy to Clean', desc: 'A quick sweep and a damp mop is all it needs to keep looking good.' },
+      { title: 'Neat Finishing', desc: 'Matching trims and thresholds so the floor meets doorways and other floors cleanly.' },
     ],
     faqs: [
-      { q: 'Is LVT as good as real wood flooring?', a: 'Modern LVT with a rigid core and a 0.55mm+ wear layer performs comparably to engineered timber in a domestic setting, and it is fully waterproof. Many of our Bolton and Manchester clients choose LVT specifically to avoid the water risk of real oak in kitchens and bathrooms.' },
-      { q: 'How long does a herringbone LVT installation take?', a: 'A typical 45m² open-plan herringbone installation takes three to four days on site, assuming the subfloor is level. If screeding is also needed, allow an additional two days for the screed to cure.' },
-      { q: 'Can LVT go over underfloor heating?', a: 'Yes, provided the product is specifically rated for underfloor heating. We check the manufacturer specification for every product before we order it, and we always confirm the surface temperature does not exceed 27°C.' },
-      { q: 'Do you remove the old flooring first?', a: 'Yes, old floor removal and disposal is included in the quote for every job. We lift the old floor, clear the debris, and prepare the subfloor ready for the new installation.' },
+      { q: 'Is LVT as good as real wood flooring?', a: 'LVT gives you a very convincing wood look with the added benefit of being water-resistant, which makes it ideal for kitchens and bathrooms. Real wood has a character of its own, so we are happy to talk through which suits your room better.' },
+      { q: 'Can LVT go over underfloor heating?', a: 'Yes, as long as the product is rated for it. We check the manufacturer specification before ordering and advise on the right way to run the heating.' },
+      { q: 'Does the subfloor need to be flat?', a: 'Yes. Vinyl follows the surface beneath it, so we check the floor during your survey and let you know if any levelling is needed first.' },
+      { q: 'Do you remove the old flooring?', a: 'We can. Just tell us what is down at the moment and we will include removal and disposal in your quote.' },
     ],
   },
   wood: {
     slug: 'wood',
     name: 'Engineered Wood Flooring',
     navLabel: 'Engineered Wood',
-    metaTitle: 'Engineered Wood Flooring | Real Oak & Smoked Planks | Hali Flooring Bolton',
+    metaTitle: 'Engineered Wood Flooring | Real Oak Supply & Fit | Hali Flooring',
     metaDescription:
-      'Engineered real oak flooring specialists. Smoked, brushed and oiled European oak in straight plank, herringbone and chevron. Built for underfloor heating. Free measure and quote across Greater Manchester and Lancashire.',
+      'Engineered real wood flooring supplied and fitted across the North West. Oak in straight plank, herringbone and chevron, suitable for underfloor heating. Free home survey and quote.',
     heroHeading: 'ENGINEERED WOOD',
     intro:
-      'Real oak, engineered to be stable over underfloor heating and British humidity. Our Chorley barn conversion shows exactly what a 120m² engineered oak floor looks like when it is specified properly.',
-    sellingPoint:
-      'Timber moves, and engineered oak is built to move with it. We hold each board to a 6–8% moisture content for the property, acclimatise the packs inside for a week before laying, and leave a gap at every wall so the floor can breathe through its worst winter.',
-    faqNote:
-      'Everything about engineered oak that catches people out: whether it is genuinely suitable over underfloor heating, how to care for an oiled finish, and what happens to a gapped floor in January.',
+      'Engineered wood gives you the beauty of a real timber floor with far better stability than solid boards. A real wood top layer sits on a layered core, so it copes well with changes in temperature and humidity and is a popular choice for UK homes.',
+    detail:
+      'Choose from natural, oiled, brushed and smoked finishes in straight plank, herringbone and chevron. Engineered wood suits living rooms, hallways, bedrooms and most kitchens, and can be used over underfloor heating when the right product is chosen. We supply, fit and finish it neatly.',
+    tagline: 'Real wood beauty, built to stay stable.',
     listBlurb:
-      'Real European oak, engineered to stay flat over heating and British humidity, in straight plank, herringbone or chevron.',
+      'Real oak and other timbers on a stable layered board, in plank, herringbone and chevron, for living rooms, hallways and beyond.',
+    icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
+    images: [img('svc-wood-1'), img('svc-wood-2')],
+    sellingPoint:
+      'A real wood floor lasts for decades when it is chosen and laid properly. We help you pick the right board, finish and width for the room.',
+    faqNote: 'What people usually want to know about engineered wood.',
     features: [
-      { title: 'European Oak Species', desc: 'Genuine European oak in a range of finishes, from natural oiled to smoked and brushed for a darker, wire-brushed look.' },
-      { title: 'UFH Compatible', desc: 'Engineered construction with a suitable thermal resistance, so real timber works safely over underfloor heating systems.' },
-      { title: 'Herringbone & Chevron', desc: 'Full pattern work in engineered oak, laid from a laser-set centre line across the full room to avoid pattern drift.' },
-      { title: 'Wide Plank Availability', desc: '190mm and wider planks in fixed lengths to minimise end joints and give a cleaner, calmer floor line.' },
-      { title: 'Subfloor Prep Included', desc: 'Ply boarding, damp proof membrane and acoustic underlay supplied and fitted as part of the installation.' },
-      { title: 'Staged Commissioning', desc: 'With underfloor heating we bring the system up slowly on a staged schedule to protect the timber during the first weeks.' },
+      { title: 'Real Wood Top Layer', desc: 'Genuine timber you can see and feel, in natural, oiled, brushed and smoked finishes.' },
+      { title: 'More Stable Than Solid', desc: 'A layered core resists movement, so it copes better with heating and changing seasons.' },
+      { title: 'Herringbone & Chevron', desc: 'Classic patterns as well as straight plank, in a range of widths and lengths.' },
+      { title: 'Underfloor Heating Suitable', desc: 'The right engineered boards work well over underfloor heating.' },
+      { title: 'Prepared Properly', desc: 'We check the subfloor and fit the right underlay or boarding before the wood goes down.' },
+      { title: 'Care Advice', desc: 'Simple guidance on cleaning and maintenance so your floor keeps its good looks.' },
     ],
     faqs: [
-      { q: 'What is the difference between solid and engineered oak?', a: 'Solid oak is a single timber layer, typically 14-20mm thick. Engineered oak is a real oak wear layer bonded to a plywood or softwood base, making it far more dimensionally stable and therefore the correct choice over underfloor heating.' },
-      { q: 'Is engineered oak suitable for kitchens?', a: 'It works well in kitchens if you maintain sensible water exposure and wipe spills promptly. For fully wet rooms such as bathrooms, we would normally recommend safety vinyl or LVT instead, because real timber and standing water are not a good pairing.' },
-      { q: 'How long does engineered oak last?', a: 'A quality engineered oak floor with a 3mm+ wear layer should last 25-30 years in a domestic property with normal maintenance. We supply board lengths and wear layers sized to the traffic level of the room.' },
-      { q: 'Can engineered oak go over concrete?', a: 'Yes, provided the subfloor is prepared correctly. We lay a moisture-resistant plywood base, a damp proof membrane, and an acoustic underlay before the timber is floated or bonded. Our Chorley barn project was a full concrete slab.' },
-    ],
-  },
-  carpet: {
-    slug: 'carpet',
-    name: 'Carpets & Stair Runners',
-    navLabel: 'Carpets & Runners',
-    metaTitle: 'Carpets & Bespoke Stair Runners | Wool, Saxony & Runners | Hali Flooring',
-    metaDescription:
-      'Deep pile saxony carpets, wool twists and bespoke stair runners across Bolton and the North West. Hand-whipped edges, acoustic underlay and matte black stair rods. Free home survey.',
-    heroHeading: 'CARPETS & STAIR RUNNERS',
-    intro:
-      'Carpet is the warmest, quietest and most forgiving floor in the house. For staircases we template on site and whip the edge by hand, so the runner follows a curve rather than fighting it.',
-    sellingPoint:
-      'Carpet is judged on what is underneath it, and that is what gets skipped. We stretch-fit with a proper knee kicker, power-stretcher and trimmer rather than a staple gun, so a fitted carpet stays flat through a British winter instead of ridging along the wall.',
-    faqNote:
-      'Carpet questions from our Bolton installs: choosing a pile for a busy hallway, whether underlay matters, and what fitting a curved staircase actually involves.',
-    listBlurb:
-      'Deep saxony and wool twists, plus bespoke stair runners templated on site and hand-whipped to follow a curve.',
-    features: [
-      { title: 'Deep Pile Saxony', desc: 'High-twist saxony in wool and wool blends, selected for longevity in the highest traffic rooms in the house.' },
-      { title: 'Bespoke Stair Runners', desc: 'Runners templated on site to follow curved or straight flights, cut and hand-whipped to fit exactly.' },
-      { title: 'Acoustic Underlay', desc: '11mm underlay beneath stair runners to reduce impact noise between floors in converted and loft spaces.' },
-      { title: 'Stair Rods & Finishing', desc: 'Matte black, brass or stainless rods fixed to hold runners securely on the tread.' },
-      { title: 'Room Sizing Advice', desc: 'We will tell you if a room needs a patterned carpet, or if a plain twist will wear better and cost less over ten years.' },
-      { title: 'Free Sampling Call', desc: 'Order swatches to your home from the mobile showroom van, or visit the Bolton showroom in person.' },
-    ],
-    faqs: [
-      { q: 'Can stair runners follow a curved staircase?', a: 'Yes. For a curved flight we template the full run on site, cut the runner to the measured profile and whip the edge by hand. Our Worsley manor project is a full 180-degree curved flight.' },
-      { q: 'Wool or synthetic carpet — which is better?', a: 'Wool is naturally resilient, self-cleaning in fibre and lasts longer, but costs more per square metre. Synthetic twists are more stain resistant and budget-friendly. For high-traffic hallways we usually recommend a wool-rich blend.' },
-      { q: 'What underlay do you use?', a: 'We use 11mm acoustic underlay as standard on staircases, and a 10-12mm bonded underlay on normal floors. Underlay is the single biggest factor in how a carpet feels and wears over time.' },
-      { q: 'How long does carpet fitting take?', a: 'A standard room takes most of a day including removal of the old carpet. Stair runners take around two days, since each tread and riser is templated and cut individually.' },
+      { q: 'What is the difference between solid and engineered wood?', a: 'Solid wood is a single piece of timber. Engineered wood has a real wood top layer bonded to a stable layered base, which makes it better suited to modern heated homes.' },
+      { q: 'Is engineered wood suitable for kitchens?', a: 'Generally yes, if spills are wiped up promptly. For bathrooms and wet rooms we would normally suggest LVT or vinyl instead.' },
+      { q: 'Can it be fitted over underfloor heating?', a: 'Yes, with a suitable board and the right installation method. We will confirm this when we choose your floor.' },
+      { q: 'Can it be laid over concrete?', a: 'Yes, once the base is dry and flat. We will advise on any damp protection or levelling that is needed.' },
     ],
   },
   laminate: {
     slug: 'laminate',
     name: 'Laminate Flooring',
     navLabel: 'Laminate',
-    metaTitle: 'Laminate Flooring | AC4 & AC5 Herringbone & Straight Plank | Hali Flooring',
+    metaTitle: 'Laminate Flooring | Supply & Fit North West | Hali Flooring',
     metaDescription:
-      'Heavy duty AC4 and AC5 laminate flooring in straight plank and herringbone across Bolton and the North West. Water-resistant options for busy homes. Free measure and fit.',
+      'Laminate flooring supplied and fitted across the North West. Hardwearing, great value and available in straight plank and herringbone. Free home survey and no-obligation quote.',
     heroHeading: 'LAMINATE FLOORING',
     intro:
-      'Laminate is the value-for-money option that has genuinely improved. AC5 herringbone in a busy Bury retail unit proves that you do not need real timber to get a herringbone floor.',
-    sellingPoint:
-      'A floating click floor lives or dies on the flatness of what is under it, because the boards span the floor rather than bonding to it. We laser-check every high point and bring the whole room into tolerance with a screed before a single board is locked together.',
-    faqNote:
-      'Laminate questions we get asked most: which wear rating suits which room, how much it really saves against engineered oak, and where a click floor will not work at all.',
+      'Laminate is the great-value way to get a wood look that stands up to real life. Modern laminate is tougher and more realistic than ever, and comes in straight plank and herringbone styles to suit any home.',
+    detail:
+      'It is a natural choice for hallways, living rooms, bedrooms and children’s rooms, where you want a floor that copes with daily wear without a big price tag. Click-fit boards go down cleanly and quickly, so there is minimal mess and disruption.',
+    tagline: 'Hardwearing, great-value wood looks.',
     listBlurb:
-      'AC4 and AC5 heavy domestic laminate in straight plank and herringbone, floating-fitted with no glue lines and no dust.',
+      'Tough, good-value laminate in straight plank and herringbone, quick and clean to fit in hallways, living rooms and bedrooms.',
+    icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+    images: [img('svc-laminate-1')],
+    sellingPoint:
+      'The right wear rating for the right room is what makes laminate last. We will point you to the board that suits how you live.',
+    faqNote: 'Quick answers on wear ratings, water and where laminate works best.',
     features: [
-      { title: 'AC4 & AC5 Wear Ratings', desc: 'We specify on the room, not the budget. Bedrooms take AC4, busy kitchens and commercial spaces take AC5.' },
-      { title: 'Herringbone & Straight Plank', desc: 'Available in both layouts, with the herringbone ranges producing a genuinely convincing timber look.' },
-      { title: 'Water-Resistant Core', desc: 'A sealed HDF core that stands up to everyday kitchen and bathroom spills without swelling.' },
-      { title: 'Click-Fit Installation', desc: 'Fast, clean floating installation with no glue lines and no dust created in the property.' },
-      { title: 'Fibreboard Preparation', desc: 'Where the existing subfloor needs it, we lay fibreboard and DPM to give the click system a stable, flat base.' },
-      { title: '10 Year Wear Guarantee', desc: 'Every commercial-rated AC5 laminate we fit carries a 10 year wear layer warranty.' },
+      { title: 'Hardwearing', desc: 'A tough surface that stands up to everyday family life, pets and furniture.' },
+      { title: 'Plank & Herringbone', desc: 'Straight plank and herringbone styles with realistic wood finishes.' },
+      { title: 'Good Value', desc: 'The look of timber at a friendly price, so you can floor more of the house.' },
+      { title: 'Click-Fit Installation', desc: 'A clean, floating installation with no glue and very little mess.' },
+      { title: 'Water-Resistant Options', desc: 'Moisture-resistant boards are available for busier areas of the home.' },
+      { title: 'Underlay Included', desc: 'The right underlay supplied and fitted for comfort and sound reduction.' },
     ],
     faqs: [
-      { q: 'What is the difference between AC4 and AC5 laminate?', a: 'Both are wear ratings. AC4 is intended for normal domestic use in rooms such as bedrooms and living rooms. AC5 is a commercial grade suitable for busy hallways, kitchens and light commercial footfall. We recommend AC5 wherever water and traffic combine.' },
-      { q: 'Is laminate as good as engineered wood?', a: 'Engineered wood is the better floor for resale value and long-term feel, because it is real timber. Modern AC5 laminate, however, is dramatically improved and is the right choice where the budget matters or the area is very wet.' },
-      { q: 'Can laminate be used in a bathroom?', a: 'It can, provided it is a genuine water-resistant core and the room has suitable ventilation. For a fully wet room we would normally specify safety vinyl, which is designed for standing water and coved skirting.' },
-      { q: 'How long does laminate take to install?', a: 'A typical 60m² straight plank installation takes two days including subfloor preparation. Herringbone takes longer because every plank is individually aligned.' },
+      { q: 'What do AC ratings mean?', a: 'AC ratings show how well a laminate resists wear. Higher numbers suit busier rooms, and we will recommend a rating for each room.' },
+      { q: 'Is laminate as good as engineered wood?', a: 'Engineered wood is real timber, while laminate is a great-value alternative that is very hardwearing. The best choice depends on your budget and the room.' },
+      { q: 'Can laminate be used in a bathroom?', a: 'Only a water-resistant range, and with good ventilation. For bathrooms we would usually suggest vinyl or LVT.' },
+      { q: 'Does the floor need to be level?', a: 'Laminate floats on top of the base, so it needs to be reasonably flat. We will tell you at the survey if anything needs doing first.' },
+    ],
+  },
+  carpet: {
+    slug: 'carpet',
+    name: 'Carpets & Underlays',
+    navLabel: 'Carpets & Underlays',
+    metaTitle: 'Carpets & Underlays | Supply & Fit North West | Hali Flooring',
+    metaDescription:
+      'Quality carpets and underlays supplied and fitted across the North West. Soft saxony, wool twists and luxury cushion underlay for warmth underfoot. Free home survey and quote.',
+    heroHeading: 'CARPETS & UNDERLAYS',
+    intro:
+      'Nothing beats carpet for warmth, comfort and a quieter home. From soft saxony to hardwearing wool twists, we will help you choose a carpet that feels great and wears well in your bedrooms, living rooms and landings.',
+    detail:
+      'A good underlay makes as much difference as the carpet itself, adding comfort, warmth and a longer life. We supply the carpet and underlay together, lift the old carpet and fit the new one neatly into every corner and doorway.',
+    tagline: 'Soft saxony, wool twists & cushion underlay.',
+    listBlurb:
+      'Soft, warm carpets in saxony, twist and wool blends with a quality underlay, fitted neatly for bedrooms, lounges and landings.',
+    icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
+    images: [img('svc-carpet-1'), img('svc-carpet-2')],
+    sellingPoint:
+      'A carpet is only as good as what is beneath it and how it is fitted. We pay attention to both, so it stays flat and looks great for years.',
+    faqNote: 'Choosing a carpet pile, underlay and what to expect on fitting day.',
+    features: [
+      { title: 'Wide Choice', desc: 'Saxony, twist, loop and wool blend carpets in a full range of colours.' },
+      { title: 'Luxury Underlay', desc: 'Cushion underlay for comfort, insulation and a longer-lasting carpet.' },
+      { title: 'Warm & Quiet', desc: 'Carpet reduces noise and keeps rooms cosy through the colder months.' },
+      { title: 'Neat Fitting', desc: 'Properly stretched and trimmed so it lies flat to the edges and across doorways.' },
+      { title: 'Old Carpet Removed', desc: 'We can lift and dispose of your existing carpet and underlay.' },
+      { title: 'Honest Advice', desc: 'We will tell you if a simpler carpet will wear better and cost less.' },
+    ],
+    faqs: [
+      { q: 'Wool or synthetic carpet?', a: 'Wool is naturally resilient and long-lasting but costs more. Synthetic carpets are budget-friendly and stain resistant. We can show you both.' },
+      { q: 'What underlay should I choose?', a: 'It depends on the room and whether you have underfloor heating. We will recommend the right thickness and type for each area.' },
+      { q: 'How long does fitting take?', a: 'Most rooms are fitted within a day. We will confirm timings when we survey.' },
+    ],
+  },
+  runners: {
+    slug: 'runners',
+    name: 'Stair Runners',
+    navLabel: 'Stair Runners',
+    metaTitle: 'Bespoke Stair Runners | Supply & Fit North West | Hali Flooring',
+    metaDescription:
+      'Bespoke stair runners supplied and fitted across the North West. Neat whipped edges, borders and stair rods for a finish that suits your hallway. Free home survey and quote.',
+    heroHeading: 'STAIR RUNNERS',
+    intro:
+      'A stair runner adds warmth, grip and a touch of character to your staircase, while leaving the edges of the treads on show. Choose the carpet, the border and the finish, and we will make it up and fit it neatly.',
+    detail: 'We can supply stair rods too, to give the whole staircase a polished, finished look.',
+    tagline: 'Bespoke runners with whipped edges & stair rods.',
+    listBlurb:
+      'Bespoke runners with hand-finished edges, borders and optional stair rods, made up and fitted to your staircase.',
+    icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
+    images: [img('svc-runners-1'), img('svc-runners-2')],
+    sellingPoint: 'A neat, well-finished runner makes the whole hallway look better.',
+    features: [
+      { title: 'Made to Measure', desc: 'Cut and finished to suit your staircase.' },
+      { title: 'Whipped Edges & Borders', desc: 'Hand-finished edging in a choice of colours.' },
+      { title: 'Stair Rods', desc: 'A choice of finishes to hold the runner securely.' },
+      { title: 'Underlay Fitted', desc: 'Quality underlay for comfort and a longer life.' },
+    ],
+  },
+  vinyl: {
+    slug: 'vinyl',
+    name: 'Vinyl Flooring',
+    navLabel: 'Vinyl Flooring',
+    metaTitle: 'Vinyl Flooring for Kitchens & Bathrooms | Supply & Fit | Hali Flooring',
+    metaDescription:
+      'Hardwearing, waterproof vinyl flooring supplied and fitted for kitchens, bathrooms and utility rooms across the North West. Free home survey and no-obligation quote.',
+    heroHeading: 'VINYL FLOORING',
+    intro:
+      'Vinyl is a hardwearing, waterproof and budget-friendly floor that is perfect for kitchens, bathrooms and utility rooms. It comes in a huge range of wood, stone and tile looks and is simple to keep clean.',
+    detail: 'Sheet vinyl is laid in one piece, so there are few or no joins for water to find its way through.',
+    tagline: 'Waterproof & hardwearing for kitchens and bathrooms.',
+    listBlurb:
+      'Waterproof, hardwearing sheet vinyl in a wide choice of looks, ideal for kitchens, bathrooms and utility rooms.',
+    icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+    images: [img('svc-vinyl-1'), img('svc-vinyl-2')],
+    sellingPoint: 'Practical, good-looking and easy to look after.',
+    features: [
+      { title: 'Waterproof', desc: 'Ideal for kitchens, bathrooms and utility rooms.' },
+      { title: 'Easy to Clean', desc: 'A quick wipe keeps it looking fresh.' },
+      { title: 'Great Choice of Looks', desc: 'Wood, stone and tile effects in many colours.' },
+      { title: 'Good Value', desc: 'A tough floor at a friendly price.' },
     ],
   },
   commercial: {
     slug: 'commercial',
-    name: 'Commercial Flooring',
-    navLabel: 'Commercial',
-    metaTitle: 'Commercial Flooring Contractors | Safety Flooring & Contract Work | Hali Flooring',
+    name: 'Commercial Vinyl & Safety Flooring',
+    navLabel: 'Safety Flooring',
+    metaTitle: 'Commercial Vinyl & Safety Flooring | Supply & Fit North West | Hali Flooring',
     metaDescription:
-      'Commercial flooring contractor serving the North West. Hygienic safety flooring, coved skirting and welded seams for care homes, clinics, kitchens and offices. Fully insured contract work.',
-    heroHeading: 'COMMERCIAL FLOORING',
+      'Commercial vinyl and slip-resistant safety flooring supplied and fitted across the North West for kitchens, wet rooms, care settings, offices and more. Free survey and quote.',
+    heroHeading: 'SAFETY FLOORING',
     intro:
-      'We are a fully insured flooring contractor as well as a domestic installer. Our Manchester and Preston commercial projects run to a contract spec, with method statements and out-of-hours working where the building stays open.',
-    sellingPoint:
-      'In a care home or a clinic, the floor is inspected for a slip rating rather than admired. We lay R11 safety vinyl with hot-welded seams and a coved skirting, and we hold the R11 certificate on file so your compliance audit has the paperwork already in it.',
-    faqNote:
-      'Commercial and wet-room questions: which slip rating a care home or commercial kitchen needs, how we work around a live building, and what our insurance paperwork covers.',
+      'Commercial vinyl and safety flooring is built for busy, hygienic spaces. With slip-resistant surfaces, welded seams and neat coved edges, it suits kitchens, wet rooms, clinics, care settings, schools and offices.',
+    detail: 'We can supply and fit it for both business and domestic wet rooms, and work to suit the way your premises operate.',
+    tagline: 'Slip-resistant commercial vinyl for wet and busy areas.',
     listBlurb:
-      'R11 safety vinyl with welded seams and coved skirting, fitted out of hours so care homes and offices stay open.',
+      'Slip-resistant commercial vinyl with welded seams and coved edges for kitchens, wet rooms, offices and care settings.',
+    icon: 'M3 21h18M5 21V7l7-4 7 4v14M9 9h1m-1 4h1m-1 4h1m4-8h1m-1 4h1m-1 4h1',
+    images: [img('svc-safety-1')],
+    sellingPoint: 'A safe, hygienic and long-lasting floor for working spaces.',
     features: [
-      { title: 'Safety Flooring', desc: 'R11-rated hygienic anti-slip vinyl for wet rooms, kitchens and clinical areas, with welded seams.' },
-      { title: 'Coved Skirting', desc: 'A 100mm coved detail formed and welded so the floor-to-wall junction can be washed down with no dirt trap.' },
-      { title: 'Out-of-Hours Working', desc: 'We work nights and weekends on live care homes and occupied offices, with zero daytime room downtime.' },
-      { title: 'Insured & Documented', desc: 'Full public liability and professional indemnity cover, method statements, and RAMS on request.' },
-      { title: 'Waterproof Tanking', desc: 'Tanking systems and tanking membranes under screed in areas subject to persistent moisture ingress.' },
-      { title: 'Maintenance Advice', desc: 'Written cleaning and maintenance schedules handed over on completion so the floor keeps performing.' },
-    ],
-    faqs: [
-      { q: 'What safety flooring do you install?', a: 'Commercial safety vinyl rated to R11 for slip resistance, usually in sheet form so we can weld the seams and form a coved skirting. We hold stock from Polyflor and Altro so we can match an existing facility spec.' },
-      { q: 'Can you work around an occupied building?', a: 'Yes. Our Preston care home project fitted 12 wet rooms while the facility remained fully occupied, working out of hours with no daytime room downtime. We plan around the operation rather than closing the building.' },
-      { q: 'Do you provide method statements?', a: 'Yes. Risk assessment and method statements, RAMS and COSHH documentation are all available on request before works begin, along with our public liability and professional indemnity certificates.' },
-      { q: 'What areas do you cover commercially?', a: 'We cover the whole North West for contract work, with our base in Bolton. Larger multi-site projects are quoted per site so the client has a clear cost per property.' },
+      { title: 'Slip-Resistant', desc: 'Safety surfaces suited to wet and busy areas.' },
+      { title: 'Welded Seams', desc: 'Joins sealed for a hygienic, easy-to-clean floor.' },
+      { title: 'Coved Edges', desc: 'Neat upstands where the floor meets the wall.' },
+      { title: 'Business & Home', desc: 'Suitable for commercial premises and domestic wet rooms.' },
     ],
   },
   subfloor: {
     slug: 'subfloor',
-    name: 'Floor Levelling & Prep',
-    navLabel: 'Floor Prep',
-    metaTitle: 'Floor Levelling & Subfloor Preparation | Screeding & DPM | Hali Flooring',
+    name: 'Floor Levelling & Preparation',
+    navLabel: 'Floor Levelling',
+    metaTitle: 'Floor Levelling & Subfloor Preparation | Hali Flooring North West',
     metaDescription:
-      'Laser-checked floor levelling, self-levelling screeds, damp proof membranes and ply boarding across Bolton and the North West. The prep that decides whether a floor looks good.',
-    heroHeading: 'FLOOR LEVELLING & PREP',
+      'Floor levelling, self-levelling screed, damp proofing and ply boarding across the North West. A flat, sound base for a floor that looks and lasts. Free home survey and quote.',
+    heroHeading: 'FLOOR LEVELLING',
     intro:
-      'The subfloor decides how a finished floor looks. We laser-survey every room before ordering, and we will tell you honestly if a floor can be laid without screeding rather than selling you a prep package you do not need.',
-    sellingPoint:
-      'Tolerance is measured in millimetres across a two metre span, not by eye. We laser the whole floor and put the numbers in the quote, so you can see exactly what prep was needed and what was not — and hold us to it on the day.',
-    faqNote:
-      'Subfloor questions that come up before any flooring order: how thick the screed needs to be, whether a DPM is required, and what self-levelling compound actually costs per square metre.',
+      'A great floor starts with a flat, dry and sound base. We prepare uneven, damaged or damp subfloors so your new flooring goes down properly and lasts.',
+    detail:
+      'If your floor is already in good order we will say so, and only recommend the preparation your new floor genuinely needs. Where it is needed, we can level, board and protect the base before the finished floor is fitted.',
+    tagline: 'A flat, sound base for any new floor.',
     listBlurb:
-      'Laser surveying, self-levelling screeds, damp proof membranes and ply boarding, quoted honestly even when no prep is needed.',
+      'Self-levelling screed, damp proofing and ply boarding, so uneven or damaged floors are ready for their new covering.',
+    icon: 'M5 13l4 4L19 7',
+    images: [img('svc-subfloor-1')],
+    sellingPoint: 'Preparation decides how well the finished floor looks and lasts. We only recommend what is needed.',
+    faqNote: 'Common questions about levelling, damp and preparing floors.',
     features: [
-      { title: 'Laser Surveying', desc: 'Every room is laser-surveyed before a single board is ordered, so quantities are accurate and the pattern lines up.' },
-      { title: 'Self-Levelling Screed', desc: 'Flowing self-levelling screeds to bring a slab within tolerance for herringbone, chevron and wide plank timber.' },
-      { title: 'Damp Proof Membranes', desc: 'DPM tanking laid to the correct standard for engineered timber and laminate over ground floors.' },
-      { title: 'Ply Boarding', desc: 'Moisture-resistant plywood over existing subfloors, then a proper flat base for floating installations.' },
-      { title: 'Feather Edging', desc: 'Perimeter feather edging for commercial coved skirting and for tight upstands against walls.' },
-      { title: 'Honest Advice', desc: 'If the subfloor is already within tolerance, we will tell you. We do not sell prep packages that are not needed.' },
+      { title: 'Self-Levelling Screed', desc: 'Smooths out dips and uneven areas ready for the new floor.' },
+      { title: 'Damp Proofing', desc: 'Damp proof membranes where moisture could affect the new floor.' },
+      { title: 'Ply Boarding', desc: 'A flat, stable base over uneven or older timber floors.' },
+      { title: 'Old Floor Removal', desc: 'Existing coverings lifted and the base made good.' },
+      { title: 'Repairs & Making Good', desc: 'Damaged or loose areas repaired before fitting.' },
+      { title: 'Honest Advice', desc: 'If your floor does not need preparation, we will tell you.' },
     ],
     faqs: [
-      { q: 'Do I need to level the floor before LVT?', a: 'Not always. LVT in a straight plank format is more forgiving than herringbone. We laser-check the floor first and only recommend levelling if the variation would show in the finished pattern, which is common with herringbone and chevron.' },
-      { q: 'How long does a self-levelling screed take to dry?', a: 'A standard cementitious self-levelling screed needs 24 to 48 hours before foot traffic and typically three to seven days before installing the floor covering over it. We will always give you the manufacturer cure time for the specific product used.' },
-      { q: 'What is a damp proof membrane?', a: 'A DPM is a sealed membrane laid between the concrete slab and the flooring build-up. It stops ground moisture rising into your timber or laminate, which would otherwise cause cupping and lifting over time.' },
-      { q: 'Do you do prep-only jobs?', a: 'Yes. Many clients have their own fitter install the floor, and we do the laser survey, screeding, DPM and ply boarding only. It is a common split on larger commercial projects.' },
+      { q: 'Do I need to level the floor before laying a new one?', a: 'Not always. We check the floor at your survey and only recommend levelling where it will make a difference to the finished result.' },
+      { q: 'How long does screed take to dry?', a: 'It depends on the product and thickness. We will give you the timings for the screed we use so you know when the new floor can go down.' },
+      { q: 'What is a damp proof membrane?', a: 'A protective layer that stops moisture rising from the base into your new floor.' },
+      { q: 'Can you do preparation only?', a: 'Yes. If you have your own fitter, we can prepare the floor for them.' },
+    ],
+  },
+  grass: {
+    slug: 'grass',
+    name: 'Artificial Grass',
+    navLabel: 'Artificial Grass',
+    metaTitle: 'Artificial Grass Installation | Supply & Fit North West | Hali Flooring',
+    metaDescription:
+      'Artificial grass supplied and fitted across the North West. Soft, UV-stable, child and pet-friendly lawns laid over a properly prepared base. Free survey and quote.',
+    heroHeading: 'ARTIFICIAL GRASS',
+    intro:
+      'A green lawn all year round with none of the mowing. Artificial grass is soft, hardwearing and a great fit for gardens used by children and pets.',
+    detail: 'We lay it over a properly prepared base so it drains well and stays neat.',
+    tagline: 'Green all year, child & pet friendly.',
+    listBlurb:
+      'Soft, UV-stable artificial lawns for gardens, laid over a prepared base for good drainage and a neat finish.',
+    icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z',
+    images: [img('svc-grass-1'), img('svc-grass-2')],
+    sellingPoint: 'A tidy, low-maintenance lawn that looks good every month of the year.',
+    features: [
+      { title: 'Low Maintenance', desc: 'No mowing, watering or reseeding.' },
+      { title: 'Child & Pet Friendly', desc: 'Soft underfoot and safe for play.' },
+      { title: 'UV-Stable', desc: 'Designed to hold its colour in the sun.' },
+      { title: 'Well Drained', desc: 'Laid over a prepared, free-draining base.' },
     ],
   },
 }
@@ -411,12 +500,13 @@ export const areas = [
   { name: 'Salford', desc: 'Quays & Residential' },
   { name: 'Blackburn', desc: 'Full Coverage' },
   { name: 'Horwich', desc: '& West Pennine' },
+  { name: 'Warrington', desc: 'Town & Surrounds' },
 ]
 
 export const testimonials = [
   {
     quote:
-      'They laser-measured the whole open plan before turning up, so the herringbone ran perfectly from the kitchen to the dining area. No wasted boards, no guesswork. Three days, completely tidy.',
+      'They measured the whole open plan carefully before turning up, so the herringbone ran perfectly from the kitchen to the dining area. No wasted boards, no guesswork. Three days, completely tidy.',
     name: 'Sarah K.',
     location: 'Bolton',
     project: 'Herringbone LVT, 45m²',
@@ -437,27 +527,20 @@ export const testimonials = [
   },
 ]
 
-export const stats = [
-  { value: '20+', label: 'Years Trading' },
-  { value: '3,000+', label: 'Installations' },
-  { value: '10', label: 'Areas Covered' },
-  { value: '100%', label: 'Insured & Guaranteed' },
-]
-
 export const processSteps = [
   {
     step: '01',
     title: 'See It',
-    desc: 'Explore our showroom or the mobile van, with samples to feel under real home lighting before you commit.',
+    desc: 'Browse samples at our showroom, or book a free home survey and we bring samples to you to see in your own lighting.',
   },
   {
     step: '02',
     title: 'Measure It',
-    desc: 'Free laser survey of every room, transparent pricing with no obligation, and a written itemised quote.',
+    desc: 'We survey and measure up, then send a clear, itemised written quote with no obligation.',
   },
   {
     step: '03',
     title: 'Fit It',
-    desc: 'Clean, fast, tidy workmanship by our own installers, with comprehensive guarantees on the finished floor.',
+    desc: 'Careful, tidy workmanship from experienced fitters, finished to a standard we are happy to put our name to.',
   },
 ]

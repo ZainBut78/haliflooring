@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ResponsiveImage from './ResponsiveImage';
 
 // Web-sized variants from the generated manifest — not the source originals.
-import { imagePool } from '../data/content';
+import { imagePool, services, serviceSlugs } from '../data/content';
 
 const [flooring1, flooring2, flooring3, flooring4, flooring5, flooring6] = imagePool;
 
@@ -52,46 +52,14 @@ const slidesData = [
 ];
 
 // The overlay pills double as the carousel's navigation: hovering the stage
-// reveals them, and each one opens the real service page. The slugs match
-// `serviceSlugs` in src/data/content.js.
-const servicePills = [
-  {
-    tag: '01 • LVT',
-    title: 'Luxury Vinyl Tile',
-    desc: 'Herringbone, borders & chevron styles from leading luxury brands.',
-    to: '/services/lvt'
-  },
-  {
-    tag: '02 • WOOD',
-    title: 'Engineered Wood',
-    desc: 'Engineered real oak & smoked planks crafted for underfloor heating.',
-    to: '/services/wood'
-  },
-  {
-    tag: '03 • CARPET',
-    title: 'Carpets & Runners',
-    desc: 'Deep Saxony, wool twists, bespoke stair runners & acoustic underlay.',
-    to: '/services/carpet'
-  },
-  {
-    tag: '04 • LAMINATE',
-    title: 'Laminate Flooring',
-    desc: 'AC4/AC5 heavy domestic straight plank & herringbone with water resistance.',
-    to: '/services/laminate'
-  },
-  {
-    tag: '05 • SAFETY FLOOR',
-    title: 'Commercial Safety',
-    desc: 'Coved, hygienic anti-slip vinyl fitting for wet rooms and clinics.',
-    to: '/services/commercial'
-  },
-  {
-    tag: '06 • SUBFLOOR',
-    title: 'Floor Levelling',
-    desc: 'Laser-flat self-levelling screeds, damp membranes & ply boarding.',
-    to: '/services/subfloor'
-  }
-];
+// reveals them, and each one opens the real service page. They are built from
+// the shared service data so the list always matches the rest of the site.
+const servicePills = serviceSlugs.map((slug, i) => ({
+  tag: `${String(i + 1).padStart(2, '0')} • ${services[slug].navLabel.toUpperCase()}`,
+  title: services[slug].navLabel,
+  desc: services[slug].tagline,
+  to: `/services/${slug}`,
+}));
 
 export default function LuxurySlideshow() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -181,7 +149,7 @@ export default function LuxurySlideshow() {
           })}
         </div>
 
-        {/* Interactive Hover Dimmer & 6 Signature Services Overlay */}
+        {/* Interactive Hover Dimmer & Services Overlay */}
         <div
           id="hover-services-overlay"
           className={`absolute inset-0 z-20 transition-all duration-500 flex items-center justify-center p-4 sm:p-8 ${
@@ -195,8 +163,8 @@ export default function LuxurySlideshow() {
             }`}
           />
 
-          {/* 6 Popout Service Pills Container */}
-          <div className="relative z-30 w-full max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+          {/* Popout Service Pills Container */}
+          <div className="relative z-30 w-full max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 lg:gap-4">
             {servicePills.map((pill, idx) => (
               <Link
                 key={pill.to}

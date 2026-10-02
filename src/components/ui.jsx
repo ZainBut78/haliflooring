@@ -177,7 +177,7 @@ export function FaqAccordion({ items, idPrefix = 'faq' }) {
 /* ------------------------------------------------------------------ */
 export function CtaBand({
   heading = 'Ready for a new floor?',
-  subheading = 'Free home survey, free laser measure and a written quote with no obligation. We cover Bolton, Manchester and the whole North West.',
+  subheading = 'Free home survey and a written quote with no obligation. Based in Bolton, covering the North West and fitting nationwide.',
   primaryLabel = 'Book Free Home Survey',
   secondaryLabel = 'Call the team',
 }) {
