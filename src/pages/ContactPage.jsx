@@ -5,6 +5,7 @@ import { useHead } from '../components/Seo'
 import { Breadcrumbs, PageHero, FaqAccordion } from '../components/ui'
 import { PhoneIcon } from '../components/SiteNav'
 import { areas, services, serviceSlugs, SITE } from '../data/content'
+import { sendEnquiry } from '../lib/sendEnquiry'
 
 const contactFaqs = [
   {
@@ -42,7 +43,10 @@ export default function ContactPage() {
     postcode: '',
     service: '',
     details: '',
+    website: '', // honeypot, hidden from people
   })
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
 
   useHead({
     h1: 'Contact Hali Flooring — Free Survey & Quote',
@@ -54,6 +58,20 @@ export default function ContactPage() {
       mainEntity: { '@id': `${SITE.url}/#business` },
     },
   })
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setSending(true)
+    setError('')
+    try {
+      await sendEnquiry(form)
+      setSent(true)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setSending(false)
+    }
+  }
 
   const update = (key) => (e) => setForm((prev) => ({ ...prev, [key]: e.target.value }))
 
@@ -149,7 +167,7 @@ export default function ContactPage() {
                   <button
                     onClick={() => {
                       setSent(false)
-                      setForm({ name: '', phone: '', email: '', postcode: '', service: '', details: '' })
+                      setForm({ name: '', phone: '', email: '', postcode: '', service: '', details: '', website: '' })
                     }}
                     className="mt-4 px-6 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white text-xs font-bold transition-colors"
                   >
@@ -157,7 +175,19 @@ export default function ContactPage() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={(e) => { e.preventDefault(); setSent(true) }} noValidate={false}>
+                <form onSubmit={handleSubmit} noValidate={false}>
+                  <div className="absolute -left-[9999px]" aria-hidden="true">
+                    <label htmlFor="c-website">Leave this empty</label>
+                    <input
+                      id="c-website"
+                      name="website"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={form.website}
+                      onChange={update('website')}
+                    />
+                  </div>
                   <h2 className="text-lg font-extrabold text-gray-900 font-display uppercase tracking-wide">
                     Request Your Free Survey
                   </h2>
@@ -275,11 +305,17 @@ export default function ContactPage() {
                     </div>
 
                     <div className="pt-1">
+                      {error && (
+                        <p role="alert" className="mb-3 rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
+                          {error}
+                        </p>
+                      )}
                       <button
                         type="submit"
-                        className="w-full bg-brand-orange hover:bg-brand-orangeHover text-white font-extrabold uppercase tracking-wide py-4 px-6 rounded-xl shadow-glow-orange transition-all duration-300 transform hover:-translate-y-0.5 text-sm"
+                        disabled={sending}
+                        className="w-full bg-brand-orange hover:bg-brand-orangeHover disabled:opacity-60 disabled:cursor-not-allowed text-white font-extrabold uppercase tracking-wide py-4 px-6 rounded-xl shadow-glow-orange transition-all duration-300 transform hover:-translate-y-0.5 text-sm"
                       >
-                        Submit For Free Survey &amp; Quote
+                        {sending ? 'Sending…' : 'Submit For Free Survey & Quote'}
                       </button>
                       <p className="text-center text-[11px] text-gray-500 mt-3">
                         🔒 No pushy sales tactics. Your details stay private and are never sold on.

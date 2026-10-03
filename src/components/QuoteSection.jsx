@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SITE, services, serviceSlugs } from '../data/content';
+import { sendEnquiry } from '../lib/sendEnquiry';
 
 export default function QuoteSection() {
   const [formData, setFormData] = useState({
@@ -7,13 +8,32 @@ export default function QuoteSection() {
     phone: '',
     postcode: '',
     flooring_type: '',
-    details: ''
+    details: '',
+    website: '' // honeypot, hidden from people
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError('');
+    try {
+      await sendEnquiry({
+        name: formData.name,
+        phone: formData.phone,
+        postcode: formData.postcode,
+        service: formData.flooring_type,
+        details: formData.details,
+        website: formData.website
+      });
+      setSubmitted(true);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -94,6 +114,18 @@ export default function QuoteSection() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5" id="free-quote-form">
+                <div className="absolute -left-[9999px]" aria-hidden="true">
+                  <label htmlFor="website">Leave this empty</label>
+                  <input
+                    id="website"
+                    name="website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.website}
+                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                  />
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2" htmlFor="full-name">
@@ -182,11 +214,17 @@ export default function QuoteSection() {
                 </div>
 
                 <div className="pt-2">
+                  {error && (
+                    <p role="alert" className="mb-3 rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
+                      {error}
+                    </p>
+                  )}
                   <button
                     type="submit"
-                    className="w-full bg-brand-orange hover:bg-brand-orangeHover text-white font-extrabold uppercase tracking-wide py-4 px-6 rounded-xl shadow-glow-orange transition-all duration-300 transform hover:-translate-y-0.5 text-sm"
+                    disabled={sending}
+                    className="w-full bg-brand-orange hover:bg-brand-orangeHover disabled:opacity-60 disabled:cursor-not-allowed text-white font-extrabold uppercase tracking-wide py-4 px-6 rounded-xl shadow-glow-orange transition-all duration-300 transform hover:-translate-y-0.5 text-sm"
                   >
-                    Submit For Free Survey &amp; Quote
+                    {sending ? 'Sending…' : 'Submit For Free Survey & Quote'}
                   </button>
                   <p className="text-center text-[11px] text-gray-500 mt-3 font-medium">
                     🔒 No pushy sales tactics. Free cancellation anytime. Your data is strictly private.
