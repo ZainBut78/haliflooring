@@ -10,7 +10,7 @@ export default function SiteFooter() {
       <div className="w-[90%] max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-3 space-y-4">
             <Link
               to="/"
               className="inline-block"
@@ -55,7 +55,7 @@ export default function SiteFooter() {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <h2 className="text-xs font-extrabold text-gray-900 uppercase tracking-[0.15em] mb-4">
               Our Services
             </h2>
@@ -78,46 +78,46 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          {/* Contact + hours */}
-          <div className="lg:col-span-6 space-y-6">
-            <div>
-              <h2 className="text-xs font-extrabold text-gray-900 uppercase tracking-[0.15em] mb-4">
-                Get In Touch
-              </h2>
-              <ul className="space-y-2.5 text-xs text-gray-600">
-                <li>
-                  <a href={`tel:${SITE.phone}`} className="font-extrabold text-gray-900 hover:text-brand-orange transition-colors">
-                    {SITE.phoneDisplay}
-                  </a>
+          {/* Contact */}
+          <div className="lg:col-span-3">
+            <h2 className="text-xs font-extrabold text-gray-900 uppercase tracking-[0.15em] mb-4">
+              Get In Touch
+            </h2>
+            <ul className="space-y-2.5 text-xs text-gray-600">
+              <li>
+                <a href={`tel:${SITE.phone}`} className="font-extrabold text-gray-900 hover:text-brand-orange transition-colors">
+                  {SITE.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${SITE.email}`} className="hover:text-brand-orange transition-colors break-all">
+                  {SITE.email}
+                </a>
+              </li>
+              <li>
+                <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">
+                  Message us on WhatsApp
+                </a>
+              </li>
+              <li className="text-gray-700">
+                {SITE.address.line1}, {SITE.address.line2}
+              </li>
+            </ul>
+          </div>
+
+          {/* Hours */}
+          <div className="lg:col-span-3">
+            <h2 className="text-xs font-extrabold text-gray-900 uppercase tracking-[0.15em] mb-4">
+              Working Hours
+            </h2>
+            <ul className="space-y-3 text-xs text-gray-600">
+              {SITE.hours.map((h) => (
+                <li key={h.day} className="font-medium">
+                  <span className="block text-gray-600">{h.day}</span>
+                  <span className="block text-gray-900 font-bold mt-0.5">{h.time}</span>
                 </li>
-                <li>
-                  <a href={`mailto:${SITE.email}`} className="hover:text-brand-orange transition-colors">
-                    {SITE.email}
-                  </a>
-                </li>
-                <li>
-                  <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">
-                    Message us on WhatsApp
-                  </a>
-                </li>
-                <li className="text-gray-700">
-                  {SITE.address.line1}, {SITE.address.line2}
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="text-xs font-extrabold text-gray-900 uppercase tracking-[0.15em] mb-4">
-                Working Hours
-              </h2>
-              <ul className="space-y-1.5 text-xs text-gray-600">
-                {SITE.hours.map((h) => (
-                  <li key={h.day} className="flex justify-between gap-3 font-medium">
-                    <span>{h.day}:</span>
-                    <span className="text-gray-900 font-bold text-right">{h.time}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              ))}
+            </ul>
           </div>
         </div>
 

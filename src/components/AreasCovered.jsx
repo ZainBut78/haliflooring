@@ -21,8 +21,8 @@ const coverageGroups = [
   },
 ];
 
-/*  The ten towns that get the full "local" treatment below the ticker — a card    */
-/*  with a description each. Bolton is the headquarters, so it is highlighted.      */
+/*  The main towns as cards, plus an "Other Cities" card for anywhere else.       */
+/*  Bolton is our base, so it is highlighted.                                       */
 const localAreas = [
   { name: '📍 Bolton', desc: 'Our Base', highlight: true },
   { name: 'Manchester', desc: 'City & Greater Area', highlight: false },
@@ -35,6 +35,7 @@ const localAreas = [
   { name: 'Blackburn', desc: 'Full Coverage', highlight: false },
   { name: 'Horwich', desc: '& West Pennine', highlight: false },
   { name: 'Warrington', desc: 'Town & Surrounds', highlight: false },
+  { name: 'Other Cities', desc: 'ANY', highlight: false },
 ];
 
 /*  Flatten a set of groups into a token stream of labels and cities, then repeat   */
