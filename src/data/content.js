@@ -472,6 +472,7 @@ export const services = {
     intro:
       'A green lawn all year round with none of the mowing. Artificial grass is soft, hardwearing and a great fit for gardens used by children and pets.',
     detail: 'We lay it over a properly prepared base so it drains well and stays neat.',
+    clearing: 'Old lawn or surface cleared if needed',
     tagline: 'Green all year, child & pet friendly.',
     listBlurb:
       'Soft, UV-stable artificial lawns for gardens, laid over a prepared base for good drainage and a neat finish.',

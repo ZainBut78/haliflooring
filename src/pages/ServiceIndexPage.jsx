@@ -42,7 +42,7 @@ export default function ServiceIndexPage() {
               return (
                 <article
                   key={slug}
-                  className="group flex flex-col bg-white border border-gray-200 hover:border-brand-orange rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:shadow-card-hover"
+                  className="group relative flex flex-col bg-white border border-gray-200 hover:border-brand-orange rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:shadow-card-hover"
                 >
                   <span className="inline-flex w-12 h-12 rounded-full bg-orange-50 text-brand-orange items-center justify-center shrink-0 group-hover:bg-brand-orange group-hover:text-white transition-colors duration-200">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
@@ -61,7 +61,7 @@ export default function ServiceIndexPage() {
                     {service.listBlurb}
                   </p>
                   <div className="mt-5 pt-4 border-t border-gray-100 flex items-center justify-end text-xs">
-                    <span className="text-brand-orange font-bold group-hover:translate-x-0.5 transition-transform">
+                    <span className="pointer-events-none text-brand-orange font-bold group-hover:translate-x-0.5 transition-transform">
                       Learn more →
                     </span>
                   </div>

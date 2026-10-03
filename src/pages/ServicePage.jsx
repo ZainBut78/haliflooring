@@ -62,7 +62,7 @@ export default function ServicePage() {
                 {[
                   'Free home survey and measure',
                   'Written, itemised quote with no obligation',
-                  'Old floor removal and disposal if you need it',
+                  service.clearing || 'Old floor removal and disposal if you need it',
                   'Experienced fitters and a tidy, careful finish',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-gray-700">

@@ -78,7 +78,7 @@ export default function WorkPage() {
             {visible.map((proj) => (
               <article
                 key={proj.slug}
-                className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-brand-orange transition-all duration-300 hover:shadow-card-hover flex flex-col"
+                className="group relative bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-brand-orange transition-all duration-300 hover:shadow-card-hover flex flex-col"
               >
                 <Link
                   to={`/work/${proj.slug}`}
