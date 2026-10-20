@@ -200,6 +200,53 @@ export const projects = [
   },
 ]
 
+/**
+ * Before / after photos. Used by the home page carousel and the Work page, so
+ * the wording is written once here. `title` is short enough for a carousel
+ * badge; `text` is the longer caption shown on the Work page.
+ */
+export const beforeAfter = [
+  {
+    id: 'hallway',
+    summary: 'From bare screed to a bright, welcoming entrance. Large marble-effect tiles make a narrow hallway feel lighter and more spacious.',
+    image: img('ba-hallway'),
+    title: 'Before & After: Entrance Hallway',
+    heading: 'Entrance hallway',
+    text: 'A bare, uneven base became a bright, polished hallway. We prepared the floor properly first, then laid large marble-effect tiles for a clean, seamless finish.',
+    alt: 'Entrance hallway before and after flooring installation',
+  },
+  {
+    id: 'stairs',
+    summary: 'Unfinished treads ready for a fresh start. A deep dark carpet fitted tight to every step leaves the stairs warm, quiet and safe underfoot.',
+    image: img('ba-stairs'),
+    title: 'Before & After: Staircase Carpet',
+    heading: 'Staircase',
+    text: 'Bare, patched treads turned into a smart, hard-wearing staircase. A deep dark carpet, neatly fitted to every step, gives a warm, quiet and safe underfoot feel.',
+    alt: 'Staircase before and after carpet fitting',
+  },
+  {
+    id: 'herringbone',
+    summary: 'Herringbone going down across a spacious open-plan room. The finished floor adds warmth and character from wall to wall.',
+    image: img('ba-herringbone'),
+    title: 'Before & After: Herringbone Floor',
+    heading: 'Open-plan living room',
+    text: 'A large, open-plan room finished with a classic herringbone floor. Laid row by row from a carefully set starting line, the pattern runs true from wall to wall for a warm, elegant finish.',
+    alt: 'Open-plan room before and after herringbone flooring',
+  },
+]
+
+/** A look at the range we supply and fit. Each card opens its service page. */
+export const rangeGallery = [
+  { slug: 'lvt', image: img('range-lvt'), title: 'Luxury Vinyl Tile (LVT)', text: 'Warm, water-resistant herringbone and plank styles for kitchens and living areas.' },
+  { slug: 'wood', image: img('range-wood'), title: 'Engineered Wood Flooring', text: 'Real wood beauty with the stability to suit modern heated homes.' },
+  { slug: 'laminate', image: img('range-laminate'), title: 'Laminate Flooring', text: 'Hardwearing, great-value wood looks for bedrooms, hallways and family rooms.' },
+  { slug: 'carpet', image: img('range-carpet'), title: 'Plush Carpets', text: 'Soft, warm carpets that make living rooms and bedrooms feel inviting.' },
+  { slug: 'runners', image: img('range-runners'), title: 'Bespoke Stair Runners', text: 'Made-to-measure runners with neat borders and stair rods.' },
+  { slug: 'commercial', image: img('range-commercial'), title: 'Commercial Vinyl Flooring', text: 'Durable, easy-clean vinyl for offices, shops and other busy spaces.' },
+  { slug: 'subfloor', image: img('range-levelling'), title: 'Floor Levelling', text: 'A flat, sound base so your new floor looks right and lasts.' },
+  { slug: 'grass', image: img('range-grass'), title: 'Artificial Grass', text: 'A neat, low-maintenance lawn that stays green all year round.' },
+]
+
 export const projectCategories = [
   { id: 'all', label: 'All Projects' },
   { id: 'lvt', label: 'LVT & Vinyl' },
@@ -491,17 +538,18 @@ export const services = {
 export const serviceSlugs = Object.keys(services)
 
 export const areas = [
-  { name: 'Bolton', desc: 'Headquarters & Hub', highlight: true },
-  { name: 'Manchester', desc: 'City & Greater Area' },
-  { name: 'Bury', desc: 'Town & Suburbs' },
+  { name: 'Bolton', desc: 'Our Base', highlight: true },
   { name: 'Wigan', desc: 'All Postcodes' },
-  { name: 'Chorley', desc: 'Central & Surrounds' },
-  { name: 'Preston', desc: 'Lancashire County' },
-  { name: 'Rochdale', desc: 'Domestic & Commercial' },
   { name: 'Salford', desc: 'Quays & Residential' },
-  { name: 'Blackburn', desc: 'Full Coverage' },
-  { name: 'Horwich', desc: '& West Pennine' },
+  { name: 'Manchester', desc: 'City & Greater Area' },
+  { name: 'Stockport', desc: 'Town & Surrounds' },
+  { name: 'Cheadle', desc: 'Village & Surrounds' },
+  { name: 'Wythenshawe', desc: 'South Manchester' },
+  { name: 'Sale', desc: 'Town & Surrounds' },
+  { name: 'Hale', desc: 'Village & Surrounds' },
+  { name: 'Altrincham', desc: 'Town & Surrounds' },
   { name: 'Warrington', desc: 'Town & Surrounds' },
+  { name: 'Macclesfield', desc: 'Cheshire Town' },
 ]
 
 export const testimonials = [

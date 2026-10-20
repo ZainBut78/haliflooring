@@ -94,9 +94,11 @@ export function PageHero({ eyebrow, heading, subheading, children, align = 'cent
             {heading}
           </h1>
           {subheading && (
-            <p className="mt-5 text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto">
-              {subheading}
-            </p>
+            <div className="mt-5 space-y-4 text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto">
+              {[].concat(subheading).map((para) => (
+                <p key={para}>{para}</p>
+              ))}
+            </div>
           )}
           {children && <div className="mt-8">{children}</div>}
         </div>

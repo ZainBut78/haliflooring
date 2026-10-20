@@ -28,7 +28,10 @@ export default function ServiceIndexPage() {
       <PageHero
         eyebrow="Supply & fit for homes and businesses"
         heading="Our Services"
-        subheading="From luxury vinyl tile and carpets to commercial safety flooring and artificial grass, we supply and fit it all. Every job starts with a free home survey and a written quote."
+        subheading={[
+          "From luxury vinyl tiles (LVT) and carpets to commercial safety flooring and artificial grass, Hali Flooring supplies and installs a wide range of quality flooring to suit every space.",
+          "Every project begins with a free home survey and a clear, written quotation, ensuring you receive expert advice, transparent pricing and a service you can trust.",
+        ]}
       >
         <PrimaryActions />
       </PageHero>

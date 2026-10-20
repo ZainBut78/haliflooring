@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { areas } from '../data/content';
 
 /*  North West coverage list, grouped by county.                                   */
 const coverageGroups = [
   {
     label: 'Greater Manchester',
-    cities: ['Bolton', 'Manchester', 'Salford', 'Bury', 'Rochdale', 'Oldham', 'Stockport', 'Wigan', 'Horwich'],
+    cities: [
+      'Bolton', 'Manchester', 'Salford', 'Bury', 'Rochdale', 'Oldham', 'Stockport', 'Wigan', 'Horwich',
+      'Cheadle', 'Wythenshawe', 'Sale', 'Hale', 'Altrincham',
+    ],
   },
   {
     label: 'Lancashire',
@@ -13,29 +17,12 @@ const coverageGroups = [
   },
   {
     label: 'Cheshire & Merseyside',
-    cities: ['Warrington', 'Chester', 'Liverpool', 'St Helens', 'Southport'],
+    cities: ['Warrington', 'Macclesfield', 'Chester', 'Liverpool', 'St Helens', 'Southport'],
   },
   {
     label: 'Cumbria',
     cities: ['Carlisle'],
   },
-];
-
-/*  The main towns as cards, plus an "Other Cities" card for anywhere else.       */
-/*  Bolton is our base, so it is highlighted.                                       */
-const localAreas = [
-  { name: '📍 Bolton', desc: 'Our Base', highlight: true },
-  { name: 'Manchester', desc: 'City & Greater Area', highlight: false },
-  { name: 'Bury', desc: 'Town & Suburbs', highlight: false },
-  { name: 'Wigan', desc: 'All Postcodes', highlight: false },
-  { name: 'Chorley', desc: 'Central & Surrounds', highlight: false },
-  { name: 'Preston', desc: 'Lancashire County', highlight: false },
-  { name: 'Rochdale', desc: 'Domestic & Commercial', highlight: false },
-  { name: 'Salford', desc: 'Quays & Residential', highlight: false },
-  { name: 'Blackburn', desc: 'Full Coverage', highlight: false },
-  { name: 'Horwich', desc: '& West Pennine', highlight: false },
-  { name: 'Warrington', desc: 'Town & Surrounds', highlight: false },
-  { name: 'Other Cities', desc: 'ANY', highlight: false },
 ];
 
 /*  Flatten a set of groups into a token stream of labels and cities, then repeat   */
@@ -151,7 +138,7 @@ export default function AreasCovered() {
           <span aria-hidden="true" className="h-px flex-1 bg-gray-200" />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 text-center">
-          {localAreas.map((area) => (
+          {areas.map((area) => (
             <Link
               key={area.name}
               to="/contact"
@@ -168,7 +155,7 @@ export default function AreasCovered() {
                     : 'text-gray-900 font-bold'
                 }`}
               >
-                {area.name}
+                {area.highlight ? `📍 ${area.name}` : area.name}
               </span>
               <span className="text-[11px] text-gray-500 font-semibold">{area.desc}</span>
             </Link>

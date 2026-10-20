@@ -54,7 +54,11 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Your local flooring specialists"
         heading="About Us"
-        subheading="Hali Flooring supplies and fits quality flooring for homes and businesses across the North West. Visit our Bolton showroom, or book a free home survey and we will bring the samples to you."
+        subheading={[
+          "At Hali Flooring, we specialise in the supply and professional installation of quality carpets, LVT, wood, laminate and safety flooring.",
+          "Whether you’re transforming your home, upgrading a commercial space or managing a property development, you can rely on us for quality products, expert workmanship and a service you can trust.",
+          "With a wide range of flooring styles and finishes to choose from, we’re here to help you find the perfect flooring for your space. Whether you know exactly what you’re looking for or need a little inspiration, we’ll guide you through the options and make the whole process simple.",
+        ]}
       >
         <PrimaryActions />
       </PageHero>
@@ -68,21 +72,20 @@ export default function AboutPage() {
                 Who we are
               </span>
               <h2 className="mt-3 text-2xl sm:text-4xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
-                Flooring made simple
+                Flooring Made Simple
               </h2>
               <div className="mt-5 space-y-4 text-sm sm:text-base text-gray-600 leading-relaxed">
                 <p>
-                  Choosing a new floor should be exciting, not stressful. At {SITE.name} we make it simple: we help
-                  you pick the right floor for the room, give you a clear price, and fit it properly.
+                  At Hali Flooring, we believe great flooring starts with great service. From your first enquiry to the final installation, we aim to make the entire process straightforward, stress-free and tailored to your needs.
                 </p>
                 <p>
-                  We are based in Bolton and work with homeowners, landlords, shops, offices and care providers
-                  across the North West. Whether it is a carpet for the bedrooms, LVT for the kitchen or safety
-                  flooring for a commercial space, you get the same friendly advice and careful workmanship.
+                  Based in Bolton, we work with homeowners, landlords, businesses and property developers across the North West, building lasting relationships through honest advice, reliable service and attention to detail.
                 </p>
                 <p>
-                  Not sure where to start? Book a free home survey. We will talk through your ideas, measure up and
-                  bring samples to your door, then put everything in a written quote with no obligation.
+                  Every space is different, which is why we take the time to understand your requirements and help you find the right solution for your project. Whether it’s a single room, a full property renovation or a larger development, we approach every job with the same commitment to quality and care.
+                </p>
+                <p>
+                  Your project matters to us. We’re here to make choosing and installing your flooring as easy as possible, from the first conversation to the finished result.
                 </p>
               </div>
             </div>

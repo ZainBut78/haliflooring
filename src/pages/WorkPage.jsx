@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import ResponsiveImage from '../components/ResponsiveImage'
 import { useHead } from '../components/Seo'
 import { PageHero, CtaBand, PrimaryActions, Stars, Breadcrumbs } from '../components/ui'
-import { projects, projectCategories, testimonials, SITE } from '../data/content'
+import { projects, projectCategories, testimonials, beforeAfter, rangeGallery, SITE } from '../data/content'
 
 export default function WorkPage() {
   // All projects are rendered into the static HTML. The category buttons only
@@ -38,10 +38,108 @@ export default function WorkPage() {
       <PageHero
         eyebrow="Portfolio of completed projects"
         heading="Our Work"
-        subheading="Real installations across the North West — from luxury herringbone LVT in modern open-plan kitchens to bespoke wool stair runners in period properties and fully welded safety flooring in care homes. Every project gets the same meticulous attention to detail."
+        subheading={[
+          "Take a look at some of our recent flooring projects across the North West. From stylish LVT and beautifully fitted carpets to commercial safety flooring, each installation showcases the quality of our workmanship and attention to detail.",
+          "Every project is different, and we take pride in delivering a professional finish that our customers can be proud of.",
+        ]}
       >
         <PrimaryActions />
       </PageHero>
+
+      {/* Before & after */}
+      <section id="before-after" className="py-14 lg:py-20 bg-white">
+        <div className="w-[90%] max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-10 lg:mb-12">
+            <span className="text-brand-orange font-bold text-xs uppercase tracking-widest bg-brand-orange/10 px-3 py-1 rounded-full border border-brand-orange/20">
+              Transformations
+            </span>
+            <h2 className="mt-3 text-2xl sm:text-4xl font-extrabold text-[#111111] font-display uppercase tracking-tight">
+              Before &amp; After
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+              See the difference a proper installation makes. From bare screed and unfinished stairs to beautifully
+              finished floors, here are some of our recent transformations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            {beforeAfter.map((item, i) => (
+              <figure
+                key={item.id}
+                className={`group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-brand-orange transition-colors ${
+                  i === 0 ? 'lg:col-span-2' : ''
+                }`}
+              >
+                {/* The two half-width cards share one image ratio, so their captions
+                    start at the same height even though the photos differ slightly. */}
+                <div className={`bg-gray-100 ${i === 0 ? '' : 'aspect-[16/9]'}`}>
+                  <ResponsiveImage
+                    image={item.image}
+                    alt={item.alt}
+                    sizes={i === 0 ? '(min-width: 1024px) 1200px, 100vw' : '(min-width: 1024px) 50vw, 100vw'}
+                    className={i === 0 ? 'w-full h-auto' : 'h-full w-full object-contain'}
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                  />
+                </div>
+                <figcaption className="p-5 sm:p-6">
+                  <h3 className="text-base sm:text-lg font-extrabold text-gray-900 font-display uppercase tracking-wide">
+                    {item.heading}
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.text}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The range we fit */}
+      <section className="py-14 lg:py-20 bg-brand-grayBg border-y border-brand-borderLight">
+        <div className="w-[90%] max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-10 lg:mb-12">
+            <span className="text-brand-orange font-bold text-xs uppercase tracking-widest bg-brand-orange/10 px-3 py-1 rounded-full border border-brand-orange/20">
+              What we fit
+            </span>
+            <h2 className="mt-3 text-2xl sm:text-4xl font-extrabold text-[#111111] font-display uppercase tracking-tight">
+              Flooring for Every Space
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+              A look at the floors we supply and install, from luxury vinyl and engineered wood to plush carpets,
+              commercial vinyl and artificial grass.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+            {rangeGallery.map((item) => (
+              <article
+                key={item.slug}
+                className="group relative bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-brand-orange hover:shadow-card-hover transition-all duration-300 flex flex-col"
+              >
+                <div className="aspect-[16/9] overflow-hidden bg-gray-100">
+                  <ResponsiveImage
+                    image={item.image}
+                    alt={`${item.title} installation`}
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-sm font-extrabold text-gray-900 font-display uppercase tracking-wide">
+                    <Link
+                      to={`/services/${item.slug}`}
+                      className="hover:text-brand-orange transition-colors after:absolute after:inset-0 after:content-['']"
+                    >
+                      {item.title}
+                    </Link>
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed flex-1">{item.text}</p>
+                  <span className="pointer-events-none mt-4 text-xs font-bold text-brand-orange">View service →</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Filter bar */}
       <div className="sticky top-20 z-40 bg-white/95 backdrop-blur-md border-y border-brand-borderLight">
@@ -74,6 +172,9 @@ export default function WorkPage() {
       {/* Project grid */}
       <section className="py-14 lg:py-20 bg-white">
         <div className="w-[90%] max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#111111] font-display uppercase tracking-tight text-center mb-10">
+            Recent Projects
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {visible.map((proj) => (
               <article

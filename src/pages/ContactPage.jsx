@@ -26,7 +26,7 @@ const contactFaqs = [
   },
   {
     q: 'What areas do you actually cover?',
-    a: 'We are based in Bolton and cover the North West, including Manchester, Bury, Wigan, Chorley, Preston, Rochdale, Salford, Blackburn, Horwich and Warrington. We fit in every town nationwide, so just ask.',
+    a: 'We are based in Bolton and cover the North West, including Manchester, Salford, Wigan, Stockport, Cheadle, Wythenshawe, Sale, Hale, Altrincham, Warrington and Macclesfield. We fit in every town nationwide, so just ask.',
   },
   {
     q: 'Are you insured?',
@@ -81,8 +81,11 @@ export default function ContactPage() {
 
       <PageHero
         eyebrow="Free survey · Free measure · No obligation"
-        heading="Contact Us"
-        subheading="Call us, message us on WhatsApp, or send the form below. Whichever you pick, you will get a real person and a straight answer about what your room actually needs."
+        heading="Get in Touch"
+        subheading={[
+          "Looking for the perfect flooring for your home or business? We’re here to help. Whether you call us, message us on WhatsApp or fill in the contact form below, you’ll receive friendly, honest advice and a straightforward response.",
+          "Tell us a little about your project, and we’ll help you find the right flooring solution for your space.",
+        ]}
       />
 
       {/* Contact methods + form */}

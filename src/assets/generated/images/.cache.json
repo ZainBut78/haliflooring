@@ -408,5 +408,168 @@
       "src/assets/generated/images/svc-wood-2-1200.jpg",
       "src/assets/generated/images/svc-wood-2-1600.jpg"
     ]
+  },
+  "ba-hallway.jpg": {
+    "slug": "ba-hallway",
+    "source": "ba-hallway.jpg",
+    "width": 1200,
+    "height": 670,
+    "sourceWidth": 1600,
+    "sourceHeight": 893,
+    "mtimeMs": 1792518692000,
+    "size": 183354,
+    "outputs": [
+      "src/assets/generated/images/ba-hallway-480.webp",
+      "src/assets/generated/images/ba-hallway-800.webp",
+      "src/assets/generated/images/ba-hallway-1200.webp",
+      "src/assets/generated/images/ba-hallway-800.jpg",
+      "src/assets/generated/images/ba-hallway-1200.jpg"
+    ]
+  },
+  "ba-herringbone.jpg": {
+    "slug": "ba-herringbone",
+    "source": "ba-herringbone.jpg",
+    "width": 1200,
+    "height": 593,
+    "sourceWidth": 1600,
+    "sourceHeight": 791,
+    "mtimeMs": 1792518692000,
+    "size": 232092,
+    "outputs": [
+      "src/assets/generated/images/ba-herringbone-480.webp",
+      "src/assets/generated/images/ba-herringbone-800.webp",
+      "src/assets/generated/images/ba-herringbone-1200.webp",
+      "src/assets/generated/images/ba-herringbone-800.jpg",
+      "src/assets/generated/images/ba-herringbone-1200.jpg"
+    ]
+  },
+  "ba-stairs.jpg": {
+    "slug": "ba-stairs",
+    "source": "ba-stairs.jpg",
+    "width": 1200,
+    "height": 670,
+    "sourceWidth": 1600,
+    "sourceHeight": 893,
+    "mtimeMs": 1792518692000,
+    "size": 263466,
+    "outputs": [
+      "src/assets/generated/images/ba-stairs-480.webp",
+      "src/assets/generated/images/ba-stairs-800.webp",
+      "src/assets/generated/images/ba-stairs-1200.webp",
+      "src/assets/generated/images/ba-stairs-800.jpg",
+      "src/assets/generated/images/ba-stairs-1200.jpg"
+    ]
+  },
+  "range-carpet.jpg": {
+    "slug": "range-carpet",
+    "source": "range-carpet.jpg",
+    "width": 480,
+    "height": 225,
+    "sourceWidth": 528,
+    "sourceHeight": 247,
+    "mtimeMs": 1792518931073,
+    "size": 44346,
+    "outputs": [
+      "src/assets/generated/images/range-carpet-480.webp",
+      "src/assets/generated/images/range-carpet-528.jpg"
+    ]
+  },
+  "range-commercial.jpg": {
+    "slug": "range-commercial",
+    "source": "range-commercial.jpg",
+    "width": 480,
+    "height": 225,
+    "sourceWidth": 527,
+    "sourceHeight": 247,
+    "mtimeMs": 1792518931132,
+    "size": 33237,
+    "outputs": [
+      "src/assets/generated/images/range-commercial-480.webp",
+      "src/assets/generated/images/range-commercial-527.jpg"
+    ]
+  },
+  "range-grass.jpg": {
+    "slug": "range-grass",
+    "source": "range-grass.jpg",
+    "width": 480,
+    "height": 215,
+    "sourceWidth": 527,
+    "sourceHeight": 236,
+    "mtimeMs": 1792518931194,
+    "size": 62660,
+    "outputs": [
+      "src/assets/generated/images/range-grass-480.webp",
+      "src/assets/generated/images/range-grass-527.jpg"
+    ]
+  },
+  "range-laminate.jpg": {
+    "slug": "range-laminate",
+    "source": "range-laminate.jpg",
+    "width": 480,
+    "height": 218,
+    "sourceWidth": 527,
+    "sourceHeight": 239,
+    "mtimeMs": 1792518931053,
+    "size": 44226,
+    "outputs": [
+      "src/assets/generated/images/range-laminate-480.webp",
+      "src/assets/generated/images/range-laminate-527.jpg"
+    ]
+  },
+  "range-levelling.jpg": {
+    "slug": "range-levelling",
+    "source": "range-levelling.jpg",
+    "width": 480,
+    "height": 215,
+    "sourceWidth": 528,
+    "sourceHeight": 236,
+    "mtimeMs": 1792518931162,
+    "size": 35073,
+    "outputs": [
+      "src/assets/generated/images/range-levelling-480.webp",
+      "src/assets/generated/images/range-levelling-528.jpg"
+    ]
+  },
+  "range-lvt.jpg": {
+    "slug": "range-lvt",
+    "source": "range-lvt.jpg",
+    "width": 480,
+    "height": 217,
+    "sourceWidth": 528,
+    "sourceHeight": 239,
+    "mtimeMs": 1792518931001,
+    "size": 38397,
+    "outputs": [
+      "src/assets/generated/images/range-lvt-480.webp",
+      "src/assets/generated/images/range-lvt-528.jpg"
+    ]
+  },
+  "range-runners.jpg": {
+    "slug": "range-runners",
+    "source": "range-runners.jpg",
+    "width": 480,
+    "height": 225,
+    "sourceWidth": 528,
+    "sourceHeight": 247,
+    "mtimeMs": 1792518931103,
+    "size": 47723,
+    "outputs": [
+      "src/assets/generated/images/range-runners-480.webp",
+      "src/assets/generated/images/range-runners-528.jpg"
+    ]
+  },
+  "range-wood.jpg": {
+    "slug": "range-wood",
+    "source": "range-wood.jpg",
+    "width": 480,
+    "height": 217,
+    "sourceWidth": 528,
+    "sourceHeight": 239,
+    "mtimeMs": 1792518931025,
+    "size": 49823,
+    "outputs": [
+      "src/assets/generated/images/range-wood-480.webp",
+      "src/assets/generated/images/range-wood-528.jpg"
+    ]
   }
 }
