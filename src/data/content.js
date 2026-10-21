@@ -10,8 +10,8 @@ export const SITE = {
   whatsappDisplay: '+44 7467 030479',
   email: 'Halifloorings@gmail.com',
   address: {
-    line1: 'Bolton',
-    line2: 'Greater Manchester',
+    line1: 'Studio, 1 Breightmet St',
+    line2: 'Bolton BL2 1BR',
     postcode: 'BL1',
     country: 'United Kingdom',
   },
@@ -36,6 +36,23 @@ const flooring6 = optimizedImages['flooring-6']
 const img = (name) => optimizedImages[name]
 
 export const imagePool = [flooring1, flooring2, flooring3, flooring4, flooring5, flooring6]
+
+// Home carousel: flooring 1 and 2 lead, followed by the remaining client
+// photographs and three additional flooring images. All use optimised variants.
+export const carouselPool = [
+  flooring1,
+  flooring2,
+  img('carasoul-3'),
+  img('carasoul-4'),
+  img('carasoul-5'),
+  img('carasoul-6'),
+  img('carasoul-7'),
+  img('carasoul-8'),
+  img('carasoul-9'),
+  flooring6,
+  img('svc-lvt-1'),
+  img('svc-wood-1'),
+]
 
 /**
  * Every project is fully static data, so the SSG generator can
@@ -232,6 +249,31 @@ export const beforeAfter = [
     heading: 'Open-plan living room',
     text: 'A large, open-plan room finished with a classic herringbone floor. Laid row by row from a carefully set starting line, the pattern runs true from wall to wall for a warm, elegant finish.',
     alt: 'Open-plan room before and after herringbone flooring',
+  },
+]
+
+// Client-supplied before/after photographs for the three home Work cards.
+export const homeWork = [
+  {
+    id: 'living-room',
+    image: img('home-work-living-room-new'),
+    heading: 'Engineered Wood',
+    summary: '',
+    alt: 'Before and after: open-plan room with herringbone flooring being laid and the completed floor',
+  },
+  {
+    id: 'stairs',
+    image: img('home-work-services'),
+    heading: '',
+    summary: '',
+    alt: 'Flooring collage showing LVT, engineered wood, laminate, carpets, stair runners, safety flooring, floor levelling and artificial grass',
+  },
+  {
+    id: 'staircase',
+    image: img('home-work-staircase-new'),
+    heading: 'Contract Carpet',
+    summary: ' ',
+    alt: 'Before and after: bare wooden staircase transformed with dark fitted carpet',
   },
 ]
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useHead } from '../components/Seo'
-import { Breadcrumbs, PageHero, CtaBand, PrimaryActions } from '../components/ui'
+import { PageHero, CtaBand, PrimaryActions } from '../components/ui'
 import { services, serviceSlugs, SITE } from '../data/content'
 
 export default function ServiceIndexPage() {
@@ -23,8 +23,6 @@ export default function ServiceIndexPage() {
 
   return (
     <Layout>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Services' }]} />
-
       <PageHero
         eyebrow="Supply & fit for homes and businesses"
         heading="Our Services"

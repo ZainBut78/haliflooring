@@ -571,5 +571,260 @@
       "src/assets/generated/images/range-wood-480.webp",
       "src/assets/generated/images/range-wood-528.jpg"
     ]
+  },
+  "carasoul (1).jpeg": {
+    "slug": "carasoul-1",
+    "source": "carasoul (1).jpeg",
+    "width": 1200,
+    "height": 848,
+    "sourceWidth": 1600,
+    "sourceHeight": 1131,
+    "mtimeMs": 1792609454017.744,
+    "size": 323230,
+    "outputs": [
+      "src/assets/generated/images/carasoul-1-480.webp",
+      "src/assets/generated/images/carasoul-1-800.webp",
+      "src/assets/generated/images/carasoul-1-1200.webp",
+      "src/assets/generated/images/carasoul-1-800.jpg",
+      "src/assets/generated/images/carasoul-1-1200.jpg"
+    ]
+  },
+  "carasoul (2).jpeg": {
+    "slug": "carasoul-2",
+    "source": "carasoul (2).jpeg",
+    "width": 1200,
+    "height": 848,
+    "sourceWidth": 1600,
+    "sourceHeight": 1131,
+    "mtimeMs": 1792609454356.3894,
+    "size": 372549,
+    "outputs": [
+      "src/assets/generated/images/carasoul-2-480.webp",
+      "src/assets/generated/images/carasoul-2-800.webp",
+      "src/assets/generated/images/carasoul-2-1200.webp",
+      "src/assets/generated/images/carasoul-2-800.jpg",
+      "src/assets/generated/images/carasoul-2-1200.jpg"
+    ]
+  },
+  "carasoul (3).jpeg": {
+    "slug": "carasoul-3",
+    "source": "carasoul (3).jpeg",
+    "width": 1200,
+    "height": 848,
+    "sourceWidth": 1600,
+    "sourceHeight": 1131,
+    "mtimeMs": 1792609454293.8909,
+    "size": 434342,
+    "outputs": [
+      "src/assets/generated/images/carasoul-3-480.webp",
+      "src/assets/generated/images/carasoul-3-800.webp",
+      "src/assets/generated/images/carasoul-3-1200.webp",
+      "src/assets/generated/images/carasoul-3-800.jpg",
+      "src/assets/generated/images/carasoul-3-1200.jpg"
+    ]
+  },
+  "carasoul (4).jpeg": {
+    "slug": "carasoul-4",
+    "source": "carasoul (4).jpeg",
+    "width": 1200,
+    "height": 848,
+    "sourceWidth": 1600,
+    "sourceHeight": 1131,
+    "mtimeMs": 1792609454473.733,
+    "size": 342784,
+    "outputs": [
+      "src/assets/generated/images/carasoul-4-480.webp",
+      "src/assets/generated/images/carasoul-4-800.webp",
+      "src/assets/generated/images/carasoul-4-1200.webp",
+      "src/assets/generated/images/carasoul-4-800.jpg",
+      "src/assets/generated/images/carasoul-4-1200.jpg"
+    ]
+  },
+  "carasoul (5).jpeg": {
+    "slug": "carasoul-5",
+    "source": "carasoul (5).jpeg",
+    "width": 1200,
+    "height": 848,
+    "sourceWidth": 1600,
+    "sourceHeight": 1131,
+    "mtimeMs": 1792609454514.6777,
+    "size": 361048,
+    "outputs": [
+      "src/assets/generated/images/carasoul-5-480.webp",
+      "src/assets/generated/images/carasoul-5-800.webp",
+      "src/assets/generated/images/carasoul-5-1200.webp",
+      "src/assets/generated/images/carasoul-5-800.jpg",
+      "src/assets/generated/images/carasoul-5-1200.jpg"
+    ]
+  },
+  "carasoul (6).jpeg": {
+    "slug": "carasoul-6",
+    "source": "carasoul (6).jpeg",
+    "width": 1200,
+    "height": 848,
+    "sourceWidth": 1600,
+    "sourceHeight": 1131,
+    "mtimeMs": 1792609454418.89,
+    "size": 691085,
+    "outputs": [
+      "src/assets/generated/images/carasoul-6-480.webp",
+      "src/assets/generated/images/carasoul-6-800.webp",
+      "src/assets/generated/images/carasoul-6-1200.webp",
+      "src/assets/generated/images/carasoul-6-800.jpg",
+      "src/assets/generated/images/carasoul-6-1200.jpg"
+    ]
+  },
+  "carasoul (7).jpeg": {
+    "slug": "carasoul-7",
+    "source": "carasoul (7).jpeg",
+    "width": 1200,
+    "height": 848,
+    "sourceWidth": 1600,
+    "sourceHeight": 1131,
+    "mtimeMs": 1792609454111.494,
+    "size": 265071,
+    "outputs": [
+      "src/assets/generated/images/carasoul-7-480.webp",
+      "src/assets/generated/images/carasoul-7-800.webp",
+      "src/assets/generated/images/carasoul-7-1200.webp",
+      "src/assets/generated/images/carasoul-7-800.jpg",
+      "src/assets/generated/images/carasoul-7-1200.jpg"
+    ]
+  },
+  "carasoul (8).jpeg": {
+    "slug": "carasoul-8",
+    "source": "carasoul (8).jpeg",
+    "width": 1200,
+    "height": 848,
+    "sourceWidth": 1600,
+    "sourceHeight": 1131,
+    "mtimeMs": 1792609454187.4536,
+    "size": 269419,
+    "outputs": [
+      "src/assets/generated/images/carasoul-8-480.webp",
+      "src/assets/generated/images/carasoul-8-800.webp",
+      "src/assets/generated/images/carasoul-8-1200.webp",
+      "src/assets/generated/images/carasoul-8-800.jpg",
+      "src/assets/generated/images/carasoul-8-1200.jpg"
+    ]
+  },
+  "carasoul (9).jpeg": {
+    "slug": "carasoul-9",
+    "source": "carasoul (9).jpeg",
+    "width": 1200,
+    "height": 848,
+    "sourceWidth": 1600,
+    "sourceHeight": 1131,
+    "mtimeMs": 1792609454247.017,
+    "size": 337548,
+    "outputs": [
+      "src/assets/generated/images/carasoul-9-480.webp",
+      "src/assets/generated/images/carasoul-9-800.webp",
+      "src/assets/generated/images/carasoul-9-1200.webp",
+      "src/assets/generated/images/carasoul-9-800.jpg",
+      "src/assets/generated/images/carasoul-9-1200.jpg"
+    ]
+  },
+  "home-work-hallway.jpg": {
+    "slug": "home-work-hallway",
+    "source": "home-work-hallway.jpg",
+    "width": 1200,
+    "height": 670,
+    "sourceWidth": 1600,
+    "sourceHeight": 893,
+    "mtimeMs": 1792612729054.6946,
+    "size": 281302,
+    "outputs": [
+      "src/assets/generated/images/home-work-hallway-480.webp",
+      "src/assets/generated/images/home-work-hallway-800.webp",
+      "src/assets/generated/images/home-work-hallway-1200.webp",
+      "src/assets/generated/images/home-work-hallway-800.jpg",
+      "src/assets/generated/images/home-work-hallway-1200.jpg"
+    ]
+  },
+  "home-work-herringbone.jpg": {
+    "slug": "home-work-herringbone",
+    "source": "home-work-herringbone.jpg",
+    "width": 1200,
+    "height": 670,
+    "sourceWidth": 1600,
+    "sourceHeight": 893,
+    "mtimeMs": 1792612684915.9524,
+    "size": 300043,
+    "outputs": [
+      "src/assets/generated/images/home-work-herringbone-480.webp",
+      "src/assets/generated/images/home-work-herringbone-800.webp",
+      "src/assets/generated/images/home-work-herringbone-1200.webp",
+      "src/assets/generated/images/home-work-herringbone-800.jpg",
+      "src/assets/generated/images/home-work-herringbone-1200.jpg"
+    ]
+  },
+  "home-work-stairs.jpg": {
+    "slug": "home-work-stairs",
+    "source": "home-work-stairs.jpg",
+    "width": 1200,
+    "height": 670,
+    "sourceWidth": 1600,
+    "sourceHeight": 893,
+    "mtimeMs": 1792612712056.3455,
+    "size": 349404,
+    "outputs": [
+      "src/assets/generated/images/home-work-stairs-480.webp",
+      "src/assets/generated/images/home-work-stairs-800.webp",
+      "src/assets/generated/images/home-work-stairs-1200.webp",
+      "src/assets/generated/images/home-work-stairs-800.jpg",
+      "src/assets/generated/images/home-work-stairs-1200.jpg"
+    ]
+  },
+  "home-work-services.jpeg": {
+    "slug": "home-work-services",
+    "source": "home-work-services.jpeg",
+    "width": 1200,
+    "height": 669,
+    "sourceWidth": 1600,
+    "sourceHeight": 892,
+    "mtimeMs": 1792613124264.9343,
+    "size": 390992,
+    "outputs": [
+      "src/assets/generated/images/home-work-services-480.webp",
+      "src/assets/generated/images/home-work-services-800.webp",
+      "src/assets/generated/images/home-work-services-1200.webp",
+      "src/assets/generated/images/home-work-services-800.jpg",
+      "src/assets/generated/images/home-work-services-1200.jpg"
+    ]
+  },
+  "home-work-living-room-new.jpeg": {
+    "slug": "home-work-living-room-new",
+    "source": "home-work-living-room-new.jpeg",
+    "width": 1200,
+    "height": 669,
+    "sourceWidth": 1600,
+    "sourceHeight": 892,
+    "mtimeMs": 1792613184948.0044,
+    "size": 312544,
+    "outputs": [
+      "src/assets/generated/images/home-work-living-room-new-480.webp",
+      "src/assets/generated/images/home-work-living-room-new-800.webp",
+      "src/assets/generated/images/home-work-living-room-new-1200.webp",
+      "src/assets/generated/images/home-work-living-room-new-800.jpg",
+      "src/assets/generated/images/home-work-living-room-new-1200.jpg"
+    ]
+  },
+  "home-work-staircase-new.jpeg": {
+    "slug": "home-work-staircase-new",
+    "source": "home-work-staircase-new.jpeg",
+    "width": 1200,
+    "height": 848,
+    "sourceWidth": 1600,
+    "sourceHeight": 1131,
+    "mtimeMs": 1792613175576.5532,
+    "size": 309173,
+    "outputs": [
+      "src/assets/generated/images/home-work-staircase-new-480.webp",
+      "src/assets/generated/images/home-work-staircase-new-800.webp",
+      "src/assets/generated/images/home-work-staircase-new-1200.webp",
+      "src/assets/generated/images/home-work-staircase-new-800.jpg",
+      "src/assets/generated/images/home-work-staircase-new-1200.jpg"
+    ]
   }
 }

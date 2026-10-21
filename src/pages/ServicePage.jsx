@@ -4,7 +4,7 @@ import { useRouteParams } from '../components/RouteParams'
 import Layout from '../components/Layout'
 import ResponsiveImage from '../components/ResponsiveImage'
 import { useHead } from '../components/Seo'
-import { Breadcrumbs, PageHero, SectionHeading, FaqAccordion, CtaBand, PrimaryActions } from '../components/ui'
+import { PageHero, SectionHeading, FaqAccordion, CtaBand, PrimaryActions } from '../components/ui'
 import { services, serviceSlugs, projects, SITE } from '../data/content'
 
 export default function ServicePage() {
@@ -37,14 +37,6 @@ export default function ServicePage() {
 
   return (
     <Layout>
-      <Breadcrumbs
-        items={[
-          { name: 'Home', path: '/' },
-          { name: 'Services', path: '/services' },
-          { name: service.navLabel },
-        ]}
-      />
-
       <PageHero eyebrow="Free home survey & quote" heading={service.heroHeading} subheading={service.intro}>
         <PrimaryActions />
       </PageHero>

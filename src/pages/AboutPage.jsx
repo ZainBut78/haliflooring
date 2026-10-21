@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import ResponsiveImage from '../components/ResponsiveImage'
 import { useHead } from '../components/Seo'
-import { Breadcrumbs, PageHero, SectionHeading, CtaBand, PrimaryActions } from '../components/ui'
+import { PageHero, SectionHeading, CtaBand, PrimaryActions } from '../components/ui'
 import { processSteps, services, serviceSlugs, imagePool, SITE } from '../data/content'
 
 // Short, factual reasons to choose us. Nothing here depends on a number or a
@@ -49,8 +49,6 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'About' }]} />
-
       <PageHero
         eyebrow="Your local flooring specialists"
         heading="About Us"

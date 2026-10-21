@@ -3,13 +3,19 @@ import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import ResponsiveImage from '../components/ResponsiveImage'
 import { useHead } from '../components/Seo'
-import { PageHero, CtaBand, PrimaryActions, Stars, Breadcrumbs } from '../components/ui'
+import { PageHero, CtaBand, PrimaryActions, Stars } from '../components/ui'
 import { projects, projectCategories, testimonials, beforeAfter, rangeGallery, SITE } from '../data/content'
+
+// The carpets & runners job and the herringbone laminate job are not listed in
+// the Recent Projects grid for now. Their detail pages stay online.
+const hiddenProjects = ['worsley-manor-custom-runner', 'bury-home-laminate-herringbone']
 
 export default function WorkPage() {
   // All projects are rendered into the static HTML. The category buttons only
   // toggle visibility on the client, so crawlers always see the full set.
   const [active, setActive] = useState('all')
+
+  const galleryProjects = projects.filter((p) => !hiddenProjects.includes(p.slug))
 
   useHead({
     h1: 'Our Flooring Work & Completed Projects',
@@ -30,11 +36,10 @@ export default function WorkPage() {
     },
   })
 
-  const visible = active === 'all' ? projects : projects.filter((p) => p.category === active)
+  const visible = active === 'all' ? galleryProjects : galleryProjects.filter((p) => p.category === active)
 
   return (
     <Layout>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Our Work' }]} />
       <PageHero
         eyebrow="Portfolio of completed projects"
         heading="Our Work"
@@ -146,7 +151,7 @@ export default function WorkPage() {
         <div className="w-[90%] max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex flex-wrap gap-2 justify-center" role="group" aria-label="Filter projects by category">
             {projectCategories.map((cat) => {
-              const count = cat.id === 'all' ? projects.length : projects.filter((p) => p.category === cat.id).length
+              const count = cat.id === 'all' ? galleryProjects.length : galleryProjects.filter((p) => p.category === cat.id).length
               if (cat.id !== 'all' && count === 0) return null
               const isActive = active === cat.id
               return (

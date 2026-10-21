@@ -3,7 +3,7 @@ import { useParams, Navigate } from 'react-router-dom'
 import { useRouteParams } from '../components/RouteParams'
 import Layout from '../components/Layout'
 import { useHead } from '../components/Seo'
-import { Breadcrumbs, PageHero } from '../components/ui'
+import { PageHero } from '../components/ui'
 import { SITE } from '../data/content'
 
 const updated = '1 September 2026'
@@ -142,8 +142,6 @@ export default function LegalPage() {
 
   return (
     <Layout showHighway={false}>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: isPrivacy ? 'Privacy Policy' : 'Terms of Service' }]} />
-
       <PageHero
         eyebrow="Legal"
         heading={isPrivacy ? 'Privacy Policy' : 'Terms of Service'}

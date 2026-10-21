@@ -3,51 +3,91 @@ import { Link } from 'react-router-dom';
 import ResponsiveImage from './ResponsiveImage';
 
 // Web-sized variants from the generated manifest — not the source originals.
-import { imagePool, services, serviceSlugs } from '../data/content';
+import { carouselPool, services, serviceSlugs } from '../data/content';
 
-const [flooring1, flooring2, flooring3, flooring4, flooring5, flooring6] = imagePool;
+// The shared pool keeps every slide on optimised WebP/JPEG variants.
+const [
+  carousel1, carousel2, carousel3, carousel4, carousel5,
+  carousel6, carousel7, carousel8, carousel9,
+  modernFloor, livingRoomFloor, woodDetail,
+] = carouselPool;
 
-// Each slide links to the project it is actually depicting. Several photos are
-// reused across two or three projects, so these are spelled out rather than
-// looked up from the shared image pool — a lookup would just as happily send
-// the oak parquet slide to the stair runner project.
+// Each slide links to the project it is depicting. The photographs are shared
+// across two or three projects, so these are spelled out rather than looked up
+// from the pool — a lookup would just as happily send the oak parquet slide to
+// the stair runner project.
 const slidesData = [
   {
-    title: 'Featured Project: Prime European Herringbone Oak Parquet',
-    alt: 'Luxury Herringbone Oak Parquet Installation',
-    image: flooring1,
-    to: '/work/chorley-barn-engineered-oak'
+    title: 'Explore Our Range: Rich Wood Flooring',
+    alt: 'Spacious bright living room with dark wood flooring',
+    image: carousel1,
+    to: '/services/wood'
   },
   {
-    title: 'Featured Project: Seamless Architectural LVT Kitchen Diner',
-    alt: 'Architectural Open-Plan LVT Kitchen Diner Installation',
-    image: flooring2,
-    to: '/work/bolton-residence-herringbone-lvt'
+    title: 'Explore Our Range: Artificial Grass',
+    alt: 'Green artificial grass on an outdoor sports court',
+    image: carousel2,
+    to: '/services/grass'
+  },
+  {
+    title: 'Featured Project: Premium Herringbone Laminate for Family Homes',
+    alt: 'Herringbone Laminate Flooring Installation in a Family Home',
+    image: carousel3,
+    to: '/work/bury-home-laminate-herringbone'
+  },
+  {
+    title: 'Featured Project: Premium Domestic & Commercial Installation',
+    alt: 'Premium Domestic and Commercial Flooring Installation',
+    image: carousel4,
+    to: '/work/manchester-office-safety-flooring'
   },
   {
     title: 'Featured Project: Handcrafted Whipped Wool Staircase Runner',
-    alt: 'Handcrafted Bespoke Staircase Runner Installation',
-    image: flooring3,
+    alt: 'Handcrafted Bespoke Wool Staircase Runner Installation',
+    image: carousel5,
+    to: '/work/worsley-manor-custom-runner'
+  },
+  {
+    title: 'Featured Project: Commercial Safety Flooring Fit-Out',
+    alt: 'Commercial Safety Flooring Installation in a Workplace',
+    image: carousel6,
+    to: '/work/manchester-office-safety-flooring'
+  },
+  {
+    title: 'Featured Project: Bespoke Stair Runner with a Neat Finished Edge',
+    alt: 'Bespoke Stair Runner Installation with a Finished Edge',
+    image: carousel7,
+    to: '/work/worsley-manor-custom-runner'
+  },
+  {
+    title: 'Featured Project: Bespoke Wool Runner on a Curved Staircase',
+    alt: 'Bespoke Wool Stair Runner Fitted to a Curved Staircase',
+    image: carousel8,
     to: '/work/worsley-manor-custom-runner'
   },
   {
     title: 'Featured Project: Bespoke Luxury Hardwood Flooring',
-    alt: 'Bespoke Hardwood Flooring Installation',
-    image: flooring4,
+    alt: 'Bespoke Luxury Hardwood Flooring Installation',
+    image: carousel9,
     to: '/work/chorley-barn-engineered-oak'
   },
   {
-    title: 'Featured Project: Premium Domestic & Commercial Installation',
-    alt: 'Premium Domestic & Commercial Installation',
-    image: flooring5,
-    to: '/work/manchester-office-safety-flooring'
+    title: 'Explore Our Range: Modern Wood Flooring',
+    alt: 'Modern open-plan interior with wide wood-effect floor planks',
+    image: modernFloor,
+    to: '/services/wood'
   },
   {
-    // A showroom shot rather than a single job, so it goes to the index.
-    title: 'Showroom Experience: Full Format Boards & Master Installation',
-    alt: 'Hali Flooring Luxury Showroom and Format Displays',
-    image: flooring6,
-    to: '/work'
+    title: 'Explore Our Range: Warm Living Room Floors',
+    alt: 'Light-filled sitting room with warm natural wood flooring',
+    image: livingRoomFloor,
+    to: '/services/wood'
+  },
+  {
+    title: 'Explore Our Range: Natural Wood Finishes',
+    alt: 'Close-up of pale wood flooring with natural grain and knots',
+    image: woodDetail,
+    to: '/services/wood'
   }
 ];
 
@@ -138,7 +178,7 @@ export default function LuxurySlideshow() {
                   sizes="(min-width: 1024px) 1600px, 100vw"
                   className="h-full w-full object-cover object-center"
                   // Every slide stays mounted, so eagerly loading all six would
-                  // pull six hero photos at once. The visible slide and the one
+                  // pull nine hero photos at once. The visible slide and the one
                   // the carousel is about to show get priority; the rest wait.
                   loading={isActive || isNext ? 'eager' : 'lazy'}
                   fetchPriority={isActive ? 'high' : undefined}

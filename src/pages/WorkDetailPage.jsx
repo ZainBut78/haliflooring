@@ -4,7 +4,7 @@ import { useRouteParams } from '../components/RouteParams'
 import Layout from '../components/Layout'
 import ResponsiveImage from '../components/ResponsiveImage'
 import { useHead } from '../components/Seo'
-import { Breadcrumbs, CtaBand, Stars } from '../components/ui'
+import { CtaBand, Stars } from '../components/ui'
 import { projects, services, SITE } from '../data/content'
 
 export default function WorkDetailPage() {
@@ -54,15 +54,6 @@ export default function WorkDetailPage() {
 
   return (
     <Layout>
-      <Breadcrumbs
-        items={[
-          { name: 'Home', path: '/' },
-          { name: 'Our Work', path: '/work' },
-          { name: project.categoryLabel, path: '/work' },
-          { name: project.title },
-        ]}
-      />
-
       {/* Hero */}
       <section className="relative pt-8 pb-12 lg:pt-12 lg:pb-16 bg-white">
         <div

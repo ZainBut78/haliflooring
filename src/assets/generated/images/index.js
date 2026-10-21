@@ -16,6 +16,51 @@ import ba_stairs_800_webp from './ba-stairs-800.webp'
 import ba_stairs_1200_webp from './ba-stairs-1200.webp'
 import ba_stairs_800_jpg from './ba-stairs-800.jpg'
 import ba_stairs_1200_jpg from './ba-stairs-1200.jpg'
+import carasoul_1_480_webp from './carasoul-1-480.webp'
+import carasoul_1_800_webp from './carasoul-1-800.webp'
+import carasoul_1_1200_webp from './carasoul-1-1200.webp'
+import carasoul_1_800_jpg from './carasoul-1-800.jpg'
+import carasoul_1_1200_jpg from './carasoul-1-1200.jpg'
+import carasoul_2_480_webp from './carasoul-2-480.webp'
+import carasoul_2_800_webp from './carasoul-2-800.webp'
+import carasoul_2_1200_webp from './carasoul-2-1200.webp'
+import carasoul_2_800_jpg from './carasoul-2-800.jpg'
+import carasoul_2_1200_jpg from './carasoul-2-1200.jpg'
+import carasoul_3_480_webp from './carasoul-3-480.webp'
+import carasoul_3_800_webp from './carasoul-3-800.webp'
+import carasoul_3_1200_webp from './carasoul-3-1200.webp'
+import carasoul_3_800_jpg from './carasoul-3-800.jpg'
+import carasoul_3_1200_jpg from './carasoul-3-1200.jpg'
+import carasoul_4_480_webp from './carasoul-4-480.webp'
+import carasoul_4_800_webp from './carasoul-4-800.webp'
+import carasoul_4_1200_webp from './carasoul-4-1200.webp'
+import carasoul_4_800_jpg from './carasoul-4-800.jpg'
+import carasoul_4_1200_jpg from './carasoul-4-1200.jpg'
+import carasoul_5_480_webp from './carasoul-5-480.webp'
+import carasoul_5_800_webp from './carasoul-5-800.webp'
+import carasoul_5_1200_webp from './carasoul-5-1200.webp'
+import carasoul_5_800_jpg from './carasoul-5-800.jpg'
+import carasoul_5_1200_jpg from './carasoul-5-1200.jpg'
+import carasoul_6_480_webp from './carasoul-6-480.webp'
+import carasoul_6_800_webp from './carasoul-6-800.webp'
+import carasoul_6_1200_webp from './carasoul-6-1200.webp'
+import carasoul_6_800_jpg from './carasoul-6-800.jpg'
+import carasoul_6_1200_jpg from './carasoul-6-1200.jpg'
+import carasoul_7_480_webp from './carasoul-7-480.webp'
+import carasoul_7_800_webp from './carasoul-7-800.webp'
+import carasoul_7_1200_webp from './carasoul-7-1200.webp'
+import carasoul_7_800_jpg from './carasoul-7-800.jpg'
+import carasoul_7_1200_jpg from './carasoul-7-1200.jpg'
+import carasoul_8_480_webp from './carasoul-8-480.webp'
+import carasoul_8_800_webp from './carasoul-8-800.webp'
+import carasoul_8_1200_webp from './carasoul-8-1200.webp'
+import carasoul_8_800_jpg from './carasoul-8-800.jpg'
+import carasoul_8_1200_jpg from './carasoul-8-1200.jpg'
+import carasoul_9_480_webp from './carasoul-9-480.webp'
+import carasoul_9_800_webp from './carasoul-9-800.webp'
+import carasoul_9_1200_webp from './carasoul-9-1200.webp'
+import carasoul_9_800_jpg from './carasoul-9-800.jpg'
+import carasoul_9_1200_jpg from './carasoul-9-1200.jpg'
 import flooring_1_480_webp from './flooring-1-480.webp'
 import flooring_1_800_webp from './flooring-1-800.webp'
 import flooring_1_1200_webp from './flooring-1-1200.webp'
@@ -68,6 +113,36 @@ import flooring_6_800_jpg from './flooring-6-800.jpg'
 import flooring_6_1200_jpg from './flooring-6-1200.jpg'
 import flooring_6_1600_jpg from './flooring-6-1600.jpg'
 import flooring_6_2000_jpg from './flooring-6-2000.jpg'
+import home_work_hallway_480_webp from './home-work-hallway-480.webp'
+import home_work_hallway_800_webp from './home-work-hallway-800.webp'
+import home_work_hallway_1200_webp from './home-work-hallway-1200.webp'
+import home_work_hallway_800_jpg from './home-work-hallway-800.jpg'
+import home_work_hallway_1200_jpg from './home-work-hallway-1200.jpg'
+import home_work_herringbone_480_webp from './home-work-herringbone-480.webp'
+import home_work_herringbone_800_webp from './home-work-herringbone-800.webp'
+import home_work_herringbone_1200_webp from './home-work-herringbone-1200.webp'
+import home_work_herringbone_800_jpg from './home-work-herringbone-800.jpg'
+import home_work_herringbone_1200_jpg from './home-work-herringbone-1200.jpg'
+import home_work_living_room_new_480_webp from './home-work-living-room-new-480.webp'
+import home_work_living_room_new_800_webp from './home-work-living-room-new-800.webp'
+import home_work_living_room_new_1200_webp from './home-work-living-room-new-1200.webp'
+import home_work_living_room_new_800_jpg from './home-work-living-room-new-800.jpg'
+import home_work_living_room_new_1200_jpg from './home-work-living-room-new-1200.jpg'
+import home_work_services_480_webp from './home-work-services-480.webp'
+import home_work_services_800_webp from './home-work-services-800.webp'
+import home_work_services_1200_webp from './home-work-services-1200.webp'
+import home_work_services_800_jpg from './home-work-services-800.jpg'
+import home_work_services_1200_jpg from './home-work-services-1200.jpg'
+import home_work_staircase_new_480_webp from './home-work-staircase-new-480.webp'
+import home_work_staircase_new_800_webp from './home-work-staircase-new-800.webp'
+import home_work_staircase_new_1200_webp from './home-work-staircase-new-1200.webp'
+import home_work_staircase_new_800_jpg from './home-work-staircase-new-800.jpg'
+import home_work_staircase_new_1200_jpg from './home-work-staircase-new-1200.jpg'
+import home_work_stairs_480_webp from './home-work-stairs-480.webp'
+import home_work_stairs_800_webp from './home-work-stairs-800.webp'
+import home_work_stairs_1200_webp from './home-work-stairs-1200.webp'
+import home_work_stairs_800_jpg from './home-work-stairs-800.jpg'
+import home_work_stairs_1200_jpg from './home-work-stairs-1200.jpg'
 import range_carpet_480_webp from './range-carpet-480.webp'
 import range_carpet_528_jpg from './range-carpet-528.jpg'
 import range_commercial_480_webp from './range-commercial-480.webp'
@@ -231,6 +306,114 @@ export const optimizedImages = {
       srcSet: `${ba_stairs_800_jpg} 800w, ${ba_stairs_1200_jpg} 1200w`,
     },
   },
+  'carasoul-1': {
+    width: 1200,
+    height: 848,
+    webp: {
+      src: carasoul_1_480_webp,
+      srcSet: `${carasoul_1_480_webp} 480w, ${carasoul_1_800_webp} 800w, ${carasoul_1_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: carasoul_1_800_jpg,
+      srcSet: `${carasoul_1_800_jpg} 800w, ${carasoul_1_1200_jpg} 1200w`,
+    },
+  },
+  'carasoul-2': {
+    width: 1200,
+    height: 848,
+    webp: {
+      src: carasoul_2_480_webp,
+      srcSet: `${carasoul_2_480_webp} 480w, ${carasoul_2_800_webp} 800w, ${carasoul_2_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: carasoul_2_800_jpg,
+      srcSet: `${carasoul_2_800_jpg} 800w, ${carasoul_2_1200_jpg} 1200w`,
+    },
+  },
+  'carasoul-3': {
+    width: 1200,
+    height: 848,
+    webp: {
+      src: carasoul_3_480_webp,
+      srcSet: `${carasoul_3_480_webp} 480w, ${carasoul_3_800_webp} 800w, ${carasoul_3_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: carasoul_3_800_jpg,
+      srcSet: `${carasoul_3_800_jpg} 800w, ${carasoul_3_1200_jpg} 1200w`,
+    },
+  },
+  'carasoul-4': {
+    width: 1200,
+    height: 848,
+    webp: {
+      src: carasoul_4_480_webp,
+      srcSet: `${carasoul_4_480_webp} 480w, ${carasoul_4_800_webp} 800w, ${carasoul_4_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: carasoul_4_800_jpg,
+      srcSet: `${carasoul_4_800_jpg} 800w, ${carasoul_4_1200_jpg} 1200w`,
+    },
+  },
+  'carasoul-5': {
+    width: 1200,
+    height: 848,
+    webp: {
+      src: carasoul_5_480_webp,
+      srcSet: `${carasoul_5_480_webp} 480w, ${carasoul_5_800_webp} 800w, ${carasoul_5_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: carasoul_5_800_jpg,
+      srcSet: `${carasoul_5_800_jpg} 800w, ${carasoul_5_1200_jpg} 1200w`,
+    },
+  },
+  'carasoul-6': {
+    width: 1200,
+    height: 848,
+    webp: {
+      src: carasoul_6_480_webp,
+      srcSet: `${carasoul_6_480_webp} 480w, ${carasoul_6_800_webp} 800w, ${carasoul_6_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: carasoul_6_800_jpg,
+      srcSet: `${carasoul_6_800_jpg} 800w, ${carasoul_6_1200_jpg} 1200w`,
+    },
+  },
+  'carasoul-7': {
+    width: 1200,
+    height: 848,
+    webp: {
+      src: carasoul_7_480_webp,
+      srcSet: `${carasoul_7_480_webp} 480w, ${carasoul_7_800_webp} 800w, ${carasoul_7_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: carasoul_7_800_jpg,
+      srcSet: `${carasoul_7_800_jpg} 800w, ${carasoul_7_1200_jpg} 1200w`,
+    },
+  },
+  'carasoul-8': {
+    width: 1200,
+    height: 848,
+    webp: {
+      src: carasoul_8_480_webp,
+      srcSet: `${carasoul_8_480_webp} 480w, ${carasoul_8_800_webp} 800w, ${carasoul_8_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: carasoul_8_800_jpg,
+      srcSet: `${carasoul_8_800_jpg} 800w, ${carasoul_8_1200_jpg} 1200w`,
+    },
+  },
+  'carasoul-9': {
+    width: 1200,
+    height: 848,
+    webp: {
+      src: carasoul_9_480_webp,
+      srcSet: `${carasoul_9_480_webp} 480w, ${carasoul_9_800_webp} 800w, ${carasoul_9_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: carasoul_9_800_jpg,
+      srcSet: `${carasoul_9_800_jpg} 800w, ${carasoul_9_1200_jpg} 1200w`,
+    },
+  },
   'flooring-1': {
     width: 2000,
     height: 1334,
@@ -301,6 +484,78 @@ export const optimizedImages = {
     jpg: {
       src: flooring_6_800_jpg,
       srcSet: `${flooring_6_800_jpg} 800w, ${flooring_6_1200_jpg} 1200w, ${flooring_6_1600_jpg} 1600w, ${flooring_6_2000_jpg} 2000w`,
+    },
+  },
+  'home-work-hallway': {
+    width: 1200,
+    height: 670,
+    webp: {
+      src: home_work_hallway_480_webp,
+      srcSet: `${home_work_hallway_480_webp} 480w, ${home_work_hallway_800_webp} 800w, ${home_work_hallway_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: home_work_hallway_800_jpg,
+      srcSet: `${home_work_hallway_800_jpg} 800w, ${home_work_hallway_1200_jpg} 1200w`,
+    },
+  },
+  'home-work-herringbone': {
+    width: 1200,
+    height: 670,
+    webp: {
+      src: home_work_herringbone_480_webp,
+      srcSet: `${home_work_herringbone_480_webp} 480w, ${home_work_herringbone_800_webp} 800w, ${home_work_herringbone_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: home_work_herringbone_800_jpg,
+      srcSet: `${home_work_herringbone_800_jpg} 800w, ${home_work_herringbone_1200_jpg} 1200w`,
+    },
+  },
+  'home-work-living-room-new': {
+    width: 1200,
+    height: 669,
+    webp: {
+      src: home_work_living_room_new_480_webp,
+      srcSet: `${home_work_living_room_new_480_webp} 480w, ${home_work_living_room_new_800_webp} 800w, ${home_work_living_room_new_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: home_work_living_room_new_800_jpg,
+      srcSet: `${home_work_living_room_new_800_jpg} 800w, ${home_work_living_room_new_1200_jpg} 1200w`,
+    },
+  },
+  'home-work-services': {
+    width: 1200,
+    height: 669,
+    webp: {
+      src: home_work_services_480_webp,
+      srcSet: `${home_work_services_480_webp} 480w, ${home_work_services_800_webp} 800w, ${home_work_services_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: home_work_services_800_jpg,
+      srcSet: `${home_work_services_800_jpg} 800w, ${home_work_services_1200_jpg} 1200w`,
+    },
+  },
+  'home-work-staircase-new': {
+    width: 1200,
+    height: 848,
+    webp: {
+      src: home_work_staircase_new_480_webp,
+      srcSet: `${home_work_staircase_new_480_webp} 480w, ${home_work_staircase_new_800_webp} 800w, ${home_work_staircase_new_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: home_work_staircase_new_800_jpg,
+      srcSet: `${home_work_staircase_new_800_jpg} 800w, ${home_work_staircase_new_1200_jpg} 1200w`,
+    },
+  },
+  'home-work-stairs': {
+    width: 1200,
+    height: 670,
+    webp: {
+      src: home_work_stairs_480_webp,
+      srcSet: `${home_work_stairs_480_webp} 480w, ${home_work_stairs_800_webp} 800w, ${home_work_stairs_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: home_work_stairs_800_jpg,
+      srcSet: `${home_work_stairs_800_jpg} 800w, ${home_work_stairs_1200_jpg} 1200w`,
     },
   },
   'range-carpet': {

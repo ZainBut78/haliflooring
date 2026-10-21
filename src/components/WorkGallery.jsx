@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ResponsiveImage from './ResponsiveImage';
-import { beforeAfter } from '../data/content';
+import { homeWork } from '../data/content';
 
-// Home page "Work" band: the three before / after transformations. The photos
-// and their full write-ups live in `beforeAfter` (src/data/content.js) and are
-// shown in full on /work; `summary` is the short caption used here.
+// Home page Work cards use the client's three supplied before/after photos.
 export default function WorkGallery() {
   return (
     <section
@@ -40,8 +38,8 @@ export default function WorkGallery() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {beforeAfter.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-8">
+          {homeWork.map((item) => (
             <Link
               key={item.id}
               to="/work"
@@ -53,15 +51,23 @@ export default function WorkGallery() {
                   image={item.image}
                   alt={item.alt}
                   sizes="(min-width: 1024px) 34vw, (min-width: 640px) 50vw, 100vw"
-                  className="h-full w-full object-contain group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                  className="h-full w-full object-contain"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-lg font-extrabold text-white group-hover:text-brand-orange transition-colors">
-                  {item.heading}
-                </h3>
-                <p className="text-sm text-neutral-400 mt-2 leading-relaxed">{item.summary}</p>
-              </div>
+              {(item.heading?.trim() || item.summary?.trim()) && (
+                <div className="px-5 py-4">
+                  {item.heading?.trim() && (
+                    <h3 className="text-center text-lg font-extrabold text-white group-hover:text-brand-orange transition-colors">
+                      {item.heading}
+                    </h3>
+                  )}
+                  {item.summary?.trim() && (
+                    <p className={`text-sm text-neutral-400 leading-relaxed ${item.heading?.trim() ? 'mt-2' : ''}`}>
+                      {item.summary}
+                    </p>
+                  )}
+                </div>
+              )}
             </Link>
           ))}
         </div>

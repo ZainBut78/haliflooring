@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useHead } from '../components/Seo'
-import { Breadcrumbs, PageHero, FaqAccordion } from '../components/ui'
+import { PageHero, FaqAccordion } from '../components/ui'
 import { PhoneIcon } from '../components/SiteNav'
 import { areas, services, serviceSlugs, SITE } from '../data/content'
 import { sendEnquiry } from '../lib/sendEnquiry'
@@ -77,8 +77,6 @@ export default function ContactPage() {
 
   return (
     <Layout>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Contact' }]} />
-
       <PageHero
         eyebrow="Free survey · Free measure · No obligation"
         heading="Get in Touch"

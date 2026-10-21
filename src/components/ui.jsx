@@ -3,49 +3,14 @@ import { Link } from 'react-router-dom'
 import { SITE } from '../data/content'
 
 /* ------------------------------------------------------------------ */
-/*  Breadcrumbs — also emits BreadcrumbList JSON-LD for the generator  */
-/* ------------------------------------------------------------------ */
-export function Breadcrumbs({ items }) {
-  return (
-    <nav aria-label="Breadcrumb" className="w-[90%] max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
-      <ol className="flex flex-wrap items-center gap-x-2 gap-y-0 text-xs text-gray-500 py-2.5">
-        {items.map((item, i) => {
-          const isLast = i === items.length - 1
-          return (
-            <li key={item.path || item.name} className="flex items-center gap-2">
-              {isLast || !item.path ? (
-                <span className="text-gray-900 font-semibold" aria-current="page">
-                  {item.name}
-                </span>
-              ) : (
-                // min-h keeps the tap target at 24px without changing the row rhythm.
-                <Link
-                  to={item.path}
-                  className="inline-flex items-center min-h-[24px] hover:text-brand-orange transition-colors"
-                >
-                  {item.name}
-                </Link>
-              )}
-              {!isLast && (
-                <svg className="w-3 h-3 text-gray-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              )}
-            </li>
-          )
-        })}
-      </ol>
-    </nav>
-  )
-}
-
-/* ------------------------------------------------------------------ */
 /*  Page hero — consistent inner-page header                          */
 /* ------------------------------------------------------------------ */
+// The layout puts the scrolling highway band above every inner page, so the
+// heading only needs a short gap on top of it.
 export function PageHero({ eyebrow, heading, subheading, children, align = 'center' }) {
   return (
     <section
-      className="relative pt-28 pb-12 sm:pb-16 lg:pt-36 lg:pb-20 overflow-hidden bg-gradient-to-b from-brand-grayBg via-white to-white"
+      className={`relative pt-6 pb-12 sm:pb-16 lg:pt-10 lg:pb-20 overflow-hidden bg-gradient-to-b from-brand-grayBg via-white to-white`}
     >
       {/* Ambient glow, mirrors the landing hero */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">

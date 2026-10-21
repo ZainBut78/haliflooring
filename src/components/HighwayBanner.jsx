@@ -1,4 +1,5 @@
 import React from 'react';
+import { SITE } from '../data/content';
 
 export default function HighwayBanner() {
   return (
@@ -8,6 +9,8 @@ export default function HighwayBanner() {
     >
       <div className="flex items-center animate-van-highway whitespace-nowrap text-xs font-mono tracking-widest text-gray-300 gap-8">
         <span>HALI FLOORING • FREE HOME SURVEY</span>
+        <span className="text-brand-orange font-bold">•</span>
+        <span>{SITE.address.line1}, {SITE.address.line2}</span>
         <span className="text-brand-orange font-bold">•</span>
         <span>BOLTON • MANCHESTER • WARRINGTON • PRESTON • WIGAN</span>
         <span className="text-brand-orange font-bold">•</span>

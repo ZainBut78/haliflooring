@@ -17,7 +17,7 @@ export default function NotFoundPage() {
 
   return (
     <Layout showHighway={false}>
-      <section className="relative pt-36 pb-20 lg:pt-44 lg:pb-28 bg-gradient-to-b from-brand-grayBg via-white to-white overflow-hidden">
+      <section className="relative pt-10 pb-20 lg:pt-16 lg:pb-28 bg-gradient-to-b from-brand-grayBg via-white to-white overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-brand-orange/10 blur-[140px] rounded-full animate-glow" />
         </div>

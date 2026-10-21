@@ -6,7 +6,7 @@ export default function Hero() {
     <section
       id="hero"
       data-purpose="hero-showcase"
-      className="relative pt-28 pb-8 lg:pt-36 lg:pb-12 overflow-hidden flex flex-col items-center justify-start bg-gradient-to-b from-brand-grayBg via-white to-white"
+      className="relative pt-6 pb-8 lg:pt-10 lg:pb-12 overflow-hidden flex flex-col items-center justify-start bg-gradient-to-b from-brand-grayBg via-white to-white"
     >
       {/* Ambient Stage Lighting */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">

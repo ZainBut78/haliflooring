@@ -18,6 +18,12 @@ export default function Layout({ children, showHighway = true }) {
         Skip to content
       </a>
       <SiteNav />
+      {/* The black scrolling band, directly under the navbar on every page.
+          pt-[81px] clears the fixed header (h-20 = 80px + 1px bottom border)
+          so the band is not hidden behind it. */}
+      <div className="pt-[81px]">
+        <HighwayBanner />
+      </div>
       <main id="main-content" className="flex-grow">
         {children}
       </main>
