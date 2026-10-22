@@ -244,7 +244,7 @@ export const beforeAfter = [
   {
     id: 'herringbone',
     summary: 'Herringbone going down across a spacious open-plan room. The finished floor adds warmth and character from wall to wall.',
-    image: img('ba-herringbone'),
+    image: img('work-range-wood'),
     title: 'Before & After: Herringbone Floor',
     heading: 'Engineered Wood',
     text: '',
@@ -256,7 +256,7 @@ export const beforeAfter = [
 export const homeWork = [
   {
     id: 'living-room',
-    image: img('home-work-living-room-new'),
+    image: img('work-range-wood'),
     heading: 'Engineered Wood',
     summary: '',
     alt: 'Before and after: open-plan room with herringbone flooring being laid and the completed floor',
