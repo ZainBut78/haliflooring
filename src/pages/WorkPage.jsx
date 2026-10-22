@@ -86,12 +86,12 @@ export default function WorkPage() {
                     loading={i === 0 ? 'eager' : 'lazy'}
                   />
                 </div>
-                <figcaption className="p-5 sm:p-6">
-                  <h3 className="text-base sm:text-lg font-extrabold text-gray-900 font-display uppercase tracking-wide">
+                {(item.heading || item.text) && <figcaption className="p-5 sm:p-6">
+                  <h3 className="text-center text-base sm:text-lg font-extrabold text-gray-900 font-display uppercase tracking-wide">
                     {item.heading}
                   </h3>
-                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.text}</p>
-                </figcaption>
+                  {item.text?.trim() && <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.text}</p>}
+                </figcaption>}
               </figure>
             ))}
           </div>
@@ -117,7 +117,7 @@ export default function WorkPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
             {rangeGallery.map((item) => (
               <article
-                key={item.slug}
+                key={item.id ?? item.slug}
                 className="group relative bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-brand-orange hover:shadow-card-hover transition-all duration-300 flex flex-col"
               >
                 <div className="aspect-[16/9] overflow-hidden bg-gray-100">
@@ -125,7 +125,7 @@ export default function WorkPage() {
                     image={item.image}
                     alt={`${item.title} installation`}
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                    className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className={item.imageFit === 'contain' ? 'h-full w-full object-contain' : 'h-full w-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out'}
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-1">

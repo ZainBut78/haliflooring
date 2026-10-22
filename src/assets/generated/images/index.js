@@ -264,6 +264,44 @@ import svc_wood_2_1600_webp from './svc-wood-2-1600.webp'
 import svc_wood_2_800_jpg from './svc-wood-2-800.jpg'
 import svc_wood_2_1200_jpg from './svc-wood-2-1200.jpg'
 import svc_wood_2_1600_jpg from './svc-wood-2-1600.jpg'
+import work_before_after_lvt_480_webp from './work-before-after-lvt-480.webp'
+import work_before_after_lvt_800_webp from './work-before-after-lvt-800.webp'
+import work_before_after_lvt_1200_webp from './work-before-after-lvt-1200.webp'
+import work_before_after_lvt_1600_webp from './work-before-after-lvt-1600.webp'
+import work_before_after_lvt_800_jpg from './work-before-after-lvt-800.jpg'
+import work_before_after_lvt_1200_jpg from './work-before-after-lvt-1200.jpg'
+import work_before_after_lvt_1600_jpg from './work-before-after-lvt-1600.jpg'
+import work_range_contract_carpet_480_webp from './work-range-contract-carpet-480.webp'
+import work_range_contract_carpet_800_webp from './work-range-contract-carpet-800.webp'
+import work_range_contract_carpet_1200_webp from './work-range-contract-carpet-1200.webp'
+import work_range_contract_carpet_1600_webp from './work-range-contract-carpet-1600.webp'
+import work_range_contract_carpet_800_jpg from './work-range-contract-carpet-800.jpg'
+import work_range_contract_carpet_1200_jpg from './work-range-contract-carpet-1200.jpg'
+import work_range_contract_carpet_1600_jpg from './work-range-contract-carpet-1600.jpg'
+import work_range_laminate_480_webp from './work-range-laminate-480.webp'
+import work_range_laminate_800_webp from './work-range-laminate-800.webp'
+import work_range_laminate_800_jpg from './work-range-laminate-800.jpg'
+import work_range_lvt_480_webp from './work-range-lvt-480.webp'
+import work_range_lvt_800_webp from './work-range-lvt-800.webp'
+import work_range_lvt_1200_webp from './work-range-lvt-1200.webp'
+import work_range_lvt_1600_webp from './work-range-lvt-1600.webp'
+import work_range_lvt_800_jpg from './work-range-lvt-800.jpg'
+import work_range_lvt_1200_jpg from './work-range-lvt-1200.jpg'
+import work_range_lvt_1600_jpg from './work-range-lvt-1600.jpg'
+import work_range_runners_480_webp from './work-range-runners-480.webp'
+import work_range_runners_800_webp from './work-range-runners-800.webp'
+import work_range_runners_1200_webp from './work-range-runners-1200.webp'
+import work_range_runners_1600_webp from './work-range-runners-1600.webp'
+import work_range_runners_800_jpg from './work-range-runners-800.jpg'
+import work_range_runners_1200_jpg from './work-range-runners-1200.jpg'
+import work_range_runners_1600_jpg from './work-range-runners-1600.jpg'
+import work_range_wood_480_webp from './work-range-wood-480.webp'
+import work_range_wood_800_webp from './work-range-wood-800.webp'
+import work_range_wood_1200_webp from './work-range-wood-1200.webp'
+import work_range_wood_1600_webp from './work-range-wood-1600.webp'
+import work_range_wood_800_jpg from './work-range-wood-800.jpg'
+import work_range_wood_1200_jpg from './work-range-wood-1200.jpg'
+import work_range_wood_1600_jpg from './work-range-wood-1600.jpg'
 
 /**
  * Each entry carries the intrinsic size plus WebP and JPEG sources, so
@@ -832,6 +870,78 @@ export const optimizedImages = {
     jpg: {
       src: svc_wood_2_800_jpg,
       srcSet: `${svc_wood_2_800_jpg} 800w, ${svc_wood_2_1200_jpg} 1200w, ${svc_wood_2_1600_jpg} 1600w`,
+    },
+  },
+  'work-before-after-lvt': {
+    width: 1600,
+    height: 893,
+    webp: {
+      src: work_before_after_lvt_480_webp,
+      srcSet: `${work_before_after_lvt_480_webp} 480w, ${work_before_after_lvt_800_webp} 800w, ${work_before_after_lvt_1200_webp} 1200w, ${work_before_after_lvt_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: work_before_after_lvt_800_jpg,
+      srcSet: `${work_before_after_lvt_800_jpg} 800w, ${work_before_after_lvt_1200_jpg} 1200w, ${work_before_after_lvt_1600_jpg} 1600w`,
+    },
+  },
+  'work-range-contract-carpet': {
+    width: 1600,
+    height: 1131,
+    webp: {
+      src: work_range_contract_carpet_480_webp,
+      srcSet: `${work_range_contract_carpet_480_webp} 480w, ${work_range_contract_carpet_800_webp} 800w, ${work_range_contract_carpet_1200_webp} 1200w, ${work_range_contract_carpet_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: work_range_contract_carpet_800_jpg,
+      srcSet: `${work_range_contract_carpet_800_jpg} 800w, ${work_range_contract_carpet_1200_jpg} 1200w, ${work_range_contract_carpet_1600_jpg} 1600w`,
+    },
+  },
+  'work-range-laminate': {
+    width: 800,
+    height: 579,
+    webp: {
+      src: work_range_laminate_480_webp,
+      srcSet: `${work_range_laminate_480_webp} 480w, ${work_range_laminate_800_webp} 800w`,
+    },
+    jpg: {
+      src: work_range_laminate_800_jpg,
+      srcSet: `${work_range_laminate_800_jpg} 800w`,
+    },
+  },
+  'work-range-lvt': {
+    width: 1600,
+    height: 606,
+    webp: {
+      src: work_range_lvt_480_webp,
+      srcSet: `${work_range_lvt_480_webp} 480w, ${work_range_lvt_800_webp} 800w, ${work_range_lvt_1200_webp} 1200w, ${work_range_lvt_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: work_range_lvt_800_jpg,
+      srcSet: `${work_range_lvt_800_jpg} 800w, ${work_range_lvt_1200_jpg} 1200w, ${work_range_lvt_1600_jpg} 1600w`,
+    },
+  },
+  'work-range-runners': {
+    width: 1600,
+    height: 1131,
+    webp: {
+      src: work_range_runners_480_webp,
+      srcSet: `${work_range_runners_480_webp} 480w, ${work_range_runners_800_webp} 800w, ${work_range_runners_1200_webp} 1200w, ${work_range_runners_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: work_range_runners_800_jpg,
+      srcSet: `${work_range_runners_800_jpg} 800w, ${work_range_runners_1200_jpg} 1200w, ${work_range_runners_1600_jpg} 1600w`,
+    },
+  },
+  'work-range-wood': {
+    width: 1600,
+    height: 893,
+    webp: {
+      src: work_range_wood_480_webp,
+      srcSet: `${work_range_wood_480_webp} 480w, ${work_range_wood_800_webp} 800w, ${work_range_wood_1200_webp} 1200w, ${work_range_wood_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: work_range_wood_800_jpg,
+      srcSet: `${work_range_wood_800_jpg} 800w, ${work_range_wood_1200_jpg} 1200w, ${work_range_wood_1600_jpg} 1600w`,
     },
   },
 }

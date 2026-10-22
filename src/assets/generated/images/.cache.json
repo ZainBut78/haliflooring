@@ -826,5 +826,115 @@
       "src/assets/generated/images/home-work-staircase-new-800.jpg",
       "src/assets/generated/images/home-work-staircase-new-1200.jpg"
     ]
+  },
+  "work-range-laminate.jpg": {
+    "slug": "work-range-laminate",
+    "source": "work-range-laminate.jpg",
+    "width": 800,
+    "height": 579,
+    "sourceWidth": 1000,
+    "sourceHeight": 724,
+    "mtimeMs": 1792660458051.4236,
+    "size": 126308,
+    "outputs": [
+      "src/assets/generated/images/work-range-laminate-480.webp",
+      "src/assets/generated/images/work-range-laminate-800.webp",
+      "src/assets/generated/images/work-range-laminate-800.jpg"
+    ]
+  },
+  "work-range-lvt.png": {
+    "slug": "work-range-lvt",
+    "source": "work-range-lvt.png",
+    "width": 1600,
+    "height": 606,
+    "sourceWidth": 2000,
+    "sourceHeight": 758,
+    "mtimeMs": 1792573292000,
+    "size": 683274,
+    "outputs": [
+      "src/assets/generated/images/work-range-lvt-480.webp",
+      "src/assets/generated/images/work-range-lvt-800.webp",
+      "src/assets/generated/images/work-range-lvt-1200.webp",
+      "src/assets/generated/images/work-range-lvt-1600.webp",
+      "src/assets/generated/images/work-range-lvt-800.jpg",
+      "src/assets/generated/images/work-range-lvt-1200.jpg",
+      "src/assets/generated/images/work-range-lvt-1600.jpg"
+    ]
+  },
+  "work-range-runners.png": {
+    "slug": "work-range-runners",
+    "source": "work-range-runners.png",
+    "width": 1600,
+    "height": 1131,
+    "sourceWidth": 2000,
+    "sourceHeight": 1414,
+    "mtimeMs": 1792573292000,
+    "size": 1195003,
+    "outputs": [
+      "src/assets/generated/images/work-range-runners-480.webp",
+      "src/assets/generated/images/work-range-runners-800.webp",
+      "src/assets/generated/images/work-range-runners-1200.webp",
+      "src/assets/generated/images/work-range-runners-1600.webp",
+      "src/assets/generated/images/work-range-runners-800.jpg",
+      "src/assets/generated/images/work-range-runners-1200.jpg",
+      "src/assets/generated/images/work-range-runners-1600.jpg"
+    ]
+  },
+  "work-range-wood.png": {
+    "slug": "work-range-wood",
+    "source": "work-range-wood.png",
+    "width": 1600,
+    "height": 893,
+    "sourceWidth": 2000,
+    "sourceHeight": 1116,
+    "mtimeMs": 1792573292000,
+    "size": 1123702,
+    "outputs": [
+      "src/assets/generated/images/work-range-wood-480.webp",
+      "src/assets/generated/images/work-range-wood-800.webp",
+      "src/assets/generated/images/work-range-wood-1200.webp",
+      "src/assets/generated/images/work-range-wood-1600.webp",
+      "src/assets/generated/images/work-range-wood-800.jpg",
+      "src/assets/generated/images/work-range-wood-1200.jpg",
+      "src/assets/generated/images/work-range-wood-1600.jpg"
+    ]
+  },
+  "work-before-after-lvt.png": {
+    "slug": "work-before-after-lvt",
+    "source": "work-before-after-lvt.png",
+    "width": 1600,
+    "height": 893,
+    "sourceWidth": 2000,
+    "sourceHeight": 1116,
+    "mtimeMs": 1792573292000,
+    "size": 1235608,
+    "outputs": [
+      "src/assets/generated/images/work-before-after-lvt-480.webp",
+      "src/assets/generated/images/work-before-after-lvt-800.webp",
+      "src/assets/generated/images/work-before-after-lvt-1200.webp",
+      "src/assets/generated/images/work-before-after-lvt-1600.webp",
+      "src/assets/generated/images/work-before-after-lvt-800.jpg",
+      "src/assets/generated/images/work-before-after-lvt-1200.jpg",
+      "src/assets/generated/images/work-before-after-lvt-1600.jpg"
+    ]
+  },
+  "work-range-contract-carpet.png": {
+    "slug": "work-range-contract-carpet",
+    "source": "work-range-contract-carpet.png",
+    "width": 1600,
+    "height": 1131,
+    "sourceWidth": 2000,
+    "sourceHeight": 1414,
+    "mtimeMs": 1792573292000,
+    "size": 1407015,
+    "outputs": [
+      "src/assets/generated/images/work-range-contract-carpet-480.webp",
+      "src/assets/generated/images/work-range-contract-carpet-800.webp",
+      "src/assets/generated/images/work-range-contract-carpet-1200.webp",
+      "src/assets/generated/images/work-range-contract-carpet-1600.webp",
+      "src/assets/generated/images/work-range-contract-carpet-800.jpg",
+      "src/assets/generated/images/work-range-contract-carpet-1200.jpg",
+      "src/assets/generated/images/work-range-contract-carpet-1600.jpg"
+    ]
   }
 }
