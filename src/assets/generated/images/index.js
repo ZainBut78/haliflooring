@@ -113,6 +113,9 @@ import flooring_6_800_jpg from './flooring-6-800.jpg'
 import flooring_6_1200_jpg from './flooring-6-1200.jpg'
 import flooring_6_1600_jpg from './flooring-6-1600.jpg'
 import flooring_6_2000_jpg from './flooring-6-2000.jpg'
+import home_work_engineered_480_webp from './home-work-engineered-480.webp'
+import home_work_engineered_800_webp from './home-work-engineered-800.webp'
+import home_work_engineered_800_jpg from './home-work-engineered-800.jpg'
 import home_work_hallway_480_webp from './home-work-hallway-480.webp'
 import home_work_hallway_800_webp from './home-work-hallway-800.webp'
 import home_work_hallway_1200_webp from './home-work-hallway-1200.webp'
@@ -128,6 +131,16 @@ import home_work_living_room_new_800_webp from './home-work-living-room-new-800.
 import home_work_living_room_new_1200_webp from './home-work-living-room-new-1200.webp'
 import home_work_living_room_new_800_jpg from './home-work-living-room-new-800.jpg'
 import home_work_living_room_new_1200_jpg from './home-work-living-room-new-1200.jpg'
+import home_work_lvt_480_webp from './home-work-lvt-480.webp'
+import home_work_lvt_800_webp from './home-work-lvt-800.webp'
+import home_work_lvt_1200_webp from './home-work-lvt-1200.webp'
+import home_work_lvt_800_jpg from './home-work-lvt-800.jpg'
+import home_work_lvt_1200_jpg from './home-work-lvt-1200.jpg'
+import home_work_runner_480_webp from './home-work-runner-480.webp'
+import home_work_runner_800_webp from './home-work-runner-800.webp'
+import home_work_runner_1200_webp from './home-work-runner-1200.webp'
+import home_work_runner_800_jpg from './home-work-runner-800.jpg'
+import home_work_runner_1200_jpg from './home-work-runner-1200.jpg'
 import home_work_services_480_webp from './home-work-services-480.webp'
 import home_work_services_800_webp from './home-work-services-800.webp'
 import home_work_services_1200_webp from './home-work-services-1200.webp'
@@ -302,6 +315,13 @@ import work_range_wood_1600_webp from './work-range-wood-1600.webp'
 import work_range_wood_800_jpg from './work-range-wood-800.jpg'
 import work_range_wood_1200_jpg from './work-range-wood-1200.jpg'
 import work_range_wood_1600_jpg from './work-range-wood-1600.jpg'
+import work_services_collage_480_webp from './work-services-collage-480.webp'
+import work_services_collage_800_webp from './work-services-collage-800.webp'
+import work_services_collage_1200_webp from './work-services-collage-1200.webp'
+import work_services_collage_1600_webp from './work-services-collage-1600.webp'
+import work_services_collage_800_jpg from './work-services-collage-800.jpg'
+import work_services_collage_1200_jpg from './work-services-collage-1200.jpg'
+import work_services_collage_1600_jpg from './work-services-collage-1600.jpg'
 
 /**
  * Each entry carries the intrinsic size plus WebP and JPEG sources, so
@@ -524,6 +544,18 @@ export const optimizedImages = {
       srcSet: `${flooring_6_800_jpg} 800w, ${flooring_6_1200_jpg} 1200w, ${flooring_6_1600_jpg} 1600w, ${flooring_6_2000_jpg} 2000w`,
     },
   },
+  'home-work-engineered': {
+    width: 800,
+    height: 1067,
+    webp: {
+      src: home_work_engineered_480_webp,
+      srcSet: `${home_work_engineered_480_webp} 480w, ${home_work_engineered_800_webp} 800w`,
+    },
+    jpg: {
+      src: home_work_engineered_800_jpg,
+      srcSet: `${home_work_engineered_800_jpg} 800w`,
+    },
+  },
   'home-work-hallway': {
     width: 1200,
     height: 670,
@@ -558,6 +590,30 @@ export const optimizedImages = {
     jpg: {
       src: home_work_living_room_new_800_jpg,
       srcSet: `${home_work_living_room_new_800_jpg} 800w, ${home_work_living_room_new_1200_jpg} 1200w`,
+    },
+  },
+  'home-work-lvt': {
+    width: 1200,
+    height: 1600,
+    webp: {
+      src: home_work_lvt_480_webp,
+      srcSet: `${home_work_lvt_480_webp} 480w, ${home_work_lvt_800_webp} 800w, ${home_work_lvt_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: home_work_lvt_800_jpg,
+      srcSet: `${home_work_lvt_800_jpg} 800w, ${home_work_lvt_1200_jpg} 1200w`,
+    },
+  },
+  'home-work-runner': {
+    width: 1200,
+    height: 1600,
+    webp: {
+      src: home_work_runner_480_webp,
+      srcSet: `${home_work_runner_480_webp} 480w, ${home_work_runner_800_webp} 800w, ${home_work_runner_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: home_work_runner_800_jpg,
+      srcSet: `${home_work_runner_800_jpg} 800w, ${home_work_runner_1200_jpg} 1200w`,
     },
   },
   'home-work-services': {
@@ -942,6 +998,18 @@ export const optimizedImages = {
     jpg: {
       src: work_range_wood_800_jpg,
       srcSet: `${work_range_wood_800_jpg} 800w, ${work_range_wood_1200_jpg} 1200w, ${work_range_wood_1600_jpg} 1600w`,
+    },
+  },
+  'work-services-collage': {
+    width: 1600,
+    height: 893,
+    webp: {
+      src: work_services_collage_480_webp,
+      srcSet: `${work_services_collage_480_webp} 480w, ${work_services_collage_800_webp} 800w, ${work_services_collage_1200_webp} 1200w, ${work_services_collage_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: work_services_collage_800_jpg,
+      srcSet: `${work_services_collage_800_jpg} 800w, ${work_services_collage_1200_jpg} 1200w, ${work_services_collage_1600_jpg} 1600w`,
     },
   },
 }

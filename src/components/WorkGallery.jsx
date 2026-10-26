@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ResponsiveImage from './ResponsiveImage';
 import { homeWork } from '../data/content';
 
-// Home page Work cards use the client's three supplied before/after photos.
+// Home page Work cards: engineered wood, LVT and stair runner photos, each linking to its service page.
 export default function WorkGallery() {
   return (
     <section
@@ -22,7 +22,7 @@ export default function WorkGallery() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>
             <span className="text-brand-orange font-bold text-xs uppercase tracking-[0.25em] bg-brand-orange/15 px-3.5 py-1 rounded-full border border-brand-orange/30">
-              BEFORE &amp; AFTER
+              RECENT WORK
             </span>
             <h2 className="mt-3 text-4xl sm:text-6xl font-extrabold text-white font-display uppercase tracking-tight">
               WORK
@@ -42,16 +42,16 @@ export default function WorkGallery() {
           {homeWork.map((item) => (
             <Link
               key={item.id}
-              to="/work"
+              to={item.to || '/work'}
               className="gallery-card-reveal group bg-[#1a1a1a] rounded-2xl overflow-hidden border border-neutral-800 hover:border-brand-orange transition-all duration-500 shadow-xl hover:shadow-glow-orange/20"
             >
-              {/* Whole photo, never cropped: the BEFORE / AFTER labels sit in its corners. */}
-              <div className="relative aspect-[16/9] overflow-hidden bg-black">
+              {/* The photos are portrait, so they fill a 4:3 frame (centre crop) rather than shrinking inside a wide one. */}
+              <div className="relative aspect-[4/3] overflow-hidden bg-black">
                 <ResponsiveImage
                   image={item.image}
                   alt={item.alt}
                   sizes="(min-width: 1024px) 34vw, (min-width: 640px) 50vw, 100vw"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
               {(item.heading?.trim() || item.summary?.trim()) && (

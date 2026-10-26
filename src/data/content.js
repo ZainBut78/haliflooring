@@ -50,7 +50,6 @@ export const carouselPool = [
   img('carasoul-8'),
   img('carasoul-9'),
   flooring6,
-  img('svc-lvt-1'),
   img('svc-wood-1'),
 ]
 
@@ -226,11 +225,11 @@ export const beforeAfter = [
   {
     id: 'hallway',
     summary: '',
-    image: img('home-work-services'),
+    image: img('work-services-collage'),
     title: 'Our flooring range',
     heading: '',
     text: '',
-    alt: 'Flooring collage showing LVT, engineered wood, laminate, carpets, stair runners, safety flooring, floor levelling and artificial grass',
+    alt: 'Flooring collage showing LVT with border, engineered wood, laminate, carpets, stair runners, safety flooring, floor levelling, oak herringbone LVT and artificial grass',
   },
   {
     id: 'stairs',
@@ -252,28 +251,33 @@ export const beforeAfter = [
   },
 ]
 
-// Client-supplied before/after photographs for the three home Work cards.
+// The three home page Work cards, in order: engineered wood, LVT, stair runner.
+// Each opens its own service page. Captions are left empty on purpose, so the
+// card shows the photo and its title only.
 export const homeWork = [
   {
-    id: 'living-room',
-    image: img('work-range-wood'),
+    id: 'engineered-wood',
+    image: img('home-work-engineered'),
     heading: 'Engineered Wood',
     summary: '',
-    alt: 'Before and after: open-plan room with herringbone flooring being laid and the completed floor',
+    to: '/services/wood',
+    alt: 'Bright open-plan room finished with a herringbone engineered wood floor',
   },
   {
-    id: 'stairs',
-    image: img('home-work-services'),
-    heading: '',
+    id: 'lvt',
+    image: img('home-work-lvt'),
+    heading: 'LVT',
     summary: '',
-    alt: 'Flooring collage showing LVT, engineered wood, laminate, carpets, stair runners, safety flooring, floor levelling and artificial grass',
+    to: '/services/lvt',
+    alt: 'Living room with a warm herringbone LVT floor',
   },
   {
-    id: 'staircase',
-    image: img('home-work-staircase-new'),
-    heading: 'Contract Carpet',
-    summary: ' ',
-    alt: 'Before and after: bare wooden staircase transformed with dark fitted carpet',
+    id: 'stair-runner',
+    image: img('home-work-runner'),
+    heading: 'Stair Runner',
+    summary: '',
+    to: '/services/runners',
+    alt: 'Patterned stair runner carpet fitted around the turn of a staircase',
   },
 ]
 

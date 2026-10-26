@@ -9,7 +9,7 @@ import { carouselPool, services, serviceSlugs } from '../data/content';
 const [
   carousel1, carousel2, carousel3, carousel4, carousel5,
   carousel6, carousel7, carousel8, carousel9,
-  modernFloor, livingRoomFloor, woodDetail,
+  modernFloor, woodDetail,
 ] = carouselPool;
 
 // Each slide links to the project it is depicting. The photographs are shared
@@ -18,22 +18,22 @@ const [
 // the stair runner project.
 const slidesData = [
   {
-    title: 'Explore Our Range: Rich Wood Flooring',
+    title: 'Rich Wood Flooring',
     alt: 'Spacious bright living room with dark wood flooring',
     image: carousel1,
     to: '/services/wood'
   },
   {
-    title: 'Explore Our Range: Artificial Grass',
+    title: 'Artificial Grass',
     alt: 'Green artificial grass on an outdoor sports court',
     image: carousel2,
     to: '/services/grass'
   },
   {
-    title: 'Featured Project: Premium Herringbone Laminate for Family Homes',
-    alt: 'Herringbone Laminate Flooring Installation in a Family Home',
+    title: 'Herringbone LVT',
+    alt: 'Herringbone LVT flooring',
     image: carousel3,
-    to: '/work/bury-home-laminate-herringbone'
+    to: '/services/lvt'
   },
   {
     title: 'Featured Project: Premium Domestic & Commercial Installation',
@@ -42,49 +42,43 @@ const slidesData = [
     to: '/work/manchester-office-safety-flooring'
   },
   {
-    title: 'Featured Project: Handcrafted Whipped Wool Staircase Runner',
-    alt: 'Handcrafted Bespoke Wool Staircase Runner Installation',
+    title: 'Herringbone Laminate',
+    alt: 'Herringbone laminate flooring',
     image: carousel5,
-    to: '/work/worsley-manor-custom-runner'
+    to: '/services/laminate'
   },
   {
-    title: 'Featured Project: Commercial Safety Flooring Fit-Out',
-    alt: 'Commercial Safety Flooring Installation in a Workplace',
+    title: 'Wool Carpet',
+    alt: 'Wool carpet fitted in a room',
     image: carousel6,
-    to: '/work/manchester-office-safety-flooring'
+    to: '/services/carpet'
   },
   {
-    title: 'Featured Project: Bespoke Stair Runner with a Neat Finished Edge',
-    alt: 'Bespoke Stair Runner Installation with a Finished Edge',
+    title: 'Domestic Carpet',
+    alt: 'Domestic carpet fitted in a home',
     image: carousel7,
-    to: '/work/worsley-manor-custom-runner'
+    to: '/services/carpet'
   },
   {
-    title: 'Featured Project: Bespoke Wool Runner on a Curved Staircase',
-    alt: 'Bespoke Wool Stair Runner Fitted to a Curved Staircase',
+    title: 'Stair Runner with Laminate on Hallway',
+    alt: 'Stair runner on the stairs with laminate flooring in the hallway',
     image: carousel8,
-    to: '/work/worsley-manor-custom-runner'
+    to: '/services/runners'
   },
   {
-    title: 'Featured Project: Bespoke Luxury Hardwood Flooring',
-    alt: 'Bespoke Luxury Hardwood Flooring Installation',
+    title: 'Living Room Carpet',
+    alt: 'Living room carpet',
     image: carousel9,
-    to: '/work/chorley-barn-engineered-oak'
+    to: '/services/carpet'
   },
   {
-    title: 'Explore Our Range: Modern Wood Flooring',
+    title: 'Modern Wood Flooring',
     alt: 'Modern open-plan interior with wide wood-effect floor planks',
     image: modernFloor,
     to: '/services/wood'
   },
   {
-    title: 'Explore Our Range: Warm Living Room Floors',
-    alt: 'Light-filled sitting room with warm natural wood flooring',
-    image: livingRoomFloor,
-    to: '/services/wood'
-  },
-  {
-    title: 'Explore Our Range: Natural Wood Finishes',
+    title: 'Natural Wood Finishes',
     alt: 'Close-up of pale wood flooring with natural grain and knots',
     image: woodDetail,
     to: '/services/wood'
@@ -100,6 +94,12 @@ const servicePills = serviceSlugs.map((slug, i) => ({
   desc: services[slug].tagline,
   to: `/services/${slug}`,
 }));
+
+// The services overlay is a mouse-hover effect. Touch screens fire a fake
+// mouseenter on tap, which would dim the slide and cover it with the service
+// pills, so it only runs on devices with a real hovering pointer.
+const canHover = () =>
+  typeof window !== 'undefined' && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
 export default function LuxurySlideshow() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -152,7 +152,7 @@ export default function LuxurySlideshow() {
       {/* Main Slideshow Card Container (Exact dimensions preserved) */}
       <div
         id="slideshow-stage"
-        onMouseEnter={() => setIsHovered(true)}
+        onMouseEnter={() => canHover() && setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className="relative w-full h-[400px] sm:h-[480px] lg:h-[580px] xl:h-[620px] rounded-3xl overflow-hidden shadow-2xl border border-brand-orange/20 bg-neutral-950 group select-none cursor-pointer"
       >

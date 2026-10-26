@@ -936,5 +936,73 @@
       "src/assets/generated/images/work-range-contract-carpet-1200.jpg",
       "src/assets/generated/images/work-range-contract-carpet-1600.jpg"
     ]
+  },
+  "home-work-engineered.jpg": {
+    "slug": "home-work-engineered",
+    "source": "home-work-engineered.jpg",
+    "width": 800,
+    "height": 1067,
+    "sourceWidth": 1086,
+    "sourceHeight": 1448,
+    "mtimeMs": 1793044829916.6638,
+    "size": 192309,
+    "outputs": [
+      "src/assets/generated/images/home-work-engineered-480.webp",
+      "src/assets/generated/images/home-work-engineered-800.webp",
+      "src/assets/generated/images/home-work-engineered-800.jpg"
+    ]
+  },
+  "home-work-lvt.jpg": {
+    "slug": "home-work-lvt",
+    "source": "home-work-lvt.jpg",
+    "width": 1200,
+    "height": 1600,
+    "sourceWidth": 1500,
+    "sourceHeight": 2000,
+    "mtimeMs": 1793044829982.1948,
+    "size": 136097,
+    "outputs": [
+      "src/assets/generated/images/home-work-lvt-480.webp",
+      "src/assets/generated/images/home-work-lvt-800.webp",
+      "src/assets/generated/images/home-work-lvt-1200.webp",
+      "src/assets/generated/images/home-work-lvt-800.jpg",
+      "src/assets/generated/images/home-work-lvt-1200.jpg"
+    ]
+  },
+  "home-work-runner.jpg": {
+    "slug": "home-work-runner",
+    "source": "home-work-runner.jpg",
+    "width": 1200,
+    "height": 1600,
+    "sourceWidth": 1500,
+    "sourceHeight": 2000,
+    "mtimeMs": 1793044830028.4048,
+    "size": 459358,
+    "outputs": [
+      "src/assets/generated/images/home-work-runner-480.webp",
+      "src/assets/generated/images/home-work-runner-800.webp",
+      "src/assets/generated/images/home-work-runner-1200.webp",
+      "src/assets/generated/images/home-work-runner-800.jpg",
+      "src/assets/generated/images/home-work-runner-1200.jpg"
+    ]
+  },
+  "work-services-collage.jpg": {
+    "slug": "work-services-collage",
+    "source": "work-services-collage.jpg",
+    "width": 1600,
+    "height": 893,
+    "sourceWidth": 1679,
+    "sourceHeight": 937,
+    "mtimeMs": 1793045194670,
+    "size": 629124,
+    "outputs": [
+      "src/assets/generated/images/work-services-collage-480.webp",
+      "src/assets/generated/images/work-services-collage-800.webp",
+      "src/assets/generated/images/work-services-collage-1200.webp",
+      "src/assets/generated/images/work-services-collage-1600.webp",
+      "src/assets/generated/images/work-services-collage-800.jpg",
+      "src/assets/generated/images/work-services-collage-1200.jpg",
+      "src/assets/generated/images/work-services-collage-1600.jpg"
+    ]
   }
 }
