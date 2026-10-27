@@ -284,6 +284,14 @@ import work_before_after_lvt_1600_webp from './work-before-after-lvt-1600.webp'
 import work_before_after_lvt_800_jpg from './work-before-after-lvt-800.jpg'
 import work_before_after_lvt_1200_jpg from './work-before-after-lvt-1200.jpg'
 import work_before_after_lvt_1600_jpg from './work-before-after-lvt-1600.jpg'
+import work_laminate_straight_plank_480_webp from './work-laminate-straight-plank-480.webp'
+import work_laminate_straight_plank_800_webp from './work-laminate-straight-plank-800.webp'
+import work_laminate_straight_plank_1200_webp from './work-laminate-straight-plank-1200.webp'
+import work_laminate_straight_plank_800_jpg from './work-laminate-straight-plank-800.jpg'
+import work_laminate_straight_plank_1200_jpg from './work-laminate-straight-plank-1200.jpg'
+import work_lvt_tile_effect_480_webp from './work-lvt-tile-effect-480.webp'
+import work_lvt_tile_effect_800_webp from './work-lvt-tile-effect-800.webp'
+import work_lvt_tile_effect_800_jpg from './work-lvt-tile-effect-800.jpg'
 import work_range_contract_carpet_480_webp from './work-range-contract-carpet-480.webp'
 import work_range_contract_carpet_800_webp from './work-range-contract-carpet-800.webp'
 import work_range_contract_carpet_1200_webp from './work-range-contract-carpet-1200.webp'
@@ -294,6 +302,13 @@ import work_range_contract_carpet_1600_jpg from './work-range-contract-carpet-16
 import work_range_laminate_480_webp from './work-range-laminate-480.webp'
 import work_range_laminate_800_webp from './work-range-laminate-800.webp'
 import work_range_laminate_800_jpg from './work-range-laminate-800.jpg'
+import work_range_laminate_before_after_480_webp from './work-range-laminate-before-after-480.webp'
+import work_range_laminate_before_after_800_webp from './work-range-laminate-before-after-800.webp'
+import work_range_laminate_before_after_1200_webp from './work-range-laminate-before-after-1200.webp'
+import work_range_laminate_before_after_1600_webp from './work-range-laminate-before-after-1600.webp'
+import work_range_laminate_before_after_800_jpg from './work-range-laminate-before-after-800.jpg'
+import work_range_laminate_before_after_1200_jpg from './work-range-laminate-before-after-1200.jpg'
+import work_range_laminate_before_after_1600_jpg from './work-range-laminate-before-after-1600.jpg'
 import work_range_lvt_480_webp from './work-range-lvt-480.webp'
 import work_range_lvt_800_webp from './work-range-lvt-800.webp'
 import work_range_lvt_1200_webp from './work-range-lvt-1200.webp'
@@ -322,6 +337,9 @@ import work_services_collage_1600_webp from './work-services-collage-1600.webp'
 import work_services_collage_800_jpg from './work-services-collage-800.jpg'
 import work_services_collage_1200_jpg from './work-services-collage-1200.jpg'
 import work_services_collage_1600_jpg from './work-services-collage-1600.jpg'
+import work_vinyl_herringbone_480_webp from './work-vinyl-herringbone-480.webp'
+import work_vinyl_herringbone_800_webp from './work-vinyl-herringbone-800.webp'
+import work_vinyl_herringbone_800_jpg from './work-vinyl-herringbone-800.jpg'
 
 /**
  * Each entry carries the intrinsic size plus WebP and JPEG sources, so
@@ -940,6 +958,30 @@ export const optimizedImages = {
       srcSet: `${work_before_after_lvt_800_jpg} 800w, ${work_before_after_lvt_1200_jpg} 1200w, ${work_before_after_lvt_1600_jpg} 1600w`,
     },
   },
+  'work-laminate-straight-plank': {
+    width: 1200,
+    height: 1200,
+    webp: {
+      src: work_laminate_straight_plank_480_webp,
+      srcSet: `${work_laminate_straight_plank_480_webp} 480w, ${work_laminate_straight_plank_800_webp} 800w, ${work_laminate_straight_plank_1200_webp} 1200w`,
+    },
+    jpg: {
+      src: work_laminate_straight_plank_800_jpg,
+      srcSet: `${work_laminate_straight_plank_800_jpg} 800w, ${work_laminate_straight_plank_1200_jpg} 1200w`,
+    },
+  },
+  'work-lvt-tile-effect': {
+    width: 800,
+    height: 1067,
+    webp: {
+      src: work_lvt_tile_effect_480_webp,
+      srcSet: `${work_lvt_tile_effect_480_webp} 480w, ${work_lvt_tile_effect_800_webp} 800w`,
+    },
+    jpg: {
+      src: work_lvt_tile_effect_800_jpg,
+      srcSet: `${work_lvt_tile_effect_800_jpg} 800w`,
+    },
+  },
   'work-range-contract-carpet': {
     width: 1600,
     height: 1131,
@@ -962,6 +1004,18 @@ export const optimizedImages = {
     jpg: {
       src: work_range_laminate_800_jpg,
       srcSet: `${work_range_laminate_800_jpg} 800w`,
+    },
+  },
+  'work-range-laminate-before-after': {
+    width: 1600,
+    height: 893,
+    webp: {
+      src: work_range_laminate_before_after_480_webp,
+      srcSet: `${work_range_laminate_before_after_480_webp} 480w, ${work_range_laminate_before_after_800_webp} 800w, ${work_range_laminate_before_after_1200_webp} 1200w, ${work_range_laminate_before_after_1600_webp} 1600w`,
+    },
+    jpg: {
+      src: work_range_laminate_before_after_800_jpg,
+      srcSet: `${work_range_laminate_before_after_800_jpg} 800w, ${work_range_laminate_before_after_1200_jpg} 1200w, ${work_range_laminate_before_after_1600_jpg} 1600w`,
     },
   },
   'work-range-lvt': {
@@ -1010,6 +1064,18 @@ export const optimizedImages = {
     jpg: {
       src: work_services_collage_800_jpg,
       srcSet: `${work_services_collage_800_jpg} 800w, ${work_services_collage_1200_jpg} 1200w, ${work_services_collage_1600_jpg} 1600w`,
+    },
+  },
+  'work-vinyl-herringbone': {
+    width: 800,
+    height: 1067,
+    webp: {
+      src: work_vinyl_herringbone_480_webp,
+      srcSet: `${work_vinyl_herringbone_480_webp} 480w, ${work_vinyl_herringbone_800_webp} 800w`,
+    },
+    jpg: {
+      src: work_vinyl_herringbone_800_jpg,
+      srcSet: `${work_vinyl_herringbone_800_jpg} 800w`,
     },
   },
 }

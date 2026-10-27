@@ -223,42 +223,42 @@ export const projects = [
  */
 export const beforeAfter = [
   {
-    id: 'hallway',
+    id: 'laminate-plank',
     summary: '',
-    image: img('work-services-collage'),
-    title: 'Our flooring range',
-    heading: '',
+    image: img('work-laminate-straight-plank'),
+    title: 'Laminate flooring - straight plank',
+    heading: 'Laminate flooring - straight plank',
     text: '',
-    alt: 'Flooring collage showing LVT with border, engineered wood, laminate, carpets, stair runners, safety flooring, floor levelling, oak herringbone LVT and artificial grass',
+    alt: 'Straight plank laminate flooring running through a hallway and into the living room',
   },
   {
-    id: 'stairs',
+    id: 'lvt-tile-effect',
     summary: '',
-    image: img('work-before-after-lvt'),
-    title: 'LVT',
-    heading: 'LVT',
+    image: img('work-lvt-tile-effect'),
+    title: 'LVT - tile effect',
+    heading: 'LVT - tile effect',
     text: '',
-    alt: 'Before and after: carpeted landing replaced with herringbone LVT flooring',
+    alt: 'Tile effect LVT flooring in a bright room',
   },
   {
-    id: 'herringbone',
-    summary: 'Herringbone going down across a spacious open-plan room. The finished floor adds warmth and character from wall to wall.',
-    image: img('work-range-wood'),
-    title: 'Before & After: Herringbone Floor',
-    heading: 'Engineered Wood',
+    id: 'vinyl',
+    summary: '',
+    image: img('work-vinyl-herringbone'),
+    title: 'Vinyl flooring',
+    heading: 'Vinyl flooring',
     text: '',
-    alt: 'Open-plan room before and after herringbone flooring',
+    alt: 'Herringbone vinyl flooring in a studio room with a kitchenette',
   },
 ]
 
-// The three home page Work cards, in order: engineered wood, LVT, stair runner.
+// The three home page Work cards, in order: engineered wood parquet, herringbone LVT, wool carpet on a curved staircase.
 // Each opens its own service page. Captions are left empty on purpose, so the
 // card shows the photo and its title only.
 export const homeWork = [
   {
     id: 'engineered-wood',
     image: img('home-work-engineered'),
-    heading: 'Engineered Wood',
+    heading: '18mm Engineered Wood Parquet',
     summary: '',
     to: '/services/wood',
     alt: 'Bright open-plan room finished with a herringbone engineered wood floor',
@@ -266,7 +266,7 @@ export const homeWork = [
   {
     id: 'lvt',
     image: img('home-work-lvt'),
-    heading: 'LVT',
+    heading: 'LVT - Herringbone',
     summary: '',
     to: '/services/lvt',
     alt: 'Living room with a warm herringbone LVT floor',
@@ -274,10 +274,10 @@ export const homeWork = [
   {
     id: 'stair-runner',
     image: img('home-work-runner'),
-    heading: 'Stair Runner',
+    heading: 'Wool Carpet - Curved Staircase',
     summary: '',
-    to: '/services/runners',
-    alt: 'Patterned stair runner carpet fitted around the turn of a staircase',
+    to: '/services/carpet',
+    alt: 'Wool carpet fitted around the curve of a staircase',
   },
 ]
 
@@ -286,7 +286,7 @@ export const rangeGallery = [
   { slug: 'lvt', image: img('work-range-lvt'), imageFit: 'contain', title: '(LVT) Straight Plank Small Office', text: 'Straight-plank LVT gives a small office a smart, practical finish with a durable, easy-clean surface for everyday use.' },
   { id: 'lvt-herringbone', slug: 'lvt', image: img('work-before-after-lvt'), imageFit: 'contain', title: 'LVT', text: 'A carpeted landing transformed with warm herringbone LVT flooring.' },
   { slug: 'wood', image: img('work-range-wood'), imageFit: 'contain', title: 'Engineered Wood Flooring', text: 'Real wood beauty with the stability to suit modern heated homes.' },
-  { slug: 'laminate', image: img('work-range-laminate'), imageFit: 'contain', title: 'Laminate Flooring', text: 'Hardwearing, great-value wood looks for bedrooms, hallways and family rooms.' },
+  { slug: 'laminate', image: img('work-range-laminate-before-after'), imageFit: 'contain', title: 'Laminate Flooring', text: 'Hardwearing, great-value wood looks for bedrooms, hallways and family rooms.' },
   { slug: 'carpet', image: img('work-range-contract-carpet'), imageFit: 'contain', title: 'Contract Carpet', text: 'Durable carpet, neatly fitted for a comfortable finish on stairs and in busy spaces.' },
   { slug: 'runners', image: img('work-range-runners'), imageFit: 'contain', title: 'Stair Runners With Stair Rods', text: 'Made-to-measure stair runners with neatly finished borders and decorative stair rods, adding comfort and character to your staircase.' },
   { slug: 'subfloor', image: img('range-levelling'), title: 'Floor Levelling', text: 'A flat, sound base so your new floor looks right and lasts.' },

@@ -1004,5 +1004,71 @@
       "src/assets/generated/images/work-services-collage-1200.jpg",
       "src/assets/generated/images/work-services-collage-1600.jpg"
     ]
+  },
+  "work-laminate-straight-plank.jpg": {
+    "slug": "work-laminate-straight-plank",
+    "source": "work-laminate-straight-plank.jpg",
+    "width": 1200,
+    "height": 1200,
+    "sourceWidth": 1600,
+    "sourceHeight": 1600,
+    "mtimeMs": 1793105300796.103,
+    "size": 239561,
+    "outputs": [
+      "src/assets/generated/images/work-laminate-straight-plank-480.webp",
+      "src/assets/generated/images/work-laminate-straight-plank-800.webp",
+      "src/assets/generated/images/work-laminate-straight-plank-1200.webp",
+      "src/assets/generated/images/work-laminate-straight-plank-800.jpg",
+      "src/assets/generated/images/work-laminate-straight-plank-1200.jpg"
+    ]
+  },
+  "work-lvt-tile-effect.jpg": {
+    "slug": "work-lvt-tile-effect",
+    "source": "work-lvt-tile-effect.jpg",
+    "width": 800,
+    "height": 1067,
+    "sourceWidth": 1200,
+    "sourceHeight": 1600,
+    "mtimeMs": 1793105300741.9185,
+    "size": 192880,
+    "outputs": [
+      "src/assets/generated/images/work-lvt-tile-effect-480.webp",
+      "src/assets/generated/images/work-lvt-tile-effect-800.webp",
+      "src/assets/generated/images/work-lvt-tile-effect-800.jpg"
+    ]
+  },
+  "work-vinyl-herringbone.jpg": {
+    "slug": "work-vinyl-herringbone",
+    "source": "work-vinyl-herringbone.jpg",
+    "width": 800,
+    "height": 1067,
+    "sourceWidth": 1200,
+    "sourceHeight": 1600,
+    "mtimeMs": 1793105300841.6875,
+    "size": 195252,
+    "outputs": [
+      "src/assets/generated/images/work-vinyl-herringbone-480.webp",
+      "src/assets/generated/images/work-vinyl-herringbone-800.webp",
+      "src/assets/generated/images/work-vinyl-herringbone-800.jpg"
+    ]
+  },
+  "work-range-laminate-before-after.jpg": {
+    "slug": "work-range-laminate-before-after",
+    "source": "work-range-laminate-before-after.jpg",
+    "width": 1600,
+    "height": 893,
+    "sourceWidth": 2000,
+    "sourceHeight": 1116,
+    "mtimeMs": 1793107378781,
+    "size": 542024,
+    "outputs": [
+      "src/assets/generated/images/work-range-laminate-before-after-480.webp",
+      "src/assets/generated/images/work-range-laminate-before-after-800.webp",
+      "src/assets/generated/images/work-range-laminate-before-after-1200.webp",
+      "src/assets/generated/images/work-range-laminate-before-after-1600.webp",
+      "src/assets/generated/images/work-range-laminate-before-after-800.jpg",
+      "src/assets/generated/images/work-range-laminate-before-after-1200.jpg",
+      "src/assets/generated/images/work-range-laminate-before-after-1600.jpg"
+    ]
   }
 }
